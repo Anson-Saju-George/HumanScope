@@ -1,0 +1,17 @@
+# Third-party source materials (copyright) + large media — never publish
+research/research-materials/
+research/extracted/
+
+# Verbatim model dumps (large; digested versions live in research/adversarial-review.md)
+research/raw-model-output/
+
+# Internal peer-session pin (not useful publicly)
+.astra-session
+
+# Local test-run workspace (A/B efficacy runs)
+_testrun/
+*.testrun/
+
+# OS / misc
+.DS_Store
+Thumbs.db

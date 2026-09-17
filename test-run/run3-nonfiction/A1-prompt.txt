@@ -1,0 +1,4 @@
+[Claude Opus 4.8 subagent, +HumanScope] Controlled TEST.
+1. Read D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone/SKILL.md in full; skim D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone/research/structural-patterns.md and evidence-map.md.
+2. NONFICTION -> apply the DOMAIN GATE (fiction lenses off; answer-first, tidy, factual, real references; do not fabricate). Following the skill, write on: "Explain the 1919 Boston Molasses Flood: what happened, why, and why it still matters." (~1,200-1,500w explanatory nonfiction)
+3. Save ONLY the final text to A1-claude-skill/story.md.

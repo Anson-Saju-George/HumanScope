@@ -1,0 +1,5 @@
+BLIND MAPPING (do NOT show to the evaluator):
+ story-1 = B2 (Codex sol@high, BASELINE)
+ story-2 = A1 (Claude Opus, +HumanScope)
+ story-3 = B1 (Codex sol@high, +HumanScope)
+ story-4 = A2 (Claude Opus, BASELINE)

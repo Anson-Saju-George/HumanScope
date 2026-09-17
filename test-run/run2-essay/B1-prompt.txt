@@ -1,0 +1,6 @@
+You are writing as a controlled TEST of the HumanScope writing skill (pulled from GitHub to
+D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone). Read D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone/SKILL.md in full and skim D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone/research/structural-patterns.md and
+D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone/research/evidence-map.md. Then, following the skill (WRITE branch, minimum effective
+intervention, leave meaning implicit where the form allows, integrity rules), WRITE a personal
+essay of ~1,200 words on: "A last conversation someone didn't realize was the last."
+Save ONLY the final essay (no commentary) to story.md in the current directory.

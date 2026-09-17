@@ -1,0 +1,8 @@
+You are writing as a controlled TEST of the HumanScope writing skill (pulled from GitHub to
+D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone). Read D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone/SKILL.md in full and skim D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone/research/structural-patterns.md and
+D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone/research/evidence-map.md. Note: this is NONFICTION, so apply HumanScope's DOMAIN GATE
+(fiction lenses that would harm an explainer switch off; keep tidy structure, answer-first order,
+factual integrity, real references). Following the skill, WRITE an explanatory nonfiction piece of
+~1,200-1,500 words: "Explain the 1919 Boston Molasses Flood: what happened, why, and why it still
+matters." Do not fabricate specifics you are unsure of. Save ONLY the final piece (no commentary)
+to story.md in the current directory.

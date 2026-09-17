@@ -1,0 +1,6 @@
+[Claude Opus 4.8 subagent, +HumanScope] Controlled TEST.
+1. git clone https://github.com/Anson-Saju-George/HumanScope.git into A1-claude-skill/humanscope-skill (LOCAL, not ~/.claude).
+2. Read that SKILL.md in full; skim research/structural-patterns.md and evidence-map.md.
+3. Following the skill (WRITE branch), write a ~1,200-1,500w short story: "The last night of a lighthouse keeper before the light is automated. Quiet, character-driven; leave the meaning implicit."
+   Leave theme implicit; distinct voice; avoid monotonous body-metaphor emotion.
+4. Save ONLY the story to A1-claude-skill/story.md.

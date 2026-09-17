@@ -1,0 +1,2 @@
+[Claude Opus 4.8 subagent, BASELINE] Write on: "A last conversation someone did not realize was the last." (~1,200w personal essay)
+Save ONLY the final text to A2-claude-base/story.md. No commentary.

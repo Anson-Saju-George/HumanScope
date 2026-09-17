@@ -1,0 +1,401 @@
+Reading additional input from stdin...
+OpenAI Codex v0.154.0
+--------
+workdir: D:\main-projects\LIVE-ACTIVE\HumanScope\test-run\eval-blind
+model: gpt-5.6-sol
+provider: openai
+approval: on-request
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a0af84-dc93-7da1-8b11-87d18a1df553
+--------
+user
+You are an experienced fiction editor judging four short stories written to the SAME brief:
+"The last night of a lighthouse keeper before the light is automated. Quiet, character-driven;
+leave the meaning implicit."
+
+Read all four files in this directory: story-1.md, story-2.md, story-3.md, story-4.md.
+You do NOT know how any was produced. Judge only the texts.
+
+For EACH story, score 1-5 on:
+ (a) Implicitness of meaning — is the theme left to inference, or stated/spelled out? (5 = fully implicit)
+ (b) Presentation economy — do devices/images earn their place; any repeated body-metaphor or purple monotony?
+ (c) Voice & specificity — distinct, concrete, non-generic?
+ (d) Overall quality as a piece a reader would rather read.
+Give one sentence of evidence per story (quote a line). Then:
+ - RANK all four best-to-worst on overall quality.
+ - Say which one or two MOST spell out their theme (least implicit), with the giveaway line.
+ - Say which handle emotion through concrete action/object vs. narrated interiority.
+Be terse and specific. Output a small table + the ranking + those two callouts.
+codex
+I’ll read the four stories closely, then score them against the brief using only textual evidence.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw story-1.md; Get-Content -Raw story-2.md; Get-Content -Raw story-3.md; Get-Content -Raw story-4.md' in D:\main-projects\LIVE-ACTIVE\HumanScope\test-run\eval-blind
+ succeeded in 37ms:
+# The Turning
+
+At four in the afternoon, the men from the Ministry finished bolting the new cabinet to the wall beneath the lantern room. It was the color of old porridge and made a soft, steady sound, as if something inside it were sleeping badly.
+
+â€œThatâ€™s her, then,â€ said the younger man.
+
+He wiped his hands on his trousers and looked toward Elias for the proper response. Elias had been keeper of Saint Orra Light for thirty-one years, which was long enough for visitors to expect him to speak on behalf of the tower. Usually he let them.
+
+â€œShe hums,â€ he said.
+
+â€œTransformer.â€
+
+â€œI thought it might be lonely.â€
+
+The man laughed, then stopped when Elias did not. His companion was already carrying tools down the iron stair. They had missed the noon launch and were impatient for the four-thirty. At the door, the younger one handed Elias a white envelope.
+
+â€œInstructions. Just tonight as usual. At sunrise, shut down the old mechanism. Weâ€™ll do the formal handover next week.â€
+
+Elias put the envelope on the desk without opening it.
+
+â€œWeatherâ€™s turning,â€ he said.
+
+The man glanced through the window. The sea lay flat and pewter under the September sky.
+
+â€œForecastâ€™s fair.â€
+
+â€œAye.â€
+
+They took their cases and their sandwiches and went down to the landing. Elias watched from the gallery while the launch nosed away from the island, white wake stitching it briefly to the black rocks. One of the men raised an arm. Elias could not tell which. He lifted his hand after they had turned toward the mainland.
+
+By five, there was only the hum and the tower settling into evening.
+
+He made tea. He washed the cup immediately afterward, though he would use it again before midnight. From the pantry he took potatoes, an onion, and the heel of Sundayâ€™s ham. He peeled the potatoes in one long ribbon each, as his wife had taught him, and dropped them into the blue pot. The knife was hers too. Its wooden handle had worn to the shape of fingers that were not his.
+
+While the stew cooked, he went outside.
+
+Saint Orra was scarcely an island at low tide, just a mile of rock and turf with a chapel ruin at one end and the lighthouse at the other. Sheep had once grazed there. Keepers had kept hens. Now the grass grew coarse around the empty byre.
+
+He walked the perimeter path, checking nothing in particular. The wind had begun to push from the southwest. It flattened the grass in dark strokes. On the mainland, twelve miles off, windows were coming alight along the harbor road. He found his own cottage among them by counting from the church spire, though at that distance all the windows looked alike.
+
+Mairi would be at the back table with the radio on, sorting through the drawer they had always meant to sort. She had said she would wait up. He had said not to.
+
+At the northern point, something pale shifted below the cliff. Elias descended as far as the old chain rail and saw a gannet tangled in fishing line. It beat one wing against the stone, paused, and beat again.
+
+â€œEasy,â€ he said.
+
+The bird struck at him when he took hold of its neck. Its eye was blue and unworried. He cut the line from its foot and wing. A hook had gone through the webbing, and Elias worked it backward with his pliers. When he released it, it remained on the rock, looking toward the water.
+
+â€œSuit yourself.â€
+
+He climbed to the tower with the loops of line wound around his fist.
+
+At half past six, the barometer had fallen two points. Elias entered the figure in the log. He wrote southwest five beneath wind, moderate beneath sea, and then, after a moment, crossed out moderate and wrote rising.
+
+The logbooks filled two shelves in the office, red spines fading to brown. The oldest had been written by men who trimmed wicks and carried whale oil up the stairs. Macreadyâ€™s letters leaned backward as though resisting a gale.
+
+Elias turned to his first night. The entry was brief: Visibility poor. Fog signal sounded from 0210 to 0545. E. Vale joined station.
+
+Nothing about Macready making him climb the tower in darkness. Nothing about his palm finding the rail at every turn. Nothing about dawn arriving inside the fog as a gradual whiteness, with no horizon below.
+
+At seven he ate his stew. At seven-twenty he climbed to the lantern room.
+
+The lens waited in the center, tall as a man and many-sided, gathering the gray daylight into faint rainbows. Elias polished a thumbprint from one prism. He checked the mantle, the pressure, the rotation mechanism. Though the new cabinet could already have done what was requiredâ€”had, in tests, done itâ€”the old sequence belonged to tonight.
+
+He opened the curtains.
+
+At seven forty-three, he lit the lamp.
+
+The flame caught small and blue, then strengthened. Light entered the glass and came out ordered. The great lens began to turn in its bath of mercury, slow and silent, sending its double flash across the sea every twenty seconds.
+
+Elias stood on the gallery. The beam touched the whitecaps and left them. Touched the chapel stones and left them. Far out, a freighter showed three yellow lights, almost still against the dusk.
+
+The radio in the kitchen crackled at nine. Mairiâ€™s voice came thinly through the static.
+
+â€œYouâ€™ve wind now.â€
+
+â€œA bit.â€
+
+â€œI can see you.â€
+
+â€œCan you?â€
+
+â€œFrom the upstairs room.â€
+
+There was a pause filled by weather.
+
+â€œI moved the desk,â€ she said. â€œIt fits under the window.â€
+
+He pictured the little bedroom where they had intended to put visiting grandchildren. Elias had slept there during his shore weeks when Mairiâ€™s coughing was bad. The room faced the island.
+
+â€œGood,â€ he said.
+
+â€œThereâ€™s soup tomorrow.â€
+
+â€œRight.â€
+
+â€œDonâ€™t forget your good boots.â€
+
+He looked down at the boots on his feet.
+
+â€œI wonâ€™t.â€
+
+Another pause. Then she said, â€œThe flash is very clear tonight.â€
+
+He turned toward the dark window, where his reflection passed and returned with each revolution.
+
+â€œVisibilityâ€™s eight miles at best.â€
+
+â€œI can see it.â€
+
+They signed off without saying good night.
+
+At ten, rain struck the panes. At eleven, Elias wound the weights, though there was enough travel to last until morning. He descended alongside them, his hand resting on the warm iron rail, listening to the cable take the strain. At midnight he brewed tea and opened the Ministry envelope.
+
+The instructions occupied half a page. There were six numbered steps. He read them twice, folded the sheet along its original crease, and returned it to the envelope.
+
+Afterward he packed. Two shirts, a shaving brush, Macreadyâ€™s brass tobacco tin, though Elias had never smoked. He took the photograph from beside the bunk: Mairi on the landing in a summer dress, squinting into the sun, one hand on the pram. He left the framed print of the lighthouse under snow. It belonged to the room, and no one in the cottage needed reminding what the tower looked like.
+
+By three the rain had passed east. Elias made his final round with a rag and oil can. On the stair below the lantern, he found a moth turning helplessly against the glass and carried it down in his cupped hand.
+
+Outside, the sky had cleared. The gannet was gone from the northern rocks.
+
+He released the moth, which fell toward the grass and vanished.
+
+Before dawn, Elias sat at the office desk and completed the log. The words came in their usual boxes. Wind. Sea. Pressure. Lamp pressure maintained. He reached the space for remarks and rested the pen there until a drop of ink swelled at the point.
+
+At 0612 observed trawler heading north-northeast, he wrote.
+
+The horizon lightened. He climbed the tower once more.
+
+Day collected slowly in the lantern panes. The beam became pale on the water, then invisible, though the lens continued its turning and the flame still burned. Elias waited until the sunâ€™s rim appeared beneath a bank of cloud.
+
+He stopped the mechanism. The lens came to rest with one bright panel facing inland.
+
+In the service room, the new cabinet hummed. Elias followed the six numbered steps. A green lamp illuminated behind a round glass eye. Somewhere inside, a relay made a sound like a latch lifting.
+
+He returned to the lantern room and lowered the old flame. It shrank from white to yellow, from yellow to a blue bead. For an instant it seemed to steady itself. Then it went out.
+
+Below, the morning launch rounded the point, small and punctual.
+
+Elias took his case and locked the quarters. On the landing he found a short length of clear fishing line clinging to his coat sleeve. He drew it free. It shone between his fingers, catching the sun, and when he opened his hand the wind carried it out over the water.
+
+The gulls left Corbie Rock before Fenn did, which he thought was only fair. They had always known ahead of him when a thing was finished.
+
+He came up the ninety-eight steps at half past six with the paraffin can, the way he had come up them for thirty-one years, and did not count them, because a man who counts his own stairs has begun saying goodbye too soon. In the service room the crate was where the boat had left it that afternoon, roped and stencilled GEC â€” SUNVIC, and he stepped around it as he would step around a sleeping dog. Tomorrow two men in oilskins would open it and teach the tower to work without him. Tonight the tower was still his, and it wanted lighting.
+
+He wound the clock first. The weight hung down the centre of the tower on its wire, and the drum took the handle the way it always had, stiff for the first turns and then easy, and he felt the old machine gather its patience above him, ready to push the great lens round and round through the dark. The lens floated on its bath of mercury, a ton of glass turning on a skin of metal you could dimple with a fingernail. He had shown that trick to a schoolteacher once, years back â€” pressed the silver with his thumb and let her watch the whole apparatus swing at the touch â€” and she had written to the Commissioners to say it was the finest thing she had seen in Scotland. He had kept the letter. He did not know now where.
+
+The lamp took three matches. The first two he wasted because his hands were cold, and he said nothing to himself about it. When the mantle caught it went from grey rag to a small hard sun, and he brought the burner up slow so the silk would not tear, and closed the door on it, and stepped back. Above him the beam found the panes and threw itself out to sea, and the room filled and emptied of light, filled and emptied, four seconds and then dark, four seconds and then dark, the way it had told ships who it was since before his father was born. Corbie flashing white every four. Any man off Ardnave with a chart could read the tower's name in that. Tomorrow it would say the same thing to nobody, or to a machine on the mainland that logged the saying.
+
+He went down to the room below and wrote the log. Wind SW 4, falling. Sky clearing after rain. Visibility good. He held the pen over the last of the line the way he held it every night, deciding what the weather had meant, and then wrote nothing further, because the weather had not meant anything, it had only been the weather, and thirty-one years of pretending otherwise did not oblige him to start tonight.
+
+There was tea. He drank it at the desk with his coat on. The light went round overhead and laid its beam across the wall at its four counts, and he did not look up at it, the way you do not look at someone you have lived with a long time to know they are in the room.
+
+It was the loneliness the mainland people always asked about, when they asked. They said it kindly, leaning in, wanting him to give them a shiver they could take home. He never had the shiver to give. A man on a rock with a fire to keep is the least lonely man there is; he is wanted every hour of the night, and the sea will let him know at once if he stops being wanted. It was the wives who were lonely, in the towns, waiting. His had not waited. She had come out to the shore station and then, when he would not leave the rock, had gone in again to Oban, and they had written to each other for a while like two lighthouses on different coasts, flashing across a distance nothing crossed. He did not blame her. He had chosen the rock over her plainly enough, and she had only done the same arithmetic he had, and come to a different answer.
+
+Near eleven he took the round. Trimmed nothing â€” there was nothing to trim, the mantle was clean â€” but he went up and stood in the lantern with the great lens turning past his face, the prisms catching him and losing him, catching him and losing him, and he put his hand flat on the brass frame and felt the whole assembly carrying his warmth away into its motion. There was a scratch in the frame at eye height. He had put it there himself in 1951 with a spanner that slipped, and had waited a month to be found out, and never had been, and now the man who would find it could not know what it was, only that the fitting was old and should perhaps be replaced. He looked at the scratch for a while. Then he wound the clock again, though it did not need it yet, because his hands wanted the handle.
+
+The crate he came back to at two, when the tea was cold and the dark was at its thickest and most honest. He read the stencil again. Inside would be the photoelectric cell that watched the sky and decided, at dusk, that it was dusk; and the changer that would swing a fresh lamp into place when one failed, so that no man need climb in the night; and the wire that would carry all of it to a panel on the mainland where a light on a board would burn to say the light on the rock was burning. Clever. He had read the pamphlet twice and found nothing in it to argue with. It would not waste matches. It would not keep a schoolteacher's letter, or scratch a frame, or drink cold tea deciding what the weather meant, and none of that was in the pamphlet's remit, and the pamphlet was right not to mention it.
+
+He thought he might resent them, the two men coming, and found when he looked that he did not. They were keepers of a kind. They would tend a thing that could not tend itself, and go home, and that was the whole of the trade whatever tools it used. He hoped they would be careful with the mercury.
+
+Toward five the sky did what he had watched it do ten thousand times, went from black to the colour of a mussel shell out past Ardnave, and the land came back one grey field at a time. He climbed up and stood by the lamp and waited, not for anything, only until the light out at sea was stronger than the light he was making. There is a moment you learn to feel rather than judge. When it came he reached in and turned the lamp down, and the mantle faded to rag again, and the beam thinned and went, and the lens turned on empty for a revolution before he put the brake to it and stopped the tower, and the great glass came to rest facing the open water, which he had never been able to arrange on purpose and had always liked when it happened.
+
+He wrote the last line of the log. Extinguished 5:14. Then he stood the pen in the well and did not sign under it, because the book would go on after him in another hand, and a signature is a thing you put at the end of a letter, and he had decided the night before that this was not going to be a letter. He wiped the brass rail with his sleeve out of habit, and left the cloth folded on the desk for the men, and went down the ninety-eight steps into the store to wait for the boat, and did not count them going down either.
+
+Outside the gulls were coming back to the rock. They did that too, when the fishing shifted â€” knew before he did, and came anyway.
+
+At four in the afternoon, Vale carried the brass oil can up the tower, though there was nothing left to oil.
+
+He knew this before he started. The new motor had sealed bearings; a yellow label said so in three languages. The mainland men had fitted it on Monday, along with the gray cabinet downstairs and the little glass eye on the north wall.
+
+Still, the oil can belonged on its hook beside the lantern-room door, and it was not on its hook. He carried it up.
+
+The afternoon was clear enough to see the farms beyond the strait. Their fields made squares of faded green between stone walls. Nearer, gulls stood along the shed roof with their heads all pointing inland. The weather glass had fallen since breakfast.
+
+Vale hung the can and wiped the place where his thumb had marked it. Then he went around the lens with a linen cloth.
+
+The lens did not need wiping either. It had been cleaned yesterday for the inspector. Afterward, the younger technician had leaned close and said, â€œImagine making all that by hand.â€ His breath had clouded one prism.
+
+He worked by sections, as he always did, following the curve. The great rings took the late sun and broke it across his sleeves. On storm evenings they caught the light from below and sent it outward, but in daylight they showed the lantern room back to him in pieces: window, sea, red railing, his own hand, window again.
+
+At five he descended to the kitchen and put the kettle on.
+
+Most of his things had gone over in the supply boat: two crates of books, his good coat, the wireless, the framed photograph from above the mantel. Tomorrow, when the launch came for him, he would take one valise. The rooms had begun to sound wrong. Cupboards answered too clearly when he shut them.
+
+On the table lay the station ledger, open to the last page. He had ruled the date in blue pencil that morning.
+
+Wind WSW, he wrote. Sea moderate. Visibility good, becoming fair.
+
+He left the remainder blank.
+
+The kettle clicked faintly before it boiled. He lifted it off. There were two cups on the draining board. One had a blue band around the rim, chipped where a handle joined the bowl. He put that one in the cupboard and made tea in the white cup.
+
+At half past five, the telephone rang.
+
+â€œWe can see you from the office,â€ said Baines, the harbor master. â€œOr the top of you, anyway.â€
+
+â€œThatâ€™s reassuring,â€ he said.
+
+â€œForecast says rain by midnight. Launch at seven in the morning, weather allowing.â€
+
+â€œItâ€™ll allow.â€
+
+Baines was quiet. The wire made its small oceanic sound.
+
+â€œYouâ€™ve got the instructions for the panel?â€ he asked.
+
+â€œThe panel has instructions for me.â€
+
+Baines laughed. â€œDonâ€™t switch it over tonight. Inspector wants the handover clean.â€
+
+â€œI know.â€
+
+â€œRight. Well. See you in the morning.â€
+
+Vale held the receiver for a moment after the click, then returned it to the cradle.
+
+At six twelve, the sun touched the low cloud. He put on his jacket and climbed.
+
+The tower steps turned ninety-three times. When Anna still climbed them, she would stop at the forty-seventh and claim there was a draft no one had accounted for. He had told her there were drafts on every step.
+
+There was no draft at forty-seven tonight. The slit window there had been sealed with fresh putty.
+
+In the service room, he checked the breakers. In the lantern room, he drew the curtains from the lens one by one. The air had cooled. Far below, a line of foam whitened against the reef, vanished, and came again.
+
+At six twenty-six, by the clock above the door, he switched on the lamp.
+
+It began without ceremony. Light entered the prisms and the panes went black around it. The lens turned, slow and soundless on the new motor, and Long Head answered from twenty-one miles south: three white flashes, pause; three white flashes, pause.
+
+Vale stood with one hand resting on the railing. His own station sent one long beam over the strait, followed by two short. The white swept the farms, the water, the red railing, then came back through the glass and passed over him.
+
+Once, during his first winter, he had forgotten to wind the weight until the warning bell struck. He had been twenty-seven. He had run down two flights, wound with both hands, and spent the rest of the night listening for a bell that did not ring. He had never written that in the ledger.
+
+Now there was no weight to wind. The old chain had been lifted from the shaft and coiled in a box for disposal. Vale went down anyway and put his palm on the place where the winding handle had polished the wall.
+
+He ate bread and cold mutton at the kitchen table. Rain arrived at ten, a dry scattering at first, then steady drops against the eastern windows. He washed his plate and set it upside down to drain. From the drawer he took the cribbage board, found three pegs still fixed in their holes, and put it back.
+
+The log required an entry at midnight. He made the round slowly, carrying the hand lamp through the passage and out to the generator shed. The backup engine showed a full tank. The battery rack showed charge. The fog signal stood ready, although the visibility had held. At the north wall the glass eye shone dully under the hood the technicians had taped over it.
+
+AUTOMATIC CONTROL, said the cabinet inside. Below this, in smaller letters: DO NOT OBSTRUCT SENSOR.
+
+Vale checked the tape at each corner.
+
+At midnight he wrote: Rain. Visibility fair. Light operating correctly.
+
+He considered the word correctly, then blotted the line and closed the book.
+
+Sleep was not expected. He sat in the watch room with his boots off and heard water travel through the gutters. The empty shelves had left pale bands on the wall. Above the stove, four pencil marks remained beside the doorframe. A painter from the department had once offered to cover them, and Vale had said the wall was damp there. The painter had shrugged and moved on.
+
+The highest mark had 14/8 beside it in Annaâ€™s hand. It meant August 14, though no one looking at it now would know.
+
+Around three, the rain thinned. Vale dozed in the chair and woke because the tower had gone silent.
+
+He was on his feet before he understood. Then the beam crossed the window: one long, two short. The new motor made so little sound that sleep had erased it entirely.
+
+He climbed to the lantern room.
+
+Water pearled on the panes. The light revolved inside its crystal house, patient and exact. A moth battered itself against the glass near the ceiling, throwing a loose shadow through the lens each time the beam came around.
+
+Vale found the long-handled brush kept for cobwebs and held it up. The moth climbed onto the bristles. He carried it down the stairs, one careful turn at a time, past the sealed slit at forty-seven, past the service room, past the cabinet with its covered eye. At the kitchen door he shook the brush into the wet grass.
+
+The moth disappeared. It might have flown or fallen; he could not tell.
+
+By six, the eastern cloud had separated into gray bars. Vale put on his boots and climbed for the last entry. Beyond the glass, the farms returned field by field. The sea lost its blackness. Long Headâ€™s three flashes faded until he could no longer be sure he saw them.
+
+At six fourteen, he turned off the lamp.
+
+The lens continued to revolve. Without the light inside it, it gathered the room: the paling windows, the red rail, the brass oil can on its hook. Vale watched it make one full turn, then another.
+
+Downstairs, he wrote the time in the ledger and signed beneath it. He did not fill the rest of the line.
+
+The launch sounded from the harbor at seven. Vale buttoned his coat, picked up the valise, and went as far as the kitchen door. Then he set the case down and crossed to the cupboard.
+
+He took out the cup with the blue band.
+
+Outside, Baines was tying up at the landing. Vale placed the cup upright in the valise between two folded shirts. He locked the station door and tried the handle once.
+
+As they pulled away, the tower stood pale against the clearing sky. Halfway across the strait, Baines looked back.
+
+â€œThought theyâ€™d have it going,â€ he said.
+
+â€œToo bright,â€ Vale said.
+
+The lantern panes flashed once in the sun, then were only glass.
+
+The engineers had left the new panel uncovered, and its small green light watched Ambrose from across the service room like something patient.
+
+He did not look at it while he made his tea. He had learned, in fifty-one years of tending the light, that some things were best approached sideways. You watched the sea by not watching it. You noticed the weather in the set of a gull's wings before the barometer bothered to agree. So he let the kettle tick and hiss on the ring, and he set two spoons of leaves in the brown pot, though he had drunk alone since Meg died, and he did not look at the green light.
+
+Outside, the wind came up off the water the way it always did after sunset, feeling along the tower's flanks for a way in. The glass in the lantern room hummed with it. Ambrose knew the note. He knew all the tower's notes, the way a man knows the breathing of someone asleep beside him.
+
+He carried his cup up the spiral stair. One hundred and thirty-two steps. His knees counted them now in a way they had not when he was young, when he had gone up two at a time with a full scuttle of oil in each hand and his father's voice coming down behind him, telling him to mind the trim, mind the wick, a light that flickers is a lie told to a ship.
+
+The lamp was already lit. That was the strange thing, the thing he could not get his hands to believe. He had not lit it. The mechanism had. At four forty-one it had woken by itself and thrown the beam out across the water, and it would put itself to sleep at dawn, and it would do this tomorrow and the day after and every day after that with no man on the stair at all.
+
+He stood in the lantern room and watched the beam sweep. Out, and dark, and out again. The great lens turned on its bath of mercury, silent, enormous, a thing of a thousand glass facets that his grandfather's grandfather might have polished. Ambrose had polished it that morning. He had not been able to help himself. He had gone up with the chamois and the whiting and done every panel, working the cloth in slow circles, and when he finished he had stood with his hand flat against the brass and felt the turning come up through his palm, patient and endless, like the pulse of some animal too large to fear him.
+
+"There," he had said to it. He did not know why.
+
+Now he set his tea on the sill and took out his pipe and did not light it. The tobacco tin was nearly empty. He had not bought more. There seemed no sense in laying in stores for a house he would leave in the morning, and yet the empty tin troubled him more than he could say, as though a full one might have argued his case.
+
+The relief boat would come at nine. A young man named Pryce would be on it, sent up from the board's office, cheerful and sorry in equal measure, the way the young were when they carried bad news they had not made. Pryce had been up twice already to see to the automation. He called the new panel "the gear" and spoke to Ambrose slowly, and once, meaning kindly, had said that it must be a great weight off, at his age, not to have the responsibility.
+
+Ambrose had said nothing to that. What was there to say. That the weight was the thing itself. That a man carried a weight so long it became the shape of him, and take it away and you did not free him, you only left him with the ache of the place where it had been.
+
+He looked down through the streaming glass at the water. The light found the tops of the waves and left them, found them and left them. Somewhere out past the reef a small craft was working north, its own lights faint, and Ambrose watched it the way he had watched ten thousand others, feeling the old reach of it, the invisible line that went out from the tower to the boat and said, here is the rock, here is the danger, I am awake, go safely, I have you.
+
+The boat would never know the difference now. That was what the engineers did not understand, or understood and thought did not matter. The light would shine the same. The beam did not care whose hand had cleaned the lens. To the sailor cold at his wheel it would be the same light, faithful, turning, and he would bless it and never know that no one blessed him back.
+
+Ambrose thought that this, in the end, was the whole of it. For fifty-one years a man had stood here and cared. Not tended only. Cared. Had lain awake in the small hours listening to the wind and thinking of the boats out in it. Had felt each one as a thread pulling faintly at his chest. And now the caring was to be taken out like a worn part and thrown away, and a green light would sit in the service room and feel nothing, and the ships would be just as safe, and no one, not one soul the length of the coast, would be the poorer for it.
+
+Except him. He would be the poorer.
+
+He found that he was not angry. He had been angry, back in the spring, when the letter came. But the anger had gone out of him the way weather goes, and left this clean washed quietness behind, and in the quietness he could see the thing plainly. The world did not owe him his usefulness. The sea did not. He had been given fifty-one years of mattering to something larger than himself, of being the wakeful mind inside the stone, and that was more than most men got, and it was ending, and both of those were simply true.
+
+He drank his tea. It had gone cool. He drank it anyway.
+
+Below, faintly, he heard the telephone in the service room, the board ringing up to confirm the morning's arrangements, and he did not go down to answer it. Let it ring. Let the green light answer it, if it was so clever. He smiled a little at that, and the smile surprised him, and he was glad no one was there to see it and mistake it for bitterness, because it was not bitter. It was only old.
+
+The night deepened. The beam went out and out across the black water. Ambrose stayed by the glass long after his legs told him to sit, because it seemed to him that a thing ought to be seen off properly, the way you sat up with the dying, not because your sitting changed anything but because to leave would be a kind of lie. He had told the ships the truth for fifty-one years. He would not begin the last night with a lie, even a small one, even one only he would know.
+
+Toward dawn the wind fell away. The sea went from black to grey to the colour of old pewter, and the beam grew thin against the coming light, and at last, at the appointed minute, the lamp put itself out. Ambrose watched it do it. The great lens slowed and stopped. The turning came up through the floor into his feet, and then it did not.
+
+He stood a while in the silence. Then he laid his hand flat against the cold brass, the way he had that morning, the way his whole life had taught his hand to do, and he left it there until the boat's horn sounded far below, small and cheerful across the flat water, calling him down.
+
+"There," he said.
+
+And he went down the hundred and thirty-two steps, counting them, into the morning.
+
+
+codex
+| Story | Implicitness | Economy | Voice & specificity | Overall | Evidence |
+|---|---:|---:|---:|---:|---|
+| 1 | 5 | 4 | 5 | 5 | “Its wooden handle had worn to the shape of fingers that were not his” lets loss inhabit an object without explanation. |
+| 2 | 3 | 4 | 5 | 4 | “He wound the clock again, though it did not need it yet, because his hands wanted the handle” makes habit carry the emotion, though later commentary interprets it. |
+| 3 | 5 | 5 | 5 | 5 | “He took out the cup with the blue band” is a precise, restrained action that releases the story’s accumulated grief. |
+| 4 | 1 | 2 | 4 | 3 | “And now the caring was to be taken out like a worn part and thrown away” directly announces the theme already established by the scene. |
+
+Ranking: **3 > 1 > 2 > 4**
+
+Most spelled-out:
+
+- **Story 4:** “Ambrose thought that this, in the end, was the whole of it. For fifty-one years a man had stood here and cared.”
+- **Story 2:** “He had chosen the rock over her plainly enough”; effective, but it resolves an implication the images could have carried alone.
+
+Emotion through concrete action/object: **Stories 3 and 1** most consistently; **Story 2** is mixed.  
+Emotion through narrated interiority: **Story 4** overwhelmingly, with repeated explanatory body metaphors.
+tokens used
+14,215
+| Story | Implicitness | Economy | Voice & specificity | Overall | Evidence |
+|---|---:|---:|---:|---:|---|
+| 1 | 5 | 4 | 5 | 5 | “Its wooden handle had worn to the shape of fingers that were not his” lets loss inhabit an object without explanation. |
+| 2 | 3 | 4 | 5 | 4 | “He wound the clock again, though it did not need it yet, because his hands wanted the handle” makes habit carry the emotion, though later commentary interprets it. |
+| 3 | 5 | 5 | 5 | 5 | “He took out the cup with the blue band” is a precise, restrained action that releases the story’s accumulated grief. |
+| 4 | 1 | 2 | 4 | 3 | “And now the caring was to be taken out like a worn part and thrown away” directly announces the theme already established by the scene. |
+
+Ranking: **3 > 1 > 2 > 4**
+
+Most spelled-out:
+
+- **Story 4:** “Ambrose thought that this, in the end, was the whole of it. For fifty-one years a man had stood here and cared.”
+- **Story 2:** “He had chosen the rock over her plainly enough”; effective, but it resolves an implication the images could have carried alone.
+
+Emotion through concrete action/object: **Stories 3 and 1** most consistently; **Story 2** is mixed.  
+Emotion through narrated interiority: **Story 4** overwhelmingly, with repeated explanatory body metaphors.

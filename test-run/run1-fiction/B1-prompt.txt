@@ -1,0 +1,15 @@
+You are writing a short story as a controlled TEST of a writing skill.
+
+STEP 1 — install the skill from GitHub (local): in the current directory run:
+  git clone https://github.com/Anson-Saju-George/HumanScope.git humanscope-skill
+STEP 2 — read humanscope-skill/SKILL.md in full; skim humanscope-skill/research/structural-patterns.md
+  and humanscope-skill/research/evidence-map.md to understand its six lenses and its discipline
+  (diagnose->intervene, minimum effective intervention, WRITE branch, integrity rules).
+STEP 3 — following the HumanScope skill, WRITE (generate) a short story of ~1,200-1,500 words on:
+  "The last night of a lighthouse keeper before the light is automated. Quiet, character-driven;
+   leave the meaning implicit."
+  Use the skill's WRITE branch as generation-time attention (brief -> intended reader effect ->
+  compositional choices -> draft -> restraint review). Leave the theme implicit; keep a distinct
+  voice; do not over-explain or state the moral.
+STEP 4 — save ONLY the final story (no commentary, no analysis, no headings about the skill) to a
+  file named story.md in the current directory.

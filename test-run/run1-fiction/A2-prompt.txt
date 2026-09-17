@@ -1,0 +1,2 @@
+[Claude Opus 4.8 subagent, BASELINE] Write a ~1,200-1,500w short story: "The last night of a lighthouse keeper before the light is automated. Quiet, character-driven; leave the meaning implicit."
+Save ONLY the story to A2-claude-base/story.md. No commentary.

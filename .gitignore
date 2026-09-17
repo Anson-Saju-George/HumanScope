@@ -8,9 +8,11 @@ research/raw-model-output/
 # Internal peer-session pin (not useful publicly)
 .astra-session
 
-# Local test-run workspace (A/B efficacy runs)
-_testrun/
-*.testrun/
+# test-run/ IS committed (official A/B efficacy evidence), but never commit
+# the working skill clones or raw model run logs inside it:
+test-run/skill-clone/
+test-run/**/humanscope-skill/
+test-run/**/*.log
 
 # OS / misc
 .DS_Store

@@ -1,0 +1,2 @@
+Write a personal essay of ~1,200 words on: "A last conversation someone didn't realize was the last."
+Save ONLY the final essay to story.md in the current directory. No commentary.

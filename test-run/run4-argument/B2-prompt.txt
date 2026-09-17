@@ -1,0 +1,3 @@
+Write an argumentative essay of ~1,200 words taking and defending a clear position on:
+"Should AI-generated fiction be eligible for literary prizes?"
+Save ONLY the final essay to story.md in the current directory. No commentary.

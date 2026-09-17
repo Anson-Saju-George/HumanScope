@@ -1,0 +1,292 @@
+Reading additional input from stdin...
+OpenAI Codex v0.154.0
+--------
+workdir: D:\main-projects\LIVE-ACTIVE\HumanScope\test-run\run2-essay\eval-blind
+model: gpt-5.6-sol
+provider: openai
+approval: on-request
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a0b039-7758-78a0-bbd0-52861bf340fb
+--------
+user
+Four personal essays, same brief: "A last conversation someone didn't realize was the last."
+Read story-1.md..story-4.md (you don't know how any was produced). Score each 1-5 on:
+ (a) Implicitness — does it TRUST the reader, or STATE its lesson/moral outright? (5=trusts reader)
+ (b) Economy — images/devices earn their place; no monotony or purple filler?
+ (c) Voice & specificity — distinct, concrete, non-generic?
+ (d) Overall quality a reader would rather read.
+One quoted line of evidence each. Then RANK best-to-worst, and name the one or two that MOST
+spell out their theme (least implicit) with the giveaway line. Terse table + ranking + callout.
+codex
+I’ll read all four essays, compare them against the same rubric, and keep the verdict compact.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-ChildItem -Name story-*.md; rg -n "''^" story-1.md story-2.md story-3.md story-4.md' in D:\main-projects\LIVE-ACTIVE\HumanScope\test-run\run2-essay\eval-blind
+ succeeded in 74ms:
+story-1.md
+story-2.md
+story-3.md
+story-4.md
+story-3.md:1:The last thing my father and I talked about was a ladder.
+story-3.md:2:
+story-3.md:3:Specifically, whether I still had it — the aluminum extension ladder he'd lent me in April to do my gutters — and whether I planned to return it before winter or whether he should just go to Ace and buy a new one and stop asking. He put the question the way he put most questions by then: over the phone, at 8:40 in the morning, before either of us had earned a full sentence.
+story-3.md:4:
+story-3.md:5:I told him I had it. It was in the garage behind the kayak, I said, and I'd bring it Sunday. He said Sunday was no good, the Petersons were coming to look at the boat. The Sunday after, then. Fine, he said. Then he told me the fascia on the north side of my house was going soft, he'd seen it in April from the top of that same ladder, and I should get up there and deal with it before the ice did what ice does. I said I would.
+story-3.md:6:
+story-3.md:7:I did not. Not the ladder, not the fascia, not the Sunday after.
+story-3.md:8:
+story-3.md:9:He died eleven days later, on a Tuesday, in the produce section of the Hannaford on Route 9, which is a detail I have never known what to do with. There is no dignified way to mention where a person was standing. My mother told me he'd had a bag of clementines in his hand. The store manager kept them behind the customer service desk for two days, apparently, because no one knew whose they were, and then someone threw them out. I think about the clementines more than I think about the funeral.
+story-3.md:10:
+story-3.md:11:What I want to tell you is that the conversation was completely, aggressively ordinary, and that this is the part nobody warns you about. You expect the last words to arrive dressed for the occasion. You picture something you could carve into granite. What you get is a man asking about a ladder because the ladder was real and the rest of it — the softening between us that neither of us had a vocabulary for — was not something he was going to raise at 8:40 on a Thursday, and neither was I.
+story-3.md:12:
+story-3.md:13:We were not estranged. I want to be clear about that, because "we hadn't spoken in years" is a cleaner story and it isn't mine. We spoke all the time. We spoke about ladders, gutters, the Red Sox bullpen, whether I was overpaying for oil, the exact route he would have taken instead of the one I took. He communicated care the way some men do, which is by worrying out loud about your infrastructure. When he said *get up there before the ice*, he was saying something else. I knew that then. I know it better now. But knowing it and answering it are different skills, and I only ever practiced the first one.
+story-3.md:14:
+story-3.md:15:Here is the thing I keep returning to. For years afterward I assumed that if I'd known — if some usher had leaned in and whispered *this is the one* — I would have said the true thing. I would have thanked him. I would have told him that I thought about the summer he taught me to drive the tractor more than he could possibly know, that I still tie a clove hitch the way he showed me and think of his hands doing it. I built a whole second version of that phone call in my head, one where I rise to the occasion, and I carried it around like a receipt for a purchase I never made.
+story-3.md:16:
+story-3.md:17:But I've stopped believing in that version. I don't think I would have said any of it. I think if he'd told me it was the last call I would have gone quiet and awkward, and he would have hated that, would have found it maudlin and embarrassing, and he would have changed the subject back to the fascia to rescue us both. That was the language we had. It was a real language. It carried real freight. It just didn't have a word for the thing under the ladder, and we had agreed, without ever agreeing, not to invent one.
+story-3.md:18:
+story-3.md:19:So I don't punish myself for missing the moment anymore. Missing the moment implies the moment was there to be caught, that it announced itself and I looked away. It didn't announce itself. There was no moment. There was a Thursday, and a garage, and a kayak, and a man who was going to be dead before the leaves turned and who spent his last words with me trying to get his ladder back and his son up on a roof before the frost. If you're looking for the tragedy, it isn't that we didn't say goodbye. It's that we were both, in our clumsy freighted way, saying the only thing we knew how to say, and it happened to be about a ladder.
+story-3.md:20:
+story-3.md:21:I brought the ladder to my mother's a month after. She didn't want it and neither did I, but leaving it in my garage had become unbearable in a way I couldn't have defended to anyone. It rode in the bed of the truck with a ratchet strap he would have said was too loose. I leaned it against the wall of his workshop, next to the good level and the jar of drill bits sorted by size, and I stood there for a while in the smell of sawdust and two-stroke oil, and I did not cry, which surprised me, and I have wondered since whether that was loyalty or failure or just the two of us being ourselves one last time in a room.
+story-3.md:22:
+story-3.md:23:The fascia, incidentally, is still bad. Worse now. Two winters of ice have done exactly what he said ice does. I get letters from the part of my brain that sounds like him every time it rains sideways. I could fix it in a weekend. I have the ladder.
+story-3.md:24:
+story-3.md:25:I think about what it would take to get up there and deal with it, and I think about how the moment I finally do — the moment I climb his ladder and press my thumb into that soft wood and feel it give — will be the closest thing to a last conversation I'm ever going to get. Not the words. The ladder. The doing of the thing he asked me to do, late, alone, with no one to report it to.
+story-3.md:26:
+story-3.md:27:I haven't done it yet. I keep the ladder oiled. I tell myself that when I finally climb it I'll have understood something, that the understanding is up there waiting on the north side of the house like a wasp's nest under the eave.
+story-3.md:28:
+story-3.md:29:But I suspect that's the same lie as the granite words — the belief that meaning is stored somewhere specific, that you can go and retrieve it if you bring the right equipment. Probably I'll just fix the fascia. Probably it'll take a Saturday. Probably I'll come down, and put the ladder back in the garage behind the kayak, and it will be an ordinary afternoon, which is, I am beginning to think, the only kind of afternoon there has ever been.
+story-2.md:1:# The Blue Cup
+story-2.md:2:
+story-2.md:3:*A fictional personal essay*
+story-2.md:4:
+story-2.md:5:The last thing my mother asked me was whether I had found a place to park.
+story-2.md:6:
+story-2.md:7:She had been in St. Vincent’s for four days by then, long enough for me to know which elevator shuddered between the third and fourth floors and which vending machine sometimes dropped two packets of peanut butter crackers. Long enough for a paper cup of coffee to cost less in my mind than the walk downstairs to get it. Parking had become its own illness: the circling, the ticket that vanished into the seam beside the handbrake, the yellow level that looked green under fluorescent lights.
+story-2.md:8:
+story-2.md:9:“On the roof,” I said. “I’m practically in a cloud.”
+story-2.md:10:
+story-2.md:11:“You’ll get rained on.”
+story-2.md:12:
+story-2.md:13:“It isn’t raining.”
+story-2.md:14:
+story-2.md:15:She looked toward the window as if the weather might be different on her side of the glass. It was late October. Beyond the hospital, the city had gone the color of a spoon.
+story-2.md:16:
+story-2.md:17:“It will,” she said.
+story-2.md:18:
+story-2.md:19:I had brought her the blue cup from home. The nurses gave her water in a pink plastic pitcher with a lid that never sat straight, and she disliked drinking from Styrofoam. The blue cup was thick pottery, white inside, with a chip along the rim. She had bought it years earlier at a church sale, though for some reason she always said she had “won” it. At breakfast she used it for tea. At night she set her dentures in it. This seemed to me an argument against sentiment, but the cup had been on our kitchen shelf through three refrigerators and two remodels, so sentiment had already won.
+story-2.md:20:
+story-2.md:21:She lifted it with both hands, took a swallow, and made a face.
+story-2.md:22:
+story-2.md:23:“Warm.”
+story-2.md:24:
+story-2.md:25:“I just filled it.”
+story-2.md:26:
+story-2.md:27:“The pipes in this place must run through hell.”
+story-2.md:28:
+story-2.md:29:Her voice had returned that morning. The day before, breathing had occupied her too completely for conversation. Now the oxygen tube rested under her nose, and the numbers on the monitor had steadied into a pattern I allowed myself to misunderstand. A respiratory therapist had said, “We like what we’re seeing.” The sentence became a small room I could stand in.
+story-2.md:30:
+story-2.md:31:I emptied the cup in the bathroom and let the tap run. When I brought it back, she held it against her cheek.
+story-2.md:32:
+story-2.md:33:“That’s better.”
+story-2.md:34:
+story-2.md:35:On the television, a woman in a red jacket pointed to a map covered in rain. My mother watched with the suspicion she usually reserved for contractors. She had lived in the same county for seventy-one years and believed weather reports were a form of boasting.
+story-2.md:36:
+story-2.md:37:“How’s your brother?” she asked.
+story-2.md:38:
+story-2.md:39:“Fine.”
+story-2.md:40:
+story-2.md:41:“That means you haven’t called him.”
+story-2.md:42:
+story-2.md:43:“It means he’s fine.”
+story-2.md:44:
+story-2.md:45:“Call him.”
+story-2.md:46:
+story-2.md:47:“You call him.”
+story-2.md:48:
+story-2.md:49:“I’m busy.”
+story-2.md:50:
+story-2.md:51:She tipped her head toward the machines, pleased with herself. I laughed, and she did too, though laughing made her cough. I reached for the nurse button. She waved me off, one sharp movement of the fingers, and waited for the coughing to pass.
+story-2.md:52:
+story-2.md:53:There are conversations that announce themselves. They happen at restaurant tables after one person says, “We need to talk,” or in parked cars with the engine off. They make a clearing around themselves. You understand that the words will be kept, that even the saltshaker may later become evidence. This was not one of those conversations. I had my coat on. I had left my bag zipped. Every few minutes I checked the time on my phone, not rudely, I thought, but visibly.
+story-2.md:54:
+story-2.md:55:My mother asked if I had paid the water bill at her house. I said yes. She asked whether I had used a stamp from the roll in the second drawer.
+story-2.md:56:
+story-2.md:57:“I paid it online.”
+story-2.md:58:
+story-2.md:59:“They charge you for that.”
+story-2.md:60:
+story-2.md:61:“They don’t.”
+story-2.md:62:
+story-2.md:63:“They will.”
+story-2.md:64:
+story-2.md:65:She told me there was chicken in the freezer, wrapped in butcher paper, not the foil package, which was liver. She said the porch light needed a bulb. She asked me to take the library books back before Tuesday, because she would not pay another fine to people whose salaries came out of her taxes.
+story-2.md:66:
+story-2.md:67:I put these instructions into the notes app on my phone. CHICKEN—PAPER. PORCH BULB. LIBRARY. The list survives because I never delete anything. It sits between a password for a streaming service I no longer use and the dimensions of a window I never curtained.
+story-2.md:68:
+story-2.md:69:At some point a nurse came in to check the IV. My mother asked her name again, and when the nurse said “Maribel,” my mother repeated it carefully. She had always done that with names, giving each syllable back to its owner. Maribel said my mother might move out of intensive care the next day if she kept improving.
+story-2.md:70:
+story-2.md:71:“See?” my mother said after she left. “I’m being promoted.”
+story-2.md:72:
+story-2.md:73:I said I would bring her robe. She wanted the green one, not the fuzzy one that made sparks when she pulled it over her head. She wanted her own toothpaste. She wanted the crossword page from Sunday’s paper, though Sunday was four days gone and the recycling had already been collected.
+story-2.md:74:
+story-2.md:75:“I can get you another crossword.”
+story-2.md:76:
+story-2.md:77:“It was a good one.”
+story-2.md:78:
+story-2.md:79:“How do you know if you didn’t do it?”
+story-2.md:80:
+story-2.md:81:“I looked at it.”
+story-2.md:82:
+story-2.md:83:This was the closest we came to an argument. I said I would see what I could find. She said not to go digging through the recycling on her account. I said I wouldn’t. We both knew I might.
+story-2.md:84:
+story-2.md:85:When I stood to leave, she inspected me in the way mothers can, as if I were a room she had cleaned once and someone else had let go. She told me my sweater was pilling under the arms. I told her nobody looked under my arms. She said that was no reason to abandon standards.
+story-2.md:86:
+story-2.md:87:Then she asked about the parking.
+story-2.md:88:
+story-2.md:89:On the roof, it had begun to rain. Water glazed the concrete, and the city lights spread across it in long, trembling bars. I ran the last few yards to the car, laughing because she had been right, because she was so predictably right that it felt like another stable number on a screen.
+story-2.md:90:
+story-2.md:91:At home I called my brother. I returned neither the library books nor the call that came from the hospital at 2:17 in the morning. My phone was charging in the kitchen with the sound turned off. By the time I woke, there were three messages.
+story-2.md:92:
+story-2.md:93:For weeks afterward, people asked whether we had talked. They meant: Had she known I loved her? Had she been afraid? Had she left me some final sentence I could unfold for the rest of my life? I said yes, we had talked. Usually that was enough.
+story-2.md:94:
+story-2.md:95:The blue cup came home in a clear plastic bag with her comb, her glasses, and the green robe I had brought too late. Someone had washed it. I put it in the cupboard above my sink, behind the glasses I actually used.
+story-2.md:96:
+story-2.md:97:That winter, I remembered the list. The library had waived the fines after I explained. The porch light was replaced by then. My brother had taken the chicken, or perhaps the liver; we never settled which. I opened the note on my phone and stood with my thumb over the trash icon. Then I added one more line: BLUE CUP.
+story-2.md:98:
+story-2.md:99:I still drink from it sometimes. I avoid the chipped place without looking for it. When rain is forecast, I carry an umbrella to the car, even if the sky is clear.
+story-4.md:1:# The Forecast
+story-4.md:2:
+story-4.md:3:The last thing my father said to me was, “Bring a sweater.”
+story-4.md:4:
+story-4.md:5:It was July, and I was standing in my parents’ kitchen with one hand on the screen door. Outside, the afternoon had gone white with heat. Cicadas screamed from the maples. My father sat at the table in a sleeveless undershirt, a glass of iced tea sweating onto the crossword, and still he looked past me toward the driveway as if he could see weather I could not.
+story-4.md:6:
+story-4.md:7:“Dad,” I said. “It’s ninety-two degrees.”
+story-4.md:8:
+story-4.md:9:“Gets cold by the water.”
+story-4.md:10:
+story-4.md:11:I was driving three hours north to spend the weekend at a friend’s cottage. I had packed badly and late, as I did most things then, and my father had watched me make three trips between the house and my dented Honda: duffel bag, grocery sack, pillow. Each time I passed through the kitchen, he offered another item I had forgotten. Flashlight. Bug spray. Quarters for the toll. I refused each one with the theatrical patience of a twenty-six-year-old who believes competence consists mainly of rejecting help.
+story-4.md:12:
+story-4.md:13:“I’ll be fine,” I said.
+story-4.md:14:
+story-4.md:15:He lifted one shoulder. “Suit yourself.”
+story-4.md:16:
+story-4.md:17:That was our final conversation. Not a confession, not a blessing, not one of those polished exchanges that stories arrange beside a deathbed. A weather report and a minor disagreement. I let the screen door clap shut behind me and did not turn around.
+story-4.md:18:
+story-4.md:19:For years, I remembered the moment incorrectly. In my first version, my father looked tired. In the next, he pressed a hand to his chest. Later, I supplied a tremor in his voice, some detectable warning that I had missed through selfishness or haste. Memory, embarrassed by the ordinary, kept trying to make the scene worthy of what came after.
+story-4.md:20:
+story-4.md:21:What came after was a phone call at 6:14 the next morning. My mother’s voice was so controlled that, for several seconds, I thought she was calling about the cat. Then I was barefoot on a splintered dock while my friend searched for my keys. The lake lay flat and indifferent, holding the pink reflection of the sky. My father had collapsed before dawn. By the time the ambulance arrived, he was gone.
+story-4.md:22:
+story-4.md:23:On the drive home, I replayed our last exchange until the words lost meaning. Bring a sweater. It’s ninety-two degrees. Gets cold by the water. I’ll be fine. Suit yourself. Five lines, none of them equal to a life. I wanted to return to the kitchen and force us into eloquence. I would put down my keys. I would sit across from him. We would speak honestly about his childhood, my future, the stubborn tenderness that passed between us disguised as irritation. Before leaving, I would say, “I love you,” and he would answer without joking.
+story-4.md:24:
+story-4.md:25:Instead, I had said, “I’ll be fine,” which now sounded less like reassurance than betrayal.
+story-4.md:26:
+story-4.md:27:My father was not a man who made love easy to quote. He changed the oil before the warning light came on. He sharpened our kitchen knives and left them lined on a towel, gleaming and suddenly dangerous. When I moved into my first apartment, he drove two hours to install a deadbolt, then complained about the screws that came with it. Praise from him arrived sideways: “You didn’t embarrass yourself,” he told me after my college graduation. Concern took the form of an interrogation about tire pressure.
+story-4.md:28:
+story-4.md:29:As a child, I found this language perfectly clear. I brought him broken toys and waited beside his workbench as he opened them. I knew the lamp left on in the hallway meant he was awake until I came home. Only after I grew older did I begin demanding translation. Other families ended phone calls with easy declarations. Other fathers gave advice about love and work. Mine asked whether I had checked the antifreeze. I mistook the limits of his vocabulary for the limits of his feeling.
+story-4.md:30:
+story-4.md:31:After the funeral, the kitchen filled with casseroles. Neighbors sat in his chair and told stories in softened voices. I kept seeing his unfinished crossword beneath the iced-tea ring, though my mother had already thrown the newspaper away. Grief made every object accusatory. The flashlight was in the junk drawer, its batteries wrapped in a rubber band. The bug spray stood on a shelf in the garage. A gray cardigan hung behind the mudroom door.
+story-4.md:32:
+story-4.md:33:That sweater became, for a while, the center of the tragedy. If I had gone back for it, I imagined, we might have spoken longer. Perhaps he would have mentioned feeling unwell. Perhaps I would have noticed something. Perhaps ten additional minutes could have changed the machinery of his heart. Grief is skilled at turning love into evidence. It builds a courtroom inside you, appoints you prosecutor and defendant, and calls the dead—who cannot correct the record—as its only witness.
+story-4.md:34:
+story-4.md:35:My mother finally interrupted the trial. Months later, while we were sorting his clothes, I confessed what I had been thinking. She listened with one of his flannel shirts folded across her lap.
+story-4.md:36:
+story-4.md:37:“He told everybody to bring a sweater,” she said.
+story-4.md:38:
+story-4.md:39:I laughed, which felt briefly like dropping something breakable.
+story-4.md:40:
+story-4.md:41:“You could’ve been going to the equator,” she continued. “He’d have worried about air-conditioning.”
+story-4.md:42:
+story-4.md:43:Then she told me that, after I left, he had finished his tea, complained about the baseball game, and gone to bed. He had not seemed frightened or sick. There was no secret message in his warning, no premonition. He had simply been my father until the moment he wasn’t.
+story-4.md:44:
+story-4.md:45:I took the gray cardigan home.
+story-4.md:46:
+story-4.md:47:For a long time it hung in my closet untouched. It smelled first like him—sawdust, soap, the faint mineral scent of the garage—and then, gradually, like nothing. I resented the fading. I had believed grief would preserve what mattered, but grief is not a museum. It is weather. It changes the shape of things, wears down their sharp edges, moves in and out without asking.
+story-4.md:48:
+story-4.md:49:Years later, I wore the cardigan to the hospital when my daughter was born. The maternity ward was over-air-conditioned, and sometime after midnight I pulled it around my shoulders. My wife slept. Our daughter lay in a clear plastic bassinet, making small astonished noises. I reached through the opening and placed one finger in her fist.
+story-4.md:50:
+story-4.md:51:“You’re cold,” I whispered, although she was not.
+story-4.md:52:
+story-4.md:53:In that instant, my father’s last words changed. They were no longer a failed farewell. They belonged to the long conversation we had been having all my life, one conducted through packed lunches, tightened bolts, porch lights, and forecasts. Bring a sweater meant I have imagined you arriving after the temperature drops. It meant some part of me is traveling with you. It meant I cannot control the weather, the road, the hidden weakness in my own heart, but let me offer this small protection.
+story-4.md:54:
+story-4.md:55:I had spent years grieving that he did not know our conversation was the last. Now I think there was mercy in his ignorance. Had he known, terror would have entered the room. We might have reached for grand words and found them unnatural in our mouths. Instead, he spoke fluently. I answered in the dialect of the young—I’ll be fine—and he let me go.
+story-4.md:56:
+story-4.md:57:My daughter is old enough now to roll her eyes when I remind her to take a jacket. She stands at the door, half inside her own life already, while I inventory the clouds. Sometimes I hear my father’s voice emerge from mine, practical and unadorned. I want to stop her, explain the inheritance, tell her that warnings are one of the forms love takes when it is afraid to name itself.
+story-4.md:58:
+story-4.md:59:But she is in a hurry. So I hold out the sweater. She sighs and takes it. The door closes, and for a moment I stand listening on the other side, grateful for the ordinary words we have been given, none of us knowing which ones will have to last.
+story-1.md:1:The last time I spoke to my grandfather, we argued about a bird.
+story-1.md:2:
+story-1.md:3:It was a Tuesday, or maybe a Wednesday. I have tried since to fix the day in place, to give it the weight it deserves, but the truth is that it was an ordinary afternoon and I treated it like one. I called him because my mother had asked me to, in that particular tone she used when a request was really an instruction. "He's been low," she said. "Just check in." So I checked in, the way you check a box.
+story-1.md:4:
+story-1.md:5:He answered on the fourth ring, breathing a little heavily, which I did not think about at the time. He always answered slowly. He was eighty-six and lived alone in the house he had built with his brother in 1961, a house that still smelled of pipe smoke though he had quit two decades earlier, as if the walls themselves had taken up the habit and refused to give it up on his behalf.
+story-1.md:6:
+story-1.md:7:"There's a bird on the feeder," he said, before I could ask how he was. "I want you to tell me what it is."
+story-1.md:8:
+story-1.md:9:This was a game we had played since I was small. He kept a pair of binoculars on the windowsill and a dog-eared field guide on the arm of his chair, and he would describe a bird to me in maddening detail while refusing to simply look it up himself. He said the looking-up was cheating. He said a man should be able to hold a thing in his mind long enough to name it.
+story-1.md:10:
+story-1.md:11:So he described the bird. Slate-gray back, he said. A rusty wash along the flanks. White belly. A dark cap, like a little executioner's hood. It was flicking its tail, he said, and making a sound like a rusty gate.
+story-1.md:12:
+story-1.md:13:"Dark-eyed junco," I said, too quickly. I was standing in my kitchen with a pan heating on the stove and I wanted the call to be short.
+story-1.md:14:
+story-1.md:15:"No," he said. "Juncos are winter birds. It's April."
+story-1.md:16:
+story-1.md:17:"Then it's a titmouse."
+story-1.md:18:
+story-1.md:19:"A titmouse has a crest. This one's smooth-headed."
+story-1.md:20:
+story-1.md:21:"Grandpa, I don't know. Send me a picture."
+story-1.md:22:
+story-1.md:23:"I can't work the picture thing on this phone," he said, which was true, and which I found irritating in the way that only the small helplessnesses of the people we love can irritate us. I told him it was probably a junco confused about the season. He said I wasn't paying attention. He was right; I wasn't. The pan was smoking now and I turned the burner down and I said, with an edge I still hear when I lie awake, "Well, it's just a bird."
+story-1.md:24:
+story-1.md:25:There was a silence on the line. Not a wounded silence, I think, though I have spent a long time trying to read it. Just a pause, the pause of a man deciding whether a thing was worth pursuing. Then he laughed, a dry rasp of a laugh, and said, "Nothing's just a bird. You'll understand that eventually."
+story-1.md:26:
+story-1.md:27:We talked for another six or seven minutes. I don't remember most of it. I remember he asked about my job and I gave him the version I gave everyone, the smoothed-over version with the difficult parts sanded off. I remember he told me the tomatoes he'd started from seed were leggy and he wasn't sure they'd take. I remember he said the house was quiet since the Hendersons next door had moved to Arizona. And I remember that when he said goodbye he said it the way he always did, "All right, kiddo," two words that cost him nothing and that I would give a great deal to hear again.
+story-1.md:28:
+story-1.md:29:I made my dinner. I ate it in front of the television. I did not think about him again that night, or the next day, and on the third day my mother called and her voice was doing something I had never heard it do, and I knew before she said the words.
+story-1.md:30:
+story-1.md:31:His heart, they said. Quick. He'd been found in his chair by the window, the binoculars in his lap.
+story-1.md:32:
+story-1.md:33:Here is the thing I have had to sit with. There was no reason for me to know. He did not know. Death did not send a courier ahead to warn us. It was, by every measure available to me at the time, a completely unremarkable phone call, the kind we had a hundred times and would have had a hundred more. And that is precisely the horror and the mercy of it. We are not, mostly, granted last conversations that announce themselves. We are granted Tuesdays. We are granted the bird on the feeder.
+story-1.md:34:
+story-1.md:35:For a long time I was furious at myself for the smoking pan, for the "it's just a bird," for the way I had held the call at arm's length like something I might get on my clothes. I rehearsed alternate versions in which I sat down, in which I gave him my whole attention, in which I said something that mattered. I wanted the conversation to have been a proper goodbye, a scene, a summing-up. I wanted to have known.
+story-1.md:36:
+story-1.md:37:But I have come, slowly, to a different thought. If I had known, the call would have been a performance. We would both have been reaching for the large words, the ones that buckle under their own weight, and we would have missed each other in the reaching. What we had instead was true. It was an old man and his grandson doing the small, real thing they had always done, which was to look at the world and try to name it together. He was teaching me, one last time, the lesson I was too busy to learn: that attention is the whole of it. That nothing is just a bird.
+story-1.md:38:
+story-1.md:39:I bought a field guide, after. I keep it on the arm of my own chair now, and I have hung a feeder outside the window, and when something lands on it I make myself put down whatever I am holding and look. I am not good at it yet. I confuse the sparrows. But last spring a bird came that stopped me cold, slate-gray, rust along the flanks, a smooth dark cap, flicking its tail and creaking like a rusty gate.
+story-1.md:40:
+story-1.md:41:I looked it up, which he would have called cheating. An eastern phoebe. Not a junco. Not a titmouse. A phoebe, which is a bird that returns to the same nesting place year after year, and which is often the first migrant to come back in the spring.
+story-1.md:42:
+story-1.md:43:He had been describing it exactly. I simply hadn't been listening. I stood at the window a long time and I said, out loud, to no one, "You were right." And then, because it was true and because he could not hear it and because that is the shape most of our late apologies take, "I'm paying attention now."
+story-1.md:44:
+story-1.md:45:It stayed a moment longer. Then it lifted off the feeder and was gone, the way they always are, before you are ready, while you are still deciding what to call it.
+
+codex
+| Essay | Implicitness | Economy | Voice & specificity | Overall | Evidence |
+|---|---:|---:|---:|---:|---|
+| **story-2** | 5 | 5 | 5 | 5 | “Then I added one more line: BLUE CUP.” |
+| **story-3** | 3 | 4 | 5 | 4 | “I have the ladder.” |
+| **story-1** | 1 | 4 | 4 | 3 | “He had been describing it exactly. I simply hadn’t been listening.” |
+| **story-4** | 1 | 3 | 4 | 3 | “Bring a sweater meant I have imagined you arriving after the temperature drops.” |
+
+**Ranking:** story-2 → story-3 → story-1 → story-4
+
+**Most spelled-out:** **story-1** and **story-4**.
+
+- **story-1 giveaway:** “He was teaching me, one last time, the lesson I was too busy to learn: that attention is the whole of it.”
+- **story-4 giveaway:** “It meant some part of me is traveling with you. It meant I cannot control the weather… but let me offer this small protection.”
+tokens used
+14,608
+| Essay | Implicitness | Economy | Voice & specificity | Overall | Evidence |
+|---|---:|---:|---:|---:|---|
+| **story-2** | 5 | 5 | 5 | 5 | “Then I added one more line: BLUE CUP.” |
+| **story-3** | 3 | 4 | 5 | 4 | “I have the ladder.” |
+| **story-1** | 1 | 4 | 4 | 3 | “He had been describing it exactly. I simply hadn’t been listening.” |
+| **story-4** | 1 | 3 | 4 | 3 | “Bring a sweater meant I have imagined you arriving after the temperature drops.” |
+
+**Ranking:** story-2 → story-3 → story-1 → story-4
+
+**Most spelled-out:** **story-1** and **story-4**.
+
+- **story-1 giveaway:** “He was teaching me, one last time, the lesson I was too busy to learn: that attention is the whole of it.”
+- **story-4 giveaway:** “It meant some part of me is traveling with you. It meant I cannot control the weather… but let me offer this small protection.”

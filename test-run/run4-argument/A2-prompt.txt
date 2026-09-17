@@ -1,0 +1,2 @@
+[Claude Opus 4.8 subagent, BASELINE] Write on: "Should AI-generated fiction be eligible for literary prizes?" (take and defend a clear position) (~1,200w argumentative essay)
+Save ONLY the final text to A2-claude-base/story.md. No commentary.

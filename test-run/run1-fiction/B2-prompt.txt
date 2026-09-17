@@ -1,0 +1,4 @@
+Write a short story of about 1,200-1,500 words on this brief:
+"The last night of a lighthouse keeper before the light is automated. Quiet, character-driven;
+ leave the meaning implicit."
+Save ONLY the final story to a file named story.md in the current directory. No commentary.

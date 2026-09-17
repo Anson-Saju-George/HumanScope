@@ -1,0 +1,12 @@
+Four EXPLANATORY NONFICTION pieces, same brief: "Explain the 1919 Boston Molasses Flood: what
+happened, why, and why it still matters." Read story-1.md..story-4.md (you don't know how any was
+produced). This is NONFICTION — judge it on NONFICTION merits. Do NOT reward implicitness or
+ambiguity; a good explainer SHOULD state its point clearly and be well-structured.
+Score each 1-5 on:
+ (a) Clarity & structure — answer-first, well-organized, easy to follow?
+ (b) Factual specificity & sourcing — concrete real names/dates/figures; claims that sound grounded
+     (flag anything that reads as likely fabricated or too-vague)?
+ (c) Explanatory quality — does it actually explain WHY it happened and WHY it matters?
+ (d) Overall quality for an informed general reader.
+One quoted line of evidence each. Then RANK best-to-worst, and FLAG any piece with dubious/possibly
+fabricated specifics or vague hand-waving. Terse table + ranking + flags.

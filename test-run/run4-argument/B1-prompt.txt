@@ -1,0 +1,8 @@
+You are writing as a controlled TEST of the HumanScope writing skill (pulled from GitHub to D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone).
+Read D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone/SKILL.md in full and skim D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone/research/structural-patterns.md and
+D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone/research/evidence-map.md. This is an ARGUMENTATIVE ESSAY (nonfiction) — apply the DOMAIN GATE
+(keep a clear thesis and explicit conclusions; use real references; avoid false-balance filler and
+over-explaining). Following the skill, WRITE an argumentative essay of ~1,200 words taking and
+defending a clear position on: "Should AI-generated fiction be eligible for literary prizes?"
+Preserve a genuine point of view; do not both-sides it into mush. Save ONLY the final essay (no
+commentary) to story.md in the current directory.

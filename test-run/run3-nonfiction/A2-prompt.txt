@@ -1,0 +1,2 @@
+[Claude Opus 4.8 subagent, BASELINE] Write on: "Explain the 1919 Boston Molasses Flood: what happened, why, and why it still matters." (~1,200-1,500w explanatory nonfiction)
+Save ONLY the final text to A2-claude-base/story.md. No commentary.

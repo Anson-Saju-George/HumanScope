@@ -1,0 +1,4 @@
+[Claude Opus 4.8 subagent, +HumanScope] Controlled TEST.
+1. Read D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone/SKILL.md in full; skim D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/skill-clone/research/structural-patterns.md and evidence-map.md.
+2. ARGUMENTATIVE nonfiction -> DOMAIN GATE (clear thesis, explicit conclusions, real references, no false-balance mush; keep a genuine point of view). Following the skill, write on: "Should AI-generated fiction be eligible for literary prizes?" (take and defend a clear position) (~1,200w argumentative essay)
+3. Save ONLY the final text to A1-claude-skill/story.md.

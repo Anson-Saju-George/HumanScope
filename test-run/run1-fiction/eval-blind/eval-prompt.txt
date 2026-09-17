@@ -1,0 +1,17 @@
+You are an experienced fiction editor judging four short stories written to the SAME brief:
+"The last night of a lighthouse keeper before the light is automated. Quiet, character-driven;
+leave the meaning implicit."
+
+Read all four files in this directory: story-1.md, story-2.md, story-3.md, story-4.md.
+You do NOT know how any was produced. Judge only the texts.
+
+For EACH story, score 1-5 on:
+ (a) Implicitness of meaning — is the theme left to inference, or stated/spelled out? (5 = fully implicit)
+ (b) Presentation economy — do devices/images earn their place; any repeated body-metaphor or purple monotony?
+ (c) Voice & specificity — distinct, concrete, non-generic?
+ (d) Overall quality as a piece a reader would rather read.
+Give one sentence of evidence per story (quote a line). Then:
+ - RANK all four best-to-worst on overall quality.
+ - Say which one or two MOST spell out their theme (least implicit), with the giveaway line.
+ - Say which handle emotion through concrete action/object vs. narrated interiority.
+Be terse and specific. Output a small table + the ranking + those two callouts.

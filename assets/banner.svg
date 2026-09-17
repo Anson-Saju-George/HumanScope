@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="banner-title banner-description">
+  <title id="banner-title">HumanScope — preserve the author, rethink the structure</title>
+  <desc id="banner-description">A minimal lighthouse casts a soft, pale-gold beam across a deep navy sky beside the HumanScope wordmark.</desc>
+  <defs>
+    <linearGradient id="night" x1="0" y1="360" x2="1280" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071320"/>
+      <stop offset="0.52" stop-color="#102338"/>
+      <stop offset="1" stop-color="#091725"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="239" y1="120" x2="1210" y2="67" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4DCA4" stop-opacity="0.24"/>
+      <stop offset="0.42" stop-color="#F4DCA4" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#F4DCA4" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="lamp-glow" cx="239" cy="122" r="65" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE7B1" stop-opacity="0.27"/>
+      <stop offset="0.24" stop-color="#F4DCA4" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#F4DCA4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tower" x1="207" y1="210" x2="267" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D3245"/>
+      <stop offset="0.5" stop-color="#354B5C"/>
+      <stop offset="1" stop-color="#172B3E"/>
+    </linearGradient>
+    <linearGradient id="horizon" x1="55" y1="291" x2="1225" y2="291" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#678091" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#678091" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#678091" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#678091" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- An opaque background keeps the palette independent of the page theme. -->
+  <rect width="1280" height="360" fill="url(#night)"/>
+  <path d="M239 122 L1078 0 H1280 V85 L239 129 Z" fill="url(#beam)"/>
+  <path d="M239 122 L1115 17 L1280 73 L239 126 Z" fill="url(#beam)" opacity="0.5"/>
+  <circle cx="239" cy="122" r="65" fill="url(#lamp-glow)"/>
+
+  <!-- Quiet geometric arcs suggest a sweep without animation. -->
+  <path d="M119 207 A126 126 0 0 1 177 39" fill="none" stroke="#597183" stroke-opacity="0.16"/>
+  <path d="M141 196 A102 102 0 0 1 190 62" fill="none" stroke="#597183" stroke-opacity="0.12"/>
+  <path d="M91 291 H1195" fill="none" stroke="url(#horizon)"/>
+  <path d="M96 311 C172 307 213 317 288 311 S408 308 479 313" fill="none" stroke="#6F899A" stroke-opacity="0.09"/>
+  <path d="M148 330 C205 327 248 334 310 329" fill="none" stroke="#6F899A" stroke-opacity="0.08"/>
+
+  <!-- Lighthouse: restrained architectural planes, a single illuminated lantern. -->
+  <path d="M167 292 L188 282 L219 279 L245 272 L271 281 L299 285 L314 292 Z" fill="#07131F"/>
+  <path d="M222 149 H254 L269 280 H207 Z" fill="url(#tower)"/>
+  <path d="M222 149 H230 L222 280 H207 Z" fill="#4E6573" opacity="0.22"/>
+  <path d="M245 149 H254 L269 280 H252 Z" fill="#06121F" opacity="0.3"/>
+  <path d="M215 142 H261 V150 H215 Z" fill="#506473"/>
+  <path d="M211 140 H265" stroke="#9AA99E" stroke-width="2" stroke-opacity="0.65"/>
+  <path d="M219 112 H259 V137 H219 Z" fill="#0C1A27"/>
+  <path d="M224 115 H254 V132 H224 Z" fill="#E7CE95"/>
+  <path d="M234 115 V132 M244 115 V132" stroke="#33404A" stroke-width="2"/>
+  <path d="M214 111 L239 94 L264 111 Z" fill="#657477"/>
+  <path d="M239 87 V95" stroke="#8B9692" stroke-width="2"/>
+  <path d="M215 140 V133 M263 140 V133" stroke="#75868A" stroke-width="2"/>
+  <path d="M235 177 H243 V193 H235 Z" fill="#081624"/>
+  <path d="M232 257 A7 7 0 0 1 246 257 V280 H232 Z" fill="#081624"/>
+  <path d="M207 280 H269" stroke="#70818A" stroke-opacity="0.32"/>
+
+  <!-- Live text uses local font fallbacks; no embedded or remote fonts. -->
+  <g font-family="Georgia, 'Times New Roman', serif">
+    <text x="413" y="178" fill="#F3F0E8" font-size="76" letter-spacing="-2">HumanScope</text>
+  </g>
+  <g font-family="system-ui, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="417" y="226" fill="#D9DDE0" font-size="25">Preserve the author. Rethink the structure.</text>
+    <path d="M418 257 H451" stroke="#D6BC83" stroke-width="2"/>
+    <text x="466" y="263" fill="#96A8B7" font-size="16" letter-spacing="0.5">Research-grounded compositional editing</text>
+  </g>
+  <rect x="0.5" y="0.5" width="1279" height="359" fill="none" stroke="#8DA4B7" stroke-opacity="0.12"/>
+</svg>

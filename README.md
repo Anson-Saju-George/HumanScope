@@ -1,8 +1,8 @@
 <div align="center">
 
-# HumanScope
+<img src="assets/banner.svg" alt="HumanScope — preserve the author, rethink the structure" width="100%">
 
-**Preserve the author. Rethink the structure.**
+# HumanScope
 
 A research-informed writing skill for composition, clarity, and author intent.
 

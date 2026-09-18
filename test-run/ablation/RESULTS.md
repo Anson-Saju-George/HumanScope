@@ -30,9 +30,13 @@ EXPOSITORY writing (nonfiction, argument), where the leaner compact four-slot di
   overconfident"* (2nd place both times).
 - **Ordinary editing (O) never won** (last in 3 of 4; middle once) — so *some* disciplined
   conditioning beats none, but the *kind* should match the genre.
-- **Concrete design implication:** route by genre — **full lenses for narrative; the compact
-  four-slot rule for expository/argumentative.** A future "HumanScope-lite" expository mode is worth
-  building.
+- **Concrete design implication (adopted, but softened per adversarial review):** choose **review
+  depth by the passage's *function*** — lean review for explanatory/argumentative passages, fuller
+  lens review for scene/experience-driven ones — rather than a hard genre split. Shipped as SKILL.md
+  §4 "Choose the review depth by purpose." **Caveat (Astra):** the SKILL.md lean path is NOT
+  literally the tested arm C (C was four-slot-only; the shipped lean path keeps substantive review of
+  information, support, and placement), and O was ordinary *generation* not editing — so this is a
+  design lead the ablation is *consistent with*, not a validated recipe.
 - Notable: the compact arm produced real references on the argument topic *without* an explicit
   "cite real things" lens — a disciplined model does it when the genre calls for it, mild evidence
   the L5 lens isn't load-bearing outside narrative.

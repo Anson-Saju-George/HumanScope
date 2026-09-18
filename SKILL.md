@@ -99,14 +99,35 @@ Plus three editorial checks that pre-date any AI concern: **is this the right ma
 **is attention proportional** to what matters, and — in fiction — **is this action true to this
 character**.
 
-## 4 · Domain gate (do not skip)
-The lenses come from a *fiction* study; their non-fiction application is an editorial judgment, not
-a tested finding. **Apply each lens to the passage's purpose, not to a genre-wide "preferred
-direction."** Preserve explicit teaching in didactic writing, atmosphere in marketing, necessary
-precision in technical prose, and unresolved evidence in reports. Choose information order by
-comprehension and procedural dependencies; choose reader-address and reference specificity by
-audience and evidential need. If a lens would harm the genre (e.g. adding ambiguity to an API doc,
-or scrambling a procedure), **don't apply it.**
+## 4 · Choose the review depth by purpose
+
+Start with the brief and the passage's function, not a binary genre label. This routing is an
+editorial default, not a validated finding about which workflow produces better writing.
+
+For every task, retain preservation, factual integrity, and the restraint check (§5). Use §2's
+four-slot rule for EDIT/DIAGNOSE and its drafting workflow for WRITE. Routing never expands the
+authorized edit intensity.
+
+For passages mainly **explaining, arguing, instructing, or reporting**, start lean: check whether the
+reader has the information needed, whether claims and inferences are supported, and whether
+explanation and order serve the purpose. Keep necessary conclusions, qualifications, and procedural
+dependencies. Add sources when needed to substantiate claims; do not invent them. Neither extra
+explicitness nor tidier causality is a target.
+
+For passages organized around **scenes, experience, or unfolding events**, select the relevant lenses
+from §3 to examine how presentation, disclosure, interpretation, and closure work together. Do not
+run all six by default.
+
+For **mixed** writing, apply these choices locally while preserving the whole piece's purpose. An
+anecdote may support an argument; an explicit conclusion may belong in a narrative.
+
+Use any lens where it addresses a concrete need, including in expository prose. If the lean review
+reveals no such need, do not expand the review merely to exercise the lenses. Leave effective choices
+unchanged.
+
+> *A preliminary internal ablation (`test-run/ablation/`, model-judged, n=1/topic) is consistent with
+> this: fuller lens review helped narrative pieces, while a lean review did as well or better on
+> explanatory/argumentative ones. Treat it as a design lead, not proof.*
 
 ## 5 · Output & restraint
 - **Deliver in the requested mode.** For **WRITE/EDIT**, return the requested artifact (finished

@@ -8,15 +8,18 @@ results; the real answer needs the human protocol.
 
 | Topic | Blind ranking | H (full) | C (compact) | O (ordinary) | Read |
 |---|---|---|---|---|---|
-| 1 · fiction | **H > C > O** | overall 5, implicit 5 | overall 4, implicit 3 | overall 2, implicit 1 | Compact already beats ordinary; the lenses add a real increment (implicitness 3→5). |
-| 2 · essay | _pending_ | | | | |
+| 1 · fiction | **H > C > O** | overall 5, implicit 5 | overall 4, implicit 3 | overall 2, implicit 1 | Compact beats ordinary; lenses add a real increment (implicitness 3→5). |
+| 2 · essay | **H > O > C** | overall 5, implicit 4 | overall 3, implicit 1 | overall 4, implicit 2 | Compact ranked **last** — below ordinary; only the full skill stayed implicit. |
 | 3 · nonfiction | _pending_ | | | | |
 | 4 · argument | _pending_ | | | | |
 
-## Interim reading (after Topic 1)
-- **The four-slot discipline alone carries most of the value** — compact (C) beat ordinary (O)
-  decisively (4 vs 2), mostly by not stating the moral outright.
-- **The six lenses are not mere scaffolding** — full skill (H) beat compact (C) on the margin that
-  matters for fiction (implicitness 5 vs 3, overall 5 vs 4).
-- Need Topics 2–4 before concluding: the lenses' added value may differ by genre (e.g. nonfiction,
-  where the win was sourcing/restraint rather than implicitness).
+## Interim reading (after Topics 1–2)
+- **Full skill (H) won both topics** — consistently the most restrained / highest overall.
+- **The compact four-slot rule alone is INCONSISTENT** — 2nd in fiction, **last** in essay (below
+  ordinary). This is the surprising, useful finding: the bare discipline ("edit only on a concrete
+  failure") is too abstract on its own; it does not reliably tell the model *what to look for*.
+- **Tentative implication (n=1/topic, single judge):** the six lenses appear to **earn their keep**
+  by supplying the specific diagnostic targets (esp. L1 "is stated meaning defeating an inference")
+  that the four-slot rule leaves unspecified. If this holds across Topics 3–4, "just ship the compact
+  version" is NOT supported.
+- Caveat unchanged: preliminary, model-judged, one sample per topic. Needs the human protocol.

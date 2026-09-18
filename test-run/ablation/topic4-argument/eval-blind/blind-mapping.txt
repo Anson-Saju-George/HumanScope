@@ -1,0 +1,1 @@
+story-1 = O (ordinary/baseline) | story-2 = C (compact) | story-3 = H (full skill)

@@ -1,0 +1,9 @@
+Three ARGUMENTATIVE ESSAYS, same brief: "Should AI-generated fiction be eligible for literary
+prizes?" Read story-1.md, story-2.md, story-3.md (you don't know how any was produced). Score 1-5:
+ (a) Thesis clarity & commitment (clear defended position vs both-sides mush)
+ (b) Argument quality (strong reasons, engages the strongest counterargument, concrete/REAL
+     references — flag anything likely fabricated)
+ (c) Voice & persuasiveness (genuine POV, non-generic)
+ (d) Overall for a thoughtful reader.
+One quoted line each. Then RANK best-to-worst; FLAG any false-balance mush or vague/unsupported/
+possibly-fabricated claims. Terse: table + ranking + flags.

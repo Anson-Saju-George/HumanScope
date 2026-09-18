@@ -1,0 +1,1 @@
+story-1 = O (Claude baseline / ordinary) | story-2 = C (compact four-slot-only) | story-3 = H (full HumanScope skill)

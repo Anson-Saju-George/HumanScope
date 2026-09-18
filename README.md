@@ -139,11 +139,34 @@ editing, and HumanScope editing. It considers reader preference, fidelity, factu
 and restraint. Detector scores are excluded. The repository also includes
 [test cases](evals/cases.md) and a [self-scored smoke test](evals/smoke-test.md).
 
+## Related work / prior art
+
+HumanScope is **not the first** skill to build on StoryScope, and it stands on a shared lineage —
+credit where due:
+
+- **[NulightJens/humanizer-stack](https://github.com/NulightJens/humanizer-stack)** — a two-pass
+  (surface + structural) Claude-skill pipeline grounded in StoryScope, with **deterministic Python
+  scanners**. Ahead of us on reproducibility and inspectability.
+- **[ccf/humanize](https://github.com/ccf/humanize)** — a StoryScope-grounded skill drawing on ~13
+  peer-reviewed sources, multi-platform, and explicit about avoiding authorship inference.
+- **[blader/humanizer](https://github.com/blader/humanizer)** and
+  **[Matt-Payne/content-humanizer](https://github.com/Matt-Payne/content-humanizer)** — the
+  surface-level humanizers our secondary-source analysis studied.
+
+**What HumanScope contributes is a *discipline*, not a first-mover claim:** every edit must clear the
+four-slot test (evidence → intended effect → present failure → smallest change), "AI-like" is not an
+allowed reason to edit, "no change" is always valid, and lenses are gated by genre and purpose — with
+an explicit refusal to optimize for detectors. Whether that discipline produces *better reading for a
+human* than a well-instructed ordinary edit is the open question our evaluation is built to answer.
+
 ## 🗺️ Roadmap
 
 - [x] Experimental skill with six conditional lenses
-- [x] Worked examples, evaluation rubric, and exploratory runs
-- [ ] Broader blind evaluation with human raters
+- [x] Worked examples, evaluation rubric, and exploratory model-judged runs
+- [x] [Prior-art acknowledgment](#related-work--prior-art)
+- [ ] **Decisive test:** 3-way blind *human* eval — HumanScope vs. a compact four-slot-only variant
+  vs. competent ordinary editing ([protocol](evals/human-eval-protocol.md)); answers both "beats
+  ordinary editing?" and "do the six lenses earn their complexity?"
 - [ ] Chrome extension for editing text in context
 - [ ] Further evaluation and guidance for nonfiction genres
 

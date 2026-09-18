@@ -138,26 +138,30 @@ blind judge's ranking — 8 / 8 cells.**
 | 3 · nonfiction | B1 > B2 > A1 > A2 | A1 > A2 ✓ | B1 > B2 ✓ |
 | 4 · argument | A1 > B1 > B2 > A2 | A1 > A2 ✓ | B1 > B2 ✓ |
 
-**Takeaways (honest):**
-- **Consistent within-runtime benefit**, blind-judged, across fiction, essay, nonfiction, and
-  argument — **8/8 cells**.
-- **The skill's *mechanism* changes by genre**, which is the encouraging part (it's not one trick):
-  - *Fiction / personal essay* → **implicitness**: it stops the model stating the moral. Both
-    baselines in the essay run were flagged for spelling out the lesson.
-  - *Explanatory nonfiction* → **restraint + factual/sourcing discipline**; the **domain gate held**
-    (it did not "humanize" tidy prose). Codex+skill was the only fully clean piece.
-  - *Argument* → **concrete real references (L5) + voice**; both baselines were "generic / under-
-    evidenced," both skill essays cited real cases.
-- **Effect size scales with the baseline's habit** — largest where the model's default was weakest
-  (Claude's over-explaining on fiction/essay; the abstract/under-evidenced Claude argument baseline,
-  which ranked last in Run 4).
-- **Codex `gpt-5.6-sol`+skill ranked #1 in three of four runs; Claude+skill took #1 in Run 4.**
-- **Honest counter-signals:** reaching for real references (Run 4) introduced minor factual
-  overstatements in the skill essays (a contested "5%" figure) — grounded but not perfectly precise;
-  and in nonfiction the skill improved but did not guarantee accuracy.
-- **Methodology note:** Runs 1–3 judges never referenced the label map (verified) and produced
-  non-monotonic rankings, so blindness held; Run 4 was additionally run in an **isolated judge dir**
-  with the map absent, and the judge web-fact-checked. Still **n = 1 per cell, single LLM judge** — a
-  demonstration, not a statistical or human-rated study. See `rubric.md` for the intended full protocol.
+**Takeaways (honest — and deliberately not overstated; see the caveats, which govern):**
+- **What the data actually licenses:** across 4 prompts × 2 runtimes, a single blinded LLM judge
+  ranked each HumanScope-conditioned output **above its own baseline in all 8 cells**. That is
+  encouraging preliminary evidence of useful steering — nothing more.
+- **What it does NOT license (per adversarial review):**
+  - Not "8 independent replications" and not "8 decisive score improvements" — several *overall
+    scores tied* (e.g. skill/baseline both 5 in some runs); the 8/8 is on **ranking**, not margin.
+  - Rankings **cannot identify a mechanism**. The judge's *stated reasons* differed by genre
+    (implicitness on fiction/essay; sourcing/restraint on nonfiction; real references on argument) —
+    that is a description of the judge's rationale, **not** a demonstrated per-genre mechanism, and
+    not evidence that "effect size scales with the baseline's habit."
+  - These were **generation (WRITE) tests**; they do **not** test the skill's *editing restraint*
+    (whether it correctly leaves strong existing text alone) — a core claim still unverified.
+  - "Preserved voice" is not shown: freshly generated text can't demonstrate preservation of an
+    existing author's voice.
+- **The judge is itself an LLM** sharing a model family with one generator; it may favor the skill's
+  aesthetics. Fact-checking (Runs 3–4) added substance, but skill outputs still contained factual
+  overstatements (the contested "5%").
+- **Blindness:** Runs 1–3 judges never referenced the label map and produced non-monotonic rankings,
+  which is **consistent with** blindness (it does not *prove* it); Run 4 additionally used an
+  isolated judge dir with no map present.
+- **Bottom line:** **n = 1 per cell, single LLM judge, generation-only.** A demonstration that models
+  prefer the conditioned output — NOT evidence that a human reader is better served, nor that the six
+  lenses beat a compact four-slot-only version. Those are exactly what
+  [`human-eval-protocol.md`](human-eval-protocol.md) is designed to test.
 
 _Raw overviews: `research/raw-model-output/codex-blind-overview-run2.txt` … `run4.txt`._

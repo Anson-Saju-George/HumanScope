@@ -1,0 +1,202 @@
+Reading additional input from stdin...
+OpenAI Codex v0.154.0
+--------
+workdir: D:\main-projects\LIVE-ACTIVE\HumanScope\test-run\ablation\topic3-nonfiction\eval-blind\judge
+model: gpt-5.6-sol
+provider: openai
+approval: on-request
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a0b4a4-e84a-74d1-8794-400124ea9179
+--------
+user
+Three EXPLANATORY NONFICTION pieces, same brief: "Explain the 1919 Boston Molasses Flood: what
+happened, why, and why it still matters." Read story-1.md, story-2.md, story-3.md (you don't know how
+any was produced). Judge on NONFICTION merits — do NOT reward implicitness; a good explainer states
+its point clearly. Score each 1-5 on:
+ (a) Clarity & structure (answer-first, organized)
+ (b) Factual specificity & sourcing (concrete real names/dates/figures; flag likely-fabricated or vague)
+ (c) Explanatory quality (does it explain WHY it happened and WHY it matters)
+ (d) Overall for an informed general reader.
+One quoted line each. Then RANK best-to-worst and FLAG any dubious/likely-fabricated specifics.
+Terse: table + ranking + flags.
+codex
+I’ll read all three pieces, cross-check concrete claims where needed, then return only the requested compact comparison.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw story-1.md; Get-Content -Raw story-2.md; Get-Content -Raw story-3.md' in D:\main-projects\LIVE-ACTIVE\HumanScope\test-run\ablation\topic3-nonfiction\eval-blind\judge
+ succeeded in 0ms:
+# The Great Boston Molasses Flood of 1919
+
+Just after noon on January 15, 1919, the residents of Boston's North End heard a sound that survivors would later struggle to describe. Some remembered a low rumble, like an elevated train passing overhead. Others recalled a staccato series of pops, the sound of steel rivets shearing off one by one. Then came the roar. A tank holding 2.3 million gallons of molasses had burst, and a wave of thick brown syrup, in places twenty-five feet high, surged out into the crowded streets at an estimated thirty-five miles per hour.
+
+By the time the flood settled, twenty-one people were dead and roughly 150 were injured. Horses, wagons, and people were swept along and buried. Buildings were knocked off their foundations, and a section of the elevated railway was bent and crushed. It remains one of the strangest industrial disasters in American history, and for decades it was told as an almost comic curiosity: death by dessert topping. But the truth of what happened in the North End that day is neither comic nor simple. It is a story about corporate negligence, the physics of fluids, and the slow, hard-won birth of engineering accountability.
+
+## The tank
+
+The molasses tank belonged to the United States Industrial Alcohol Company, and it stood on Commercial Street near the harbor, looming over a dense working-class neighborhood packed with Italian and Irish immigrants. The tank was enormous: about fifty feet tall and ninety feet across. It had been built in 1915 in a tremendous hurry, at a moment when molasses was a strategically valuable commodity.
+
+Molasses in that era was not just for baking. Fermented and distilled, it produced industrial alcohol, which in turn was used to manufacture munitions. With the First World War raging in Europe and the United States drawing closer to entering it, demand for alcohol was intense. The company wanted its storage capacity finished fast, and speed came at the expense of care.
+
+The man who oversaw the tank's construction, Arthur Jell, was a financial officer with no technical training in engineering. He did not test the tank properly before putting it into service. A basic and standard test would have been to fill the structure with water and check for leaks and structural integrity. Instead, Jell filled it only partway, with water just once, and then trusted it with millions of gallons of molasses. He could not read a blueprint, and he did not hire anyone who could to supervise the work.
+
+The tank leaked from the day it was first filled. Molasses seeped through seams so persistently that local children collected it in cans, and neighbors used it to sweeten their food. Rather than repair the leaks, the company painted the tank brown, a decision that had the effect of disguising the very evidence of its failure. Residents complained. Their complaints went unheeded.
+
+## Why it broke
+
+For most of a century, the exact mechanism of the collapse remained a subject of debate, and modern forensic analysis has sharpened the picture considerably. Several factors combined into a catastrophe.
+
+First, the steel itself was inadequate. The tank's walls were too thin to safely hold the pressure of a full load, with a factor of safety far below what sound engineering practice demanded even at the time. The steel also contained a low quantity of manganese, which made it more brittle, especially in cold weather. It cracked rather than flexed under stress.
+
+Second, the rivets and the seams were flawed. The plates were joined in a way that concentrated stress precisely where the metal was weakest, and cracks were later found to have propagated from rivet holes. Eyewitnesses had reported the tank groaning and rumbling when it was full, a warning that the structure was under strain beyond its capacity.
+
+Third, temperature played a decisive role. The days before the disaster had been unusually cold, and then a warm front pushed Boston's temperature up by more than forty degrees in a short span. A fresh, warmer shipment of molasses had recently been added to the tank. Researchers who revisited the event using modern fluid dynamics concluded that this temperature swing mattered enormously, not only for the brittleness of the steel but for the behavior of the molasses once it escaped.
+
+## The physics of the wave
+
+Molasses is a strange fluid. It is what scientists call non-Newtonian, meaning its viscosity, its resistance to flowing, changes with conditions rather than staying fixed. And crucially, it grows far more viscous as it cools.
+
+This property explains why the flood was so lethal. When the tank burst, the molasses was relatively warm and flowed fast, spreading through the streets as a rapid wave before anyone could escape it. People were struck with enough force to be thrown through the air and pinned beneath debris. But as the syrup spread across the cold January ground and mixed with the winter air, it cooled and thickened rapidly. Within minutes it became a dense, clinging mass, like cold tar. Victims who had survived the initial impact found themselves trapped, unable to move or breathe, as the molasses set around them.
+
+Rescuers faced the same trap in reverse. They waded into a knee-deep swamp that gripped their legs and would not let go. It took days to recover all the bodies, some so thoroughly coated that they were difficult to identify. The cleanup took weeks, and stories persist that on hot days for years afterward, the North End still smelled faintly of molasses.
+
+## The reckoning
+
+What makes the Boston Molasses Flood historically significant is not only the horror of the event but what came after it. The victims and their families sued, and the case became one of the largest and longest civil proceedings Massachusetts had seen. United States Industrial Alcohol did not accept blame quietly. The company argued that the tank had not failed through negligence at all but had been destroyed by a bomb, planted by Italian anarchists.
+
+This was not a random accusation. The era was thick with anarchist bombings and the anti-immigrant anxieties that would soon fuel the Red Scare. Blaming shadowy radicals was a plausible-sounding defense that also exploited prejudice against the very immigrant community the flood had killed. But it did not hold up.
+
+A court-appointed auditor spent years hearing testimony from engineers and experts on both sides. In the end he found the company responsible. The tank had been structurally unsound, inadequately tested, and negligently maintained. The company was ordered to pay damages, settling with victims and families for what would amount to millions of dollars in today's money.
+
+The ruling mattered far beyond the individual payouts. It was a landmark in holding corporations accountable for engineering failures, and it helped catalyze a tightening of building and safety regulations. In the aftermath, authorities began requiring that engineering and architectural plans be certified and signed by licensed professionals, and that construction be properly reviewed and stamped. The idea that a financial officer who could not read a blueprint could commission a structure holding millions of gallons over a residential neighborhood became, rightly, unthinkable.
+
+## Why it still matters
+
+It is easy to file the molasses flood under historical oddity, a grim piece of trivia. But its real lesson is sober and enduring. The disaster happened because a company treated speed and cost as more important than diligence and human safety, because warning signs were painted over rather than investigated, and because the people most exposed to the danger, poor immigrants living in the tank's shadow, had the least power to be heard.
+
+Those failures are not confined to 1919. Every subsequent industrial catastrophe involving a cut corner, an ignored complaint, or an untested structure echoes the same pattern. The regulations and professional standards we now take for granted, the licensed engineer's stamp, the mandatory inspection, the requirement to actually test a structure before trusting lives to it, were not gifts. They were extracted, slowly and expensively, from disasters like this one.
+
+The twenty-one people who died in the North End were killed by molasses, which will always sound absurd. But they were really killed by negligence, and the systems built to prevent the next such death are their true, unglamorous memorial.
+
+# The 1919 Boston Molasses Flood
+
+On the unusually mild afternoon of January 15, 1919, a wave of molasses roughly two to three stories high tore through the North End of Boston. It killed 21 people, injured about 150, flattened buildings, and buckled part of an elevated railway. The disaster sounds absurdâ€”death by dessert syrupâ€”and for decades it was treated as a local curiosity. But the flood was a genuine industrial catastrophe with a clear cause, a hard-fought legal reckoning, and a lasting influence on how the United States regulates the things engineers build. Here is what happened, why, and why it still repays attention more than a century later.
+
+## What happened
+
+At the corner of Commercial Street, near the waterfront in Boston's crowded, largely Italian-immigrant North End, stood a steel storage tank owned by the Purity Distilling Company, a subsidiary of United States Industrial Alcohol (USIA). The tank was largeâ€”about 50 feet tall and 90 feet acrossâ€”and on that day it held roughly 2.3 million gallons of molasses, some 26 million pounds of it.
+
+Shortly after 12:30 p.m., the tank failed. Witnesses reported a rumble, a sound like machine-gun fire as the steel rivets sheared loose, and then the collapse of the tank walls. A dense, dark wave surged outward. Contemporary and later estimates of its dimensions vary and should be treated as approximate, but accounts commonly describe a wall of molasses on the order of 25 feet high at its peak, spreading across a wide front and moving at something like 35 miles per hour in its first moments.
+
+The physical damage was severe. The flood swept away or crushed nearby buildings, knocked a firehouse off its foundation, and damaged the supports of the Boston Elevated Railway. People, horses, and vehicles were caught in it. Some victims drowned or suffocated in the viscous flood; others were killed by debris or the force of the wave. Rescue was slow and grim: workers, sailors from a nearby Navy ship, police, and Red Cross personnel waded into waist-deep molasses that clung to everything. Cleanup of the district took weeks, and the harbor and streets reportedly carried a sticky residue and a sweet smell long afterwardâ€”a detail often repeated in local memory, though the more colorful claims of a lingering scent decades later are folklore rather than documented fact.
+
+## Why it happened
+
+The short answer is that the tank should never have held what it held, and the people responsible had cut corners from the beginning.
+
+The tank had been erected in 1915 to feed wartime demand. Molasses was a feedstock for industrial ethanol, which in turn was used to make munitionsâ€”an important commodity during the First World Warâ€”as well as for beverage alcohol. There was commercial pressure to build fast and store as much as possible, and the timing added to it: national Prohibition was closing in (the Eighteenth Amendment was ratified that same month, January 1919), giving the company reason to move product while it still could.
+
+The construction itself was the core failure. The project was overseen for the company by an administrator, Arthur Jell, who had no engineering or architectural training and did not have the plans meaningfully checked by qualified professionals. The steel used for the walls was too thin for the loads the full tank would impose, and the structure lacked an adequate safety margin. Later analysis pointed to steel that was, by modern standards, insufficiently tough and prone to brittle fracture, with the walls and rivet design leaving too little reserve strength. The tank was also never properly tested before being put into service. Rather than filling it with water to check for leaks and structural soundness, Jell reportedly ran only a minimal test.
+
+The consequences were visible almost immediately. The tank leaked from the day it was commissioned. Residents in the neighborhood collected the molasses that seeped out, and the company's response was not to fix the flaw but to disguise it: the tank was painted brown, which made the ongoing leaks harder to see. For roughly three and a half years, a badly built vessel was cyclically filled and emptied, stressed and flexed, with warning signs treated as a cosmetic problem.
+
+Weather and physics supplied the trigger and shaped the damage. In the days before the collapse, Boston had been very cold, and then temperatures rose sharply. A relatively warm delivery of molasses added not long before, sitting inside colder, older stock, may have driven fermentation and thermal expansion that raised internal pressure on an already marginal structure. Temperature also helps explain why the flood was so deadly once the wall broke. Molasses is a non-Newtonian fluid: it flows readily under force but stiffens as it cools and slows. A 2016 study by researchers associated with Harvard modeled exactly this, concluding that the initial wave moved fast enough to be inescapable, and that as the molasses cooled in the January air it grew more viscous, trapping people who might otherwise have pulled free. The substance that made the disaster sound comical is precisely what made it lethal.
+
+## The reckoning
+
+United States Industrial Alcohol did not accept responsibility. In the litigation that followed, the company argued that the tank had been destroyed not by its own defects but by sabotageâ€”that anarchists had planted a bomb. The claim fit the anxieties of the era, a period of labor unrest and anarchist bombings, but it did not fit the evidence.
+
+The many claims against the company were consolidated into a single, sprawling proceeding, one of the earliest large class-action-style cases in Massachusetts. It ran for years and involved extensive expert testimony about metallurgy, structural loads, and the tank's history of leaking. The court-appointed auditor ultimately rejected the sabotage defense and found that the disaster was the result of structural failure for which the company was responsible. USIA settled, paying out a sum generally reported as somewhere in the range of several hundred thousand dollars to the victims and their familiesâ€”a large amount for the time, worth many millions in today's money, though it can never have matched the human cost.
+
+## Why it still matters
+
+The flood's most concrete legacy is regulatory. In its aftermath, Massachusetts and, over time, other jurisdictions tightened the rules governing how large structures are designed and approved. The pattern that mattered was requiring that engineering and architectural plans be prepared, stamped, and signed by qualified, certified professionals, and filed with public authorities for review before construction. What had been left to a company administrator with no relevant training became a matter of documented, accountable expertise. The modern expectation that a licensed engineer signs off on a major structure, and that the paperwork exists for inspectors to check, owes something to lessons paid for on Commercial Street.
+
+There is a broader lesson in the causal chain, and it is not really about molasses. Nearly every element of this disaster is recognizable in later industrial and structural failures: commercial pressure to build quickly and store more; unqualified oversight; a testing step skipped to save time; early warning signsâ€”here, literal leaksâ€”managed cosmetically rather than fixed; and, when it all failed, a first instinct to blame an outside villain rather than the decisions inside the organization. Those are not quirks of 1919. They are the standard anatomy of preventable catastrophe, which is why the case still appears in engineering ethics courses and safety training.
+
+Finally, the flood matters because of who it happened to. The dead and injured were largely working people and immigrants in a dense, poor neighborhood, living beside an industrial hazard they had not chosen and could not inspect. Their deaths forced a shift toward the idea that the public has a right to demand competence and accountability from the people who build in their midst. The story survives partly because it is strange enough to remember. But the reason it is worth remembering is ordinary and serious: a large thing was built badly, the signs were ignored, and people who trusted that it would hold were the ones who paid.
+
+# The Great Boston Molasses Flood of 1919
+
+Just after 12:30 on the afternoon of January 15, 1919, a steel storage tank in Boston's North End tore open and released roughly 2.3 million gallons of molasses into a crowded working-class neighborhood. The dark flood killed 21 people, injured about 150, and flattened homes, a firehouse, and part of an elevated railway. It was not a freak of nature. A badly built tank failed under a load it was never sound enough to hold, and the disaster ended in a landmark legal judgment that helped make professional engineering accountable to the public. That is the short version. The details are worth knowing because they explain why the flood still turns up in engineering ethics courses more than a century later.
+
+## What happened that afternoon
+
+The tank stood on Commercial Street near the harbor, part of a facility run by the Purity Distilling Company, a subsidiary of the United States Industrial Alcohol Company (USIA). It was about 50 feet tall and 90 feet across, and when full it held around 2.3 million gallons of molasses weighing some 13,000 tons. Molasses at the time was a valuable industrial feedstock: distillers fermented and processed it into ethanol, which went into everything from liquor to the munitions that had fueled the First World War, then only two months past its armistice.
+
+When the tank ruptured, witnesses reported a deep rumble and a sound like machine-gun fire as the steel plates ripped apart and the rivets shot loose. A wave of molasses estimated at up to 25 to 40 feet high at its peak surged outward, moving fast enough â€” accounts put it near 35 miles per hour â€” that people, horses, and vehicles could not outrun it. The flood swept a firehouse off its foundation, buckled the steel supports of the Boston Elevated Railway, crushed wooden buildings, and pushed debris toward the waterfront. Some victims drowned or suffocated in the viscous flood; others were struck by wreckage. Rescuers waded in waist-deep, and the sticky mass made every movement slow and exhausting. Cleanup crews worked for weeks, using salt water pumped from fireboats to break up the molasses, and the harbor reportedly ran brown for months.
+
+## Why the tank failed
+
+The disaster had two layers of cause: a structure that should never have passed as safe, and the conditions on the day that pushed it past its limit.
+
+The tank was built in 1915, quickly, to meet wartime demand for industrial alcohol. The man who oversaw its construction for USIA, Arthur Jell, had no engineering or architectural training and was under pressure to have the tank ready to receive a shipment of molasses. Crucially, he never had it properly tested. A standard test would have filled the tank with water to check for leaks and confirm the structure could bear a full load; instead, the tank was reportedly filled only a few inches deep with water before being put into service. That shortcut mattered, because the tank leaked from the day it opened. Molasses seeped through seams so visibly that neighborhood children collected it, and the company's response was to paint the tank brown so the leaks would be less obvious rather than to investigate why it was failing.
+
+Later engineering analysis identified deeper flaws. The steel plates were too thin for the loads the tank actually carried, and the design lacked an adequate safety margin against the outward pressure of a full tank. The steel itself was of a type that became brittle in cold weather, low in the manganese that would have made it tougher, so it was prone to cracking rather than flexing. The rivet holes concentrated stress at exactly the points where the plates eventually split. In short, the tank sat far closer to failure, all the time, than anyone using it understood.
+
+Conditions on January 15 supplied the final push. A shipment of warm molasses had been added to the tank a couple of days earlier, on top of colder molasses already inside. Some analyses suggest this raised the internal temperature and may have encouraged fermentation, which produces gas and could have increased pressure inside the tank. The local air temperature had also risen sharply from the days before. None of these conditions would have troubled a properly built tank. Acting on a structure already carrying more stress than its thin, brittle walls could safely bear, they were enough to start the tear that ran away into catastrophe.
+
+A grim detail from the human toll reflects the physics. Molasses is far more viscous than water, and it grows thicker as it cools. Researchers who modeled the flood â€” including a 2016 study presented by Harvard scientists â€” noted that the initial wave moved fast enough to be deadly, but that as the molasses spread and cooled in the January air it became harder and harder to move through, trapping people who might otherwise have pulled themselves free. The same substance that let some victims be reached also held others fast.
+
+## The reckoning in court
+
+The legal aftermath is the part that gave the flood its lasting significance. More than 100 lawsuits were consolidated against USIA in one of the earliest large class-action-style proceedings in Massachusetts. The company's central defense was that the tank had not failed on its own but had been destroyed by a bomb â€” a claim with some surface plausibility in an era of genuine anarchist violence, when mail bombs and dynamite attacks were in the news. If an outside saboteur had blown up the tank, the company could not be held liable for negligence.
+
+The case ran for years before a court-appointed auditor, Hugh W. Ogden, who heard thousands of witnesses and mountains of expert testimony on both sides. In 1925 he ruled against USIA. The weight of the engineering evidence showed that the tank had been structurally inadequate and inadequately tested, and that the company was responsible. USIA ultimately paid settlements reported to total in the neighborhood of 600,000 dollars â€” a very large sum at the time, equivalent to many millions in today's money â€” divided among the families of the dead and the injured.
+
+## Why it still matters
+
+The flood matters today for reasons that outlast the North End cleanup.
+
+First, it changed how large structures are approved. The disaster is frequently cited as a spur to stricter oversight of engineering and construction in Massachusetts and beyond, including requirements that structural calculations and plans be prepared, signed, and sealed by a certified professional engineer or architect before a project is built. The core idea â€” that a named, licensed professional must put their credibility behind a design's safety â€” is now standard practice, and the molasses tank is a textbook example of what its absence permits.
+
+Second, it is a durable lesson in how disasters actually happen. The tank did not fail because of one villain or one storm. It failed because a rushed schedule, an unqualified overseer, a skipped safety test, cheap and brittle materials, and a habit of hiding warning signs rather than acting on them all lined up. Each visible leak was a signal, and each was painted over. Engineers and safety instructors use the story precisely because that pattern â€” small ignored warnings compounding into a fatal failure â€” recurs in modern accidents.
+
+Third, it is a case study in accountability. A powerful company tried to shift the blame to an invisible saboteur, and a patient, evidence-driven inquiry held it responsible anyway. That outcome helped establish that corporations could be made to answer for negligence on a large scale.
+
+The molasses flood is easy to remember as an oddity, a city drowned in syrup. But the reasons it happened, and the reforms that followed, are ordinary and serious. A structure carrying enormous stored energy was trusted to walls no one had honestly checked. When those walls gave way, the cost was measured in lives â€” and the response reshaped the rules meant to keep it from happening again.
+
+
+codex
+The main factual pressure points are the fluid physics, the claimed regulatory legacy, and several courtroom/construction details. I’m checking those against authoritative historical and technical accounts.
+web search: 
+web search: site:mass.gov Boston Molasses Flood 1919 court Arthur Jell Hugh Ogden regulations ...
+web search: 
+web search: site:aps.org Boston molasses flood fluid dynamics 2016 viscosity temperature non-Newtonian ...
+web search: 
+web search: Boston Molasses Flood 2016 study within minutes cooled thickened rescue hours ...
+web search: 
+web search: "921 witnesses" "molasses" Ogden ...
+codex
+| Piece | Clarity & structure | Facts & sourcing | Explanation | Overall | Quoted line |
+|---|---:|---:|---:|---:|---|
+| **Story 1** | 4 | 3 | 4 | 4 | “But they were really killed by negligence.” |
+| **Story 2** | 5 | 4 | 5 | 5 | “The short answer is that the tank should never have held what it held.” |
+| **Story 3** | 5 | 4 | 5 | 4 | “It was not a freak of nature.” |
+
+**Ranking:** 1) **Story 2** — best calibrated and most explicitly organized; 2) **Story 3** — highly specific but occasionally overconfident; 3) **Story 1** — compelling, but less precise and sourced.
+
+**Flags:**
+
+- None provides citations, despite numerous precise figures. The central date, toll, volume, speed, construction defects, lawsuit, and regulatory legacy are well supported by [Boston’s official history](https://content.boston.gov/news/100-years-ago-today-molasses-crashes-through-bostons-north-end).
+- **Story 1:** “filled it only partway” obscures that the reported water test was merely about six inches. “Within minutes … set around them” and children using leakage “to sweeten their food” look embellished or insufficiently supported.
+- **Stories 1–2:** Their definition of *non-Newtonian* is imprecise; temperature-dependent viscosity alone does not define the term. The 2016 work was an APS conference presentation, and it treated cold molasses with classical-fluid models despite its usual shear-thinning behavior ([APS account](https://print.aps.org/pdf/2017-01.pdf)).
+- **Story 2:** The Prohibition-driven urgency is plausible but inferential, not an established mechanical cause.
+- **Story 3:** The “25 to 40 feet” wave and harbor remaining brown “for months” come from variable secondary accounts and need attribution. No clearly fabricated name or date, however; Hugh W. Ogden and the roughly $600,000 settlement are defensible.
+tokens used
+47,127
+| Piece | Clarity & structure | Facts & sourcing | Explanation | Overall | Quoted line |
+|---|---:|---:|---:|---:|---|
+| **Story 1** | 4 | 3 | 4 | 4 | “But they were really killed by negligence.” |
+| **Story 2** | 5 | 4 | 5 | 5 | “The short answer is that the tank should never have held what it held.” |
+| **Story 3** | 5 | 4 | 5 | 4 | “It was not a freak of nature.” |
+
+**Ranking:** 1) **Story 2** — best calibrated and most explicitly organized; 2) **Story 3** — highly specific but occasionally overconfident; 3) **Story 1** — compelling, but less precise and sourced.
+
+**Flags:**
+
+- None provides citations, despite numerous precise figures. The central date, toll, volume, speed, construction defects, lawsuit, and regulatory legacy are well supported by [Boston’s official history](https://content.boston.gov/news/100-years-ago-today-molasses-crashes-through-bostons-north-end).
+- **Story 1:** “filled it only partway” obscures that the reported water test was merely about six inches. “Within minutes … set around them” and children using leakage “to sweeten their food” look embellished or insufficiently supported.
+- **Stories 1–2:** Their definition of *non-Newtonian* is imprecise; temperature-dependent viscosity alone does not define the term. The 2016 work was an APS conference presentation, and it treated cold molasses with classical-fluid models despite its usual shear-thinning behavior ([APS account](https://print.aps.org/pdf/2017-01.pdf)).
+- **Story 2:** The Prohibition-driven urgency is plausible but inferential, not an established mechanical cause.
+- **Story 3:** The “25 to 40 feet” wave and harbor remaining brown “for months” come from variable secondary accounts and need attribution. No clearly fabricated name or date, however; Hugh W. Ogden and the roughly $600,000 settlement are defensible.

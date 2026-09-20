@@ -1,7 +1,0 @@
-# Per-project Codex config for HumanScope.
-# Overrides the global ~/.codex/config.toml default (gpt-5.6-sol) for THIS repo only.
-# FORMAL/preferred mechanism: Codex reads this automatically — no --model/--effort flags needed.
-# (Session continuity is handled separately by the gitignored .astra-session file — a convention,
-#  since Codex has no native "always resume this session" setting.)
-model = "gpt-6-astra"
-model_reasoning_effort = "xhigh"

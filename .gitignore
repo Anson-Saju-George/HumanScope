@@ -17,3 +17,6 @@ test-run/**/*.log
 # OS / misc
 .DS_Store
 Thumbs.db
+
+# Local Codex per-project pin (personal setup; not for the public repo)
+.codex/

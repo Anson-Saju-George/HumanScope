@@ -1,0 +1,134 @@
+OpenAI Codex v0.155.1
+--------
+workdir: D:\main-projects\LIVE-ACTIVE\HumanScope\test-run\generalization
+model: gpt-6-astra
+provider: openai
+approval: on-request
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a0a015-6da6-7121-b18c-55892ce0945a
+--------
+user
+Independent verification (research-oriented). We added generalization guards to HumanScope (§1
+artifact/format guard; Core-stance claim-strength/citation-attachment guard; §5 "notes may remain
+notes / intended format") after your NEEDS-WORK audit. We then ran EDIT-mode robustness tests on 4
+real hazard artifacts you flagged. For EACH, verify independently: (a) did it improve/trim genuine
+bloat, and (b) did it PRESERVE the critical genre element without harm? Flag any regression. Then a
+one-line overall: do the guards hold, or is there a genre where HumanScope still misfires?
+
+Criteria per genre:
+- ACADEMIC: keep both citations attached to their claims; do NOT harden hedges; keep scope. Trim bloat.
+- MARKETING: keep all repeated CTAs (readers hit sections independently); keep proof + scannability. Trim AI opener.
+- NOTES: should stay a notes artifact (fragments, checkboxes, open question as a question, shorthand, #412). Prose-ification = fail.
+- TECHNICAL: preserve operational meaning EXACTLY (numbers, the 429 exception, RFC-2119 MUST/MUST NOT; do NOT promote lowercase 'should'). Trim only non-normative filler.
+
+===== academic / INPUT =====
+Recent work has increasingly demonstrated that sleep plays a pivotal and crucial role in memory
+consolidation (Rasch & Born, 2013). It is important to note that these effects may be modest and
+appear to depend on sleep stage, particularly slow-wave sleep, though the precise mechanisms remain
+incompletely understood (Diekelmann & Born, 2010). In this study, we leverage a within-subjects
+design to test the hypothesis that targeted memory reactivation during slow-wave sleep enhances
+retention relative to a wake control condition.
+
+===== academic / HUMANSCOPE OUTPUT =====
+Recent work has increasingly demonstrated that sleep plays a crucial role in memory
+consolidation (Rasch & Born, 2013). These effects may be modest and appear to depend on sleep
+stage, particularly slow-wave sleep, though the precise mechanisms remain incompletely understood
+(Diekelmann & Born, 2010). In this study, we use a within-subjects design to test the hypothesis
+that targeted memory reactivation during slow-wave sleep enhances retention relative to a wake
+control condition.
+
+===== marketing / INPUT =====
+## Ship faster with Orbit
+
+In today's fast-paced, ever-evolving digital world, deploying software has never been more complex.
+Orbit gives your team one dashboard to build, test, and release.
+
+**Start your free trial →**
+
+## Built for teams that move
+
+Set up in minutes. Invite your team. Ship on Friday without fear.
+Orbit catches broken builds before your users do.
+
+**Start your free trial →**
+
+## Trusted by 4,000+ engineering teams
+
+From two-person startups to Fortune 500 platform teams.
+
+**Start your free trial →**
+
+===== marketing / HUMANSCOPE OUTPUT =====
+## Ship faster with Orbit
+
+Deploying software keeps getting more complex. Orbit gives your team one dashboard to build, test, and release.
+
+**Start your free trial →**
+
+## Built for teams that move
+
+Set up in minutes. Invite your team. Ship on Friday without fear.
+Orbit catches broken builds before your users do.
+
+**Start your free trial →**
+
+## Trusted by 4,000+ engineering teams
+
+From two-person startups to Fortune 500 platform teams.
+
+**Start your free trial →**
+
+===== notes / INPUT =====
+# Mtg notes — Orbit launch 9/20
+- ship date: prob Fri, confirm w/ Priya (blocked on QA?)
+- [ ] finalize pricing tiers — still 3 or 4??
+- [x] landing page copy draft
+- billing migration: DONE, 1 bug tracked (#412)
+- open q: announce before or after the conf talk?
+- follow up: legal re data-residency claim on homepage
+
+===== notes / HUMANSCOPE OUTPUT =====
+# Mtg notes — Orbit launch 9/20
+- ship date: prob Fri, confirm w/ Priya (blocked on QA?)
+- [ ] finalize pricing tiers — still 3 or 4??
+- [x] landing page copy draft
+- billing migration: DONE, 1 bug tracked (#412)
+- open q: announce before or after the conf talk?
+- follow up: legal re data-residency claim on homepage
+
+===== technical / INPUT =====
+## 3.2 Retry policy
+
+The client MUST retry a failed request up to three (3) times, except when the server returns a 4xx
+status other than 429, in which case it MUST NOT retry. A "failed request" means any request that
+returns a 5xx status or times out after 30 seconds. It is worth noting that retries should use
+exponential backoff (base 100 ms) to avoid overwhelming the server.
+
+===== technical / HUMANSCOPE OUTPUT =====
+## 3.2 Retry policy
+
+The client MUST retry a failed request up to three (3) times, except when the server returns a 4xx
+status other than 429, in which case it MUST NOT retry. A "failed request" means any request that
+returns a 5xx status or times out after 30 seconds. Retries should use exponential backoff (base
+100 ms) to avoid overwhelming the server.
+codex
+| Artifact | Bloat reduction | Preservation / regression |
+|---|---|---|
+| **Academic** | Removes redundant “pivotal and,” the empty introductory phrase, and simplifies “leverage.” Some padding remains: “Recent work has increasingly demonstrated.” | **Pass.** Both citations remain attached to their original claims. “May,” “appear,” mechanistic uncertainty, study design, and comparison condition survive unchanged. Citation accuracy itself is not verified here. |
+| **Marketing** | Shortens the stock opener, but retains its unsupported complexity claim. | **Minor regression.** All three CTAs, headings, proof claim, and section structure survive. However, “has never been more complex” becomes “keeps getting more complex”: a historical-maximum assertion becomes an ongoing-trend assertion. Prefer deleting that sentence and opening with “Orbit gives your team…” |
+| **Notes** | No change; no unnecessary cleanup manufactured. | **Pass.** Fragments, checkbox states, uncertainty, open questions, shorthand, date, and `#412` are preserved exactly. This is successful restraint. |
+| **Technical** | Deletes only “It is worth noting that.” | **Pass.** Retry count, timeout, backoff base, 429 exception, MUST/MUST NOT, and lowercase “should” remain unchanged. No operational meaning was altered. |
+
+**Overall: the guards hold on these examples for format, citations, uncertainty, and technical precision; the marketing edit still introduces minor claim drift, so exact semantic preservation is not yet reliable.**
+tokens used
+1,182,778
+| Artifact | Bloat reduction | Preservation / regression |
+|---|---|---|
+| **Academic** | Removes redundant “pivotal and,” the empty introductory phrase, and simplifies “leverage.” Some padding remains: “Recent work has increasingly demonstrated.” | **Pass.** Both citations remain attached to their original claims. “May,” “appear,” mechanistic uncertainty, study design, and comparison condition survive unchanged. Citation accuracy itself is not verified here. |
+| **Marketing** | Shortens the stock opener, but retains its unsupported complexity claim. | **Minor regression.** All three CTAs, headings, proof claim, and section structure survive. However, “has never been more complex” becomes “keeps getting more complex”: a historical-maximum assertion becomes an ongoing-trend assertion. Prefer deleting that sentence and opening with “Orbit gives your team…” |
+| **Notes** | No change; no unnecessary cleanup manufactured. | **Pass.** Fragments, checkbox states, uncertainty, open questions, shorthand, date, and `#412` are preserved exactly. This is successful restraint. |
+| **Technical** | Deletes only “It is worth noting that.” | **Pass.** Retry count, timeout, backoff base, 429 exception, MUST/MUST NOT, and lowercase “should” remain unchanged. No operational meaning was altered. |
+
+**Overall: the guards hold on these examples for format, citations, uncertainty, and technical precision; the marketing edit still introduces minor claim drift, so exact semantic preservation is not yet reliable.**

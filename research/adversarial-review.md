@@ -362,3 +362,8 @@ Applied: (1) rubric pass-criteria rewritten (no-regress-vs-U; H=O=U passes prese
 
 ## Round 6 — GPT Astra (gpt-6-astra) review of the expository-mode change (session 01a0a015)
 _Claude proposed a hard narrative/expository split for SKILL.md §4, motivated by the ablation. Astra: SHIP-AFTER-YOUR-EDITS — the hard split overfits n=1/topic data, the proposed 'lean path' was NOT the tested arm C, and directional wording ('state the conclusion', 'keep tidy') could harm inductive args/uncertainty/voice. Reframed as **purpose-based review depth** (route by passage function, keep substantive review across domains, no lens banned from exposition). Claude adopted Astra's rewrite verbatim as §4. Raw: research/raw-model-output/astra-expository-review-R6.txt._
+
+---
+
+## Round 7 — GPT Astra (gpt-6-astra @ xhigh) generalization audit (session 01a0a015)
+_Q: can HumanScope serve documents / papers / notes / websites / any writing? Verdict: **NEEDS-WORK** — 'safe everywhere' is unproven; concrete plausible misfires on structured docs (markup/numbering), claim-strength & citation attachment (academic), repeated CTAs (marketing), and notes-to-prose conversion. Notably it CONFIRMED the skill does NOT strip academic hedging (§4 protects qualifications). Fixes applied: (1) §1 artifact/conventions guard; (2) Core-stance claim-strength/attribution guard; (3) §5 'notes may remain notes / intended format'; (4) removed the §4 ablation aside (conflated generation with review); (5) narrowed scope language in SKILL.md + README (fiction-grounded, genres untested). Recommendation: TEST realistic artifacts, don't add genre checklists. Raw: research/raw-model-output/astra-generalization-R7.txt._

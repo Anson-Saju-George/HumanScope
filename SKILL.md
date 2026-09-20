@@ -20,7 +20,10 @@ Grounding & honest scope: the six lenses are **editorial groupings** inspired by
 (Russell et al., COLM 2026), a study of how AI vs. published human **fiction** differs in narrative
 structure. Those are *descriptive* differences, not proven quality rules; the lenses' interventions
 and their non-fiction application are **not validated by the study**. Treat every lens as a
-**question, gated by genre and purpose** — never a direction to push.
+**question, gated by genre and purpose** — never a direction to push. **Research grounding is
+fiction-specific and evidence of benefit is preliminary; performance on academic papers, structured
+documents, websites, and notes has not been established** — use it there as careful, reader-focused
+editing under the guards in §1 and Core stance, not as a validated specialist.
 
 What makes this more than generic editing: when scope warrants structural review, examine
 *interactions across the piece* — e.g. whether narration repeats meaning already carried by dialogue
@@ -32,7 +35,10 @@ operate.
 - **Preserve first.** Preserve meaning, voice, register, terminology, intent, and established story
   facts — **except where the requested transformation authorizes change**. Preserve factual
   accuracy: *correct* supported errors rather than freezing them for fidelity, and flag material
-  uncertainty. Improve; don't overwrite.
+  uncertainty. **Preserve the strength, scope, uncertainty, and attribution of every claim** — do not
+  harden a hedge, widen a scope, or detach a claim from the citation that supports it; correct or add
+  factual claims only with real supporting evidence, and never present an unverified claim or
+  reference as checked. Improve; don't overwrite.
 - **Minimum effective intervention.** Change only what you can justify. **"No change needed" is
   always a valid, common outcome.** Do not manufacture problems to look busy.
 - **No authorship scoring, no detector targets.** Never rate "how AI/human this sounds," never edit
@@ -49,6 +55,10 @@ Infer (ask only if genuinely blocking):
   marketing, email, docs. **This gates every lens** (see §4). When unsure, ask or infer
   conservatively.
 - **Voice** — if the user supplied samples or the text has a clear voice, match it; don't homogenize.
+- **Artifact & conventions** — identify the target artifact and its supplied conventions. Preserve
+  required structure, markup, citation links, numbering, notation, task states, and meaningful
+  fragments unless the requested transformation changes them. ("Documents" is a container, not a
+  genre — a paper, a spec, a landing page, and a notes file have different constraints.)
 
 ## 2 · How to intervene (the discipline)
 For **EDIT/DIAGNOSE**, an intervention is justified only when you can fill all four, in order:
@@ -125,13 +135,10 @@ Use any lens where it addresses a concrete need, including in expository prose. 
 reveals no such need, do not expand the review merely to exercise the lenses. Leave effective choices
 unchanged.
 
-> *A preliminary internal ablation (`test-run/ablation/`, model-judged, n=1/topic) is consistent with
-> this: fuller lens review helped narrative pieces, while a lean review did as well or better on
-> explanatory/argumentative ones. Treat it as a design lead, not proof.*
-
 ## 5 · Output & restraint
-- **Deliver in the requested mode.** For **WRITE/EDIT**, return the requested artifact (finished
-  prose, not a lecture) unless asked to show reasoning. For **DIAGNOSE** or a requested change
+- **Deliver in the requested mode.** For **WRITE/EDIT**, return the requested artifact **in its
+  intended format** (notes may remain notes; a spec stays a spec — not a lecture) unless asked to
+  show reasoning. For **DIAGNOSE** or a requested change
   summary, prioritize the substantive findings. **If no edit is justified, return the unchanged text
   when that was requested; otherwise briefly say no change is needed.**
 - **Restraint check before returning** (silently): meaning intact? facts accurate (errors corrected,

@@ -126,7 +126,11 @@ See the [paper notes](research/paper-notes.md), [evidence map](research/evidence
 ## Evaluation
 
 **Status: experimental.** Better reader outcomes than ordinary editing have not been
-established.
+established. Research grounding is **fiction-specific**; all testing so far is on literary/
+narrative and short expository prose. **Performance on academic papers, structured documents,
+websites/marketing, and notes has not been established** — the skill applies careful,
+reader-focused editing there (with guards for structure, claim-strength, and format), but its
+distinctive value on those genres is untested.
 
 One exploratory generation run compared four lighthouse-keeper stories: two models, each
 with and without HumanScope. A blinded model judge ranked the outputs **skill > baseline >

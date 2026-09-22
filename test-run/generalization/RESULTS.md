@@ -10,7 +10,7 @@ Arms (odd = Claude, even = Codex-family): **A** = Claude Opus + skill · **B** =
 unnecessary — A+B already establish cross-model portability; A+C establish Claude consistency.)*
 
 ## Matrix — 4 genres × 3 arms = 12 tests
-✅ pass (trimmed bloat + preserved the critical element) · ⚠️ minor (non-harmful)
+✅ preserved the critical element while trimming filler · ⚠️ a minor observed issue (see notes)
 
 | Genre (hazard) | A · Claude | B · sol | C · Claude(2) | Critical element that survived |
 |---|---|---|---|---|
@@ -19,26 +19,28 @@ unnecessary — A+B already establish cross-model portability; A+C establish Cla
 | **Notes** — fragments/checkboxes | ✅ (identical) | ⚠️² | ✅ (identical) | checkboxes, `#412`, open-question, shorthand |
 | **Technical** — MUST + 429 exception | ✅ | ✅ | ✅ | numbers, exception logic, `MUST`/`MUST NOT`/lowercase `should` |
 
-**¹ A-marketing:** nudged "has never been more complex" → "keeps getting more complex" (superlative→
-trend). Astra-flagged as minor claim drift. **Did NOT reproduce** in B or C (both kept the
-superlative) → a one-off model slip, not a systematic flaw.
-**² B-notes:** `sol` normalized `still 3 or 4??` → `3 or 4?` (touched shorthand). Meaning intact, but
-less restrained than Claude, which left the notes byte-for-byte identical (A and C).
+**¹ A-marketing:** changed "has never been more complex" → "keeps getting more complex" (superlative→
+trend). Two other arms (B, C) kept the superlative — but two observations cannot establish that this
+drift is nonsystematic.
+**² B-notes:** `sol` changed `still 3 or 4??` → `3 or 4?`. Removing "still" also drops information
+about an unresolved state — a possibly-meaningful unnecessary edit, not merely punctuation. The two
+Claude arms left the notes byte-for-byte identical (restraint).
 
-## Reading
-- **10/12 clean; 2 minor, non-harmful, non-reproducing.** In every genre, in every arm, the skill
-  trimmed real bloat **and kept the load-bearing element** (citations, CTAs, note shorthand, normative
-  precision).
-- **Guards hold across two model families** (Claude, Codex-sol) and across a fresh Claude run —
-  cross-model + within-model portability confirmed for these artifacts.
-- **Restraint works:** notes were returned unchanged by both Claude arms (the "no change is valid"
-  path), and no arm prose-ified them or hardened a hedge/normative keyword.
-- **Model difference observed:** Claude was slightly more restrained on the notes edge case than
-  `sol`; `sol` was slightly more restrained on the marketing superlative than one Claude run.
+## Reading (what these 12 outputs do and don't show)
+- **What was observed:** 4 artifacts, 12 outputs. In each, the arm trimmed some introductory filler
+  while keeping the nearby load-bearing tokens (citations, CTAs, note shorthand, normative precision).
+  One claim drift (A-marketing) and one possibly-meaningful unnecessary edit (B-notes). Unchanged
+  notes demonstrate **restraint**, not bloat removal.
+- **What it does NOT show:** there is **no guardless control**, so this cannot prove the *guards*
+  caused the preservation (only that these guarded outputs preserved these elements). It is also not
+  human-judged, and the hazards mostly reward "delete an intro phrase, keep neighbours" — not distant
+  contradictions, citation movement across paragraphs, or warranted repetition.
+- **Portability:** consistent behaviour across Claude and Codex-`sol` on these artifacts — a small,
+  encouraging sign, not established reliability.
 
 ## Honest caveats (governing)
-One artifact per genre, one blinded-ish check per arm (objective preservation greps + one Astra
-review of the Claude arm). This demonstrates the **guards prevent the specific harms Astra predicted**
-across genres and models; it is **not** a broad efficacy claim. "Distinctive value vs. a good generic
-editor" on these genres remains for the human protocol (`../../evals/human-eval-protocol.md`).
-Scope language in SKILL.md/README already states genre performance is not formally established.
+Preservation smoke tests on one artifact per genre, objective greps + one Astra review of the Claude
+arm. This **motivates** the guards and shows the specific predicted harms did not occur here; it is
+**not** a controlled demonstration that the guards cause preservation, nor an efficacy claim. A
+guard-on/guard-off experiment and harder composition cases are v1.1 work. "Distinctive value vs. a
+good generic editor" remains for the human protocol (`../../evals/human-eval-protocol.md`).

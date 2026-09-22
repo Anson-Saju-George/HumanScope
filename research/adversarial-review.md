@@ -367,3 +367,13 @@ _Claude proposed a hard narrative/expository split for SKILL.md §4, motivated b
 
 ## Round 7 — GPT Astra (gpt-6-astra @ xhigh) generalization audit (session 01a0a015)
 _Q: can HumanScope serve documents / papers / notes / websites / any writing? Verdict: **NEEDS-WORK** — 'safe everywhere' is unproven; concrete plausible misfires on structured docs (markup/numbering), claim-strength & citation attachment (academic), repeated CTAs (marketing), and notes-to-prose conversion. Notably it CONFIRMED the skill does NOT strip academic hedging (§4 protects qualifications). Fixes applied: (1) §1 artifact/conventions guard; (2) Core-stance claim-strength/attribution guard; (3) §5 'notes may remain notes / intended format'; (4) removed the §4 ablation aside (conflated generation with review); (5) narrowed scope language in SKILL.md + README (fiction-grounded, genres untested). Recommendation: TEST realistic artifacts, don't add genre checklists. Raw: research/raw-model-output/astra-generalization-R7.txt._
+
+---
+
+## Round 8 — GPT Astra (gpt-6-astra @ xhigh) max-rigor V1 audit (session 01a0a015)
+_Usage-unlimited pass. Verdict: **V1 is well short of its model-only ceiling; substantial room.** Biggest finding — an EVALUATION CONFOUND all prior rounds missed:_
+- **A/B conditions differed beyond the skill:** skill-arm prompts requested research-file reading + implicit meaning + answer-first/tidy/real-refs; baselines requested none. So the 8/8 may reflect the EXTRA INSTRUCTIONS, not SKILL.md. → withdraw 'SKILL.md alone' attribution.
+- **The essay judge had a circular criterion:** it rewarded 'implicitness = trusting the reader' — exactly what the skill arm was told to produce; the brief didn't require it.
+- **The ablation doesn't isolate the lenses** (H inherits extra instructions/context; C's prompt is edit-framed but used for generation). Also a factual error: ablation generator=Claude, judge=Sol.
+- **Residual overclaims** in results (demonstrated L1 mechanism, effect-size dependence, preserved voice, no over-editing — generation can't show voice-preservation/restraint) and generalization ('one-off/non-harmful/guards prevent' — no guardless control).
+_Also: 6 small SKILL.md runtime fixes; a concrete scaled model-only protocol (96 held-out cases × 4 arms O/C/V1/N × 3 generator families × 3 runs = 3,456 outputs, 3 independent judges, separate constraint/task/preference outcomes, case-clustered CIs); v1.1 = corrected reports + runtime fixes + versioned eval harness + regression suite, NOT another lens. Raw: research/raw-model-output/astra-v1-audit-R8.txt._

@@ -21,13 +21,15 @@ results; the real answer needs the human protocol.
 | Nonfiction (expository) | **Compact (C)** | C > H > O |
 | Argument (expository) | **Compact (C)** | C > H > O |
 
-**The six lenses earn their keep for NARRATIVE writing (fiction, personal essay) and do NOT for
-EXPOSITORY writing (nonfiction, argument), where the leaner compact four-slot discipline wins.**
+**These four comparisons MOTIVATE A ROUTING HYPOTHESIS — fuller review helped narrative pieces, a
+leaner review helped expository ones — but they do NOT identify the lenses' contribution.** (Astra
+R8: H inherits the same extra instructions + research context as the A/B skill arm, and C omits
+several other components *and* its prompt is edit-framed yet was used for generation — so "the lenses"
+are not isolated. Also, none of this is human-judged.)
 
-- This is the cleanest, most design-relevant result of the project, and it **empirically supports the
-  domain-gating premise**: the fiction-derived lenses belong on narrative prose; on expository prose
-  they're gated off anyway, and carrying the full apparatus makes the model *"occasionally
-  overconfident"* (2nd place both times).
+- It is *consistent with* the domain-gating premise (fiction-derived lenses suit narrative; the full
+  apparatus read as *"occasionally overconfident"* on expository, 2nd place both times) — but a
+  causal reading ("the six lenses earn their keep / don't") is **not supported** by this design.
 - **Ordinary editing (O) never won** (last in 3 of 4; middle once) — so *some* disciplined
   conditioning beats none, but the *kind* should match the genre.
 - **Concrete design implication (adopted, but softened per adversarial review):** choose **review
@@ -42,7 +44,8 @@ EXPOSITORY writing (nonfiction, argument), where the leaner compact four-slot di
   the L5 lens isn't load-bearing outside narrative.
 
 ## Honest caveats (unchanged, governing)
-n = 1 per topic, a single LLM judge (shared model family with the generator), **generation-only** (no
+n = 1 per topic, a single LLM judge (here the **generator is Claude and the judge is Codex-`sol`** —
+*different* families, unlike the A/B Codex arms; corrected per Astra R8), **generation-only** (no
 editing-restraint test). This is a preliminary, model-judged signal — a hypothesis-generator, not
 proof. The narrative/expository split is plausible and clean but needs the human protocol
 (`../../evals/human-eval-protocol.md`) and more samples to confirm.

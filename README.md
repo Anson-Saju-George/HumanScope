@@ -134,14 +134,19 @@ distinctive value on those genres is untested.
 
 One exploratory generation run compared four lighthouse-keeper stories: two models, each
 with and without HumanScope. A blinded model judge ranked the outputs **skill > baseline >
-skill > baseline** across the two models. Within each model, its skill output ranked ahead
-of its baseline. This is one sample per condition, not a reliable estimate of improvement.
-See the [recorded results and caveats](evals/test-topics-results.md).
+skill > baseline** across the two models. **This comparison is confounded** (a later audit found
+the skill arms also received extra instructions — read the research files, be implicit, cite,
+answer-first — that the baselines did not, and one judge rewarded the skill's own aesthetic), so it
+does **not** isolate `SKILL.md`, and it is one sample per condition. See the
+[confound notice and corrected results](evals/test-topics-results.md).
 
-For editing, the [evaluation rubric](evals/rubric.md) compares untouched text, ordinary
-editing, and HumanScope editing. It considers reader preference, fidelity, factual integrity,
-and restraint. Detector scores are excluded. The repository also includes
-[test cases](evals/cases.md) and a [self-scored smoke test](evals/smoke-test.md).
+The repository's testing so far is, honestly: **exploratory generation comparisons** (the confounded
+A/B above), a **generation ablation** (full vs compact vs ordinary — motivates the review-depth
+routing, does not isolate the lenses), and **preservation smoke tests** across genres/models (the
+guards held on the artifacts tried, with no guardless control). The intended rigorous design —
+untouched vs ordinary vs HumanScope, independent judges, constraint/task/preference scored
+separately — is specified in the [rubric](evals/rubric.md) and [human-eval protocol](evals/human-eval-protocol.md);
+also [test cases](evals/cases.md), [smoke test](evals/smoke-test.md).
 
 ## Related work / prior art
 

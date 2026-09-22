@@ -1,11 +1,29 @@
 # Test Results — 4-agent A/B efficacy run
 
+> ## ⚠️ CONFOUND NOTICE (added after Astra R8 audit — read first)
+> These A/B runs do **not** cleanly isolate `SKILL.md`. Two confounds, missed by the first 7 review
+> rounds:
+> 1. **The conditions differed by more than the skill.** The skill-arm prompts also told the agent to
+>    *read the research files*, *leave meaning implicit*, and (for nonfiction) *use answer-first
+>    structure, keep tidy, cite real references*. The baseline prompts requested none of that. So the
+>    wins may reflect **those extra instructions + research context**, not the skill file itself.
+> 2. **One judge had a circular criterion.** The essay judge was told to reward *"implicitness =
+>    trusting the reader"* — exactly what the skill arm was instructed to produce — though the shared
+>    brief did not require implicitness.
+>
+> **What still stands:** across 4 topics × 2 runtimes, a blind judge ranked the *"skill + extra
+> instructions + research context"* treatment above a bare baseline in all 8 cells — an encouraging
+> but **confounded** observation. It is **not** attributable to `SKILL.md` alone, and the essay result
+> in particular used a treatment-favoring criterion. A confound-free re-test (identical briefs for all
+> arms; judges given the brief, not the skill's aesthetic) is the fix — see v1.1 work.
+
 Results of the live test defined in [`test-topics.md`](test-topics.md). Two runtimes (Claude Opus
 4.8, Codex `gpt-5.6-sol` @ high) × two conditions (with HumanScope / baseline), scored by Claude
 and by an **independent blind Codex overview** (`gpt-5.6-sol` @ high, given the four texts under
 shuffled neutral labels with no idea which used the skill).
 
 > **Status: RUN 1 COMPLETE.** n = 1 per cell — a demonstration, not statistical proof.
+> **See the CONFOUND NOTICE above — the treatment is "skill + extra instructions + research context," not the skill alone.**
 
 ## Run 1 — Topic #1 "Lighthouse keeper's last night" (short fiction)
 
@@ -44,27 +62,23 @@ Ranking (blind): **B1 (+skill) > B2 (baseline) > A1 (+skill) > A2 (baseline).**
 overwhelmingly [uses narrated interiority], with repeated explanatory body metaphors"* — and it was
 **last** in both evaluations.
 
-### Verdict
-**HumanScope improved each runtime relative to its OWN baseline — and the effect size depends on how
-strong that runtime's over-explaining default is.**
+### Verdict (corrected per the confound notice above)
+**The *"skill + extra instructions + research context"* treatment ranked above its bare baseline in
+this run — a confounded observation, not a demonstrated `SKILL.md` effect or a demonstrated mechanism.**
 
-- **Claude: large, clear effect.** Both evaluators rank the Claude baseline (A2) **worst**, precisely
-  because it repeatedly *states* its theme ("that was the whole of it… he would be the poorer… the
-  world did not owe him his usefulness"). The skill (A1) moved Claude off that default to implicit,
-  concrete storytelling. This is a clean, independently-confirmed demonstration of the L1 lens.
-- **Codex (`sol@high`): small effect.** Its baseline (B2) was *already* restrained and object-driven,
-  so the skill (B1) only edged it — though Codex's own blind ranking did put **B1 (+skill) #1**.
-- **No voice-flattening / no over-editing** in either skill output — both kept distinct, concrete
-  voices (regression check: passed).
-- **Honest caveat / independent critique:** Codex judged A1 (Claude +skill) *slightly* more explicit
-  than the two Codex pieces (one beat — *"he had chosen the rock over her plainly enough"* — resolves
-  an implication the images could carry). So the skill reduced Claude's over-explaining a lot but not
-  to zero, and did not make Claude's piece beat a strong Codex baseline. Fair.
+- The Claude baseline (A2) ranked **last** with both evaluators; the treatment (A1) produced more
+  implicit, concrete prose. But A1's prompt *told it* to leave meaning implicit and read the research
+  files, and one judge *rewarded* implicitness — so this does not isolate the skill, and does not
+  establish "the L1 lens works." (Rankings can't identify a mechanism.)
+- **Codex (`sol`):** its baseline (B2) was already restrained, so the treatment (B1) only edged it.
+- **Not shown:** these are **generation** runs, so they cannot demonstrate *voice preservation* or
+  *editing restraint* (there is no pre-existing author voice to preserve, and nothing was edited).
+- *Independent critique (Codex):* A1 was judged *slightly* more explicit than the two Codex pieces
+  (one beat resolved an implication the images could carry), so even the implicitness push was partial.
 
-**Bottom line:** the skill did exactly what it claims — reduced compositional over-determination and
-preserved voice — with the biggest, most legible gain where the baseline habit was strongest (Claude).
-n = 1 per cell; a real efficacy study needs the full blind U/O/H protocol in `rubric.md` with human
-raters and more cases (Topic #4 reserved).
+**Bottom line:** encouraging but confounded. A clean claim needs identical briefs across arms (no
+treatment-only "be implicit / cite / answer-first" reminders), judges given the brief rather than the
+skill's aesthetic, and — for preservation/restraint — actual EDIT tasks. See the v1.1 eval plan.
 
 _Raw Codex overview: `research/raw-model-output/codex-blind-overview-run1.txt`._
 

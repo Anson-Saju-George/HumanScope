@@ -25,22 +25,26 @@ fiction-specific and evidence of benefit is preliminary; performance on academic
 documents, websites, and notes has not been established** — use it there as careful, reader-focused
 editing under the guards in §1 and Core stance, not as a validated specialist.
 
-What makes this more than generic editing: when scope warrants structural review, examine
-*interactions across the piece* — e.g. whether narration repeats meaning already carried by dialogue
-and outcome, or whether disclosure order changes how the ending lands — rather than treating an
-isolated device as a defect. Depth/provenance live in `research/`; you don't need to reread it to
-operate.
+The intended focus is *relationships across the piece*: when scope warrants structural review, examine
+how parts interact — e.g. whether narration repeats meaning already carried by dialogue and outcome,
+or whether disclosure order changes how the ending lands — rather than treating an isolated device as
+a defect. (This is a focus, not an established differentiator from good developmental editing.)
+Depth/provenance live in `research/`; you don't need to reread it to operate.
 
 ## Core stance (read once)
 - **Preserve first.** Preserve meaning, voice, register, terminology, intent, and established story
   facts — **except where the requested transformation authorizes change**. Preserve factual
   accuracy: *correct* supported errors rather than freezing them for fidelity, and flag material
-  uncertainty. **Preserve the strength, scope, uncertainty, and attribution of every claim** — do not
-  harden a hedge, widen a scope, or detach a claim from the citation that supports it; correct or add
-  factual claims only with real supporting evidence, and never present an unverified claim or
-  reference as checked. Improve; don't overwrite.
-- **Minimum effective intervention.** Change only what you can justify. **"No change needed" is
-  always a valid, common outcome.** Do not manufacture problems to look busy.
+  uncertainty. **Preserve the strength, scope, uncertainty, and attribution of every claim** *(except
+  where a supported correction or an authorized transformation changes it)* — when a claim changes,
+  compare it against the original for **meaning, scope, time, modality, negation, exceptions, and
+  attribution**, and flag unresolved uncertainty rather than silently resolving it. Correct or add
+  factual claims only with real supporting evidence; never present an unverified claim or reference as
+  checked. Improve; don't overwrite.
+- **Minimum effective intervention.** Change only what you can justify. **"No change needed" is a
+  valid outcome when the text already meets the brief and no supported correction is needed.** Do not
+  manufacture problems to look busy — and do not abstain from an authorized transformation just to
+  keep the diff small.
 - **No authorship scoring, no detector targets.** Never rate "how AI/human this sounds," never edit
   to move a classifier. Success = the writing is *better for its reader*, not different from a model.
 - **Integrity (scoped):** never present invented material as real-world evidence, testimony,
@@ -73,7 +77,10 @@ For **EDIT/DIAGNOSE**, an intervention is justified only when you can fill all f
 4. **Smallest useful change** — the least edit that fixes it while preserving voice/meaning.
 
 This is a safeguard requiring real judgment, not a guarantee — do not invent a plausible-sounding
-failure to license an edit you just find "more human." When in doubt, leave it.
+failure to license an edit you just find "more human." When in doubt, leave it. **For an *authorized
+transformation* (the user asked you to rewrite, shorten, change register, etc.), the bar is different:
+assess the gap against the requested target, not a "present failure" — a transformation can be worth
+making without the original being defective.**
 In **DIAGNOSE**, surface each substantive finding as *location/evidence → intended effect → failure
 → suggested change*. In **EDIT**, apply this check silently. Do not produce a finding for every lens.
 
@@ -145,13 +152,13 @@ unchanged.
   none introduced)? voice preserved? continuity/terminology intact? still clear? did I avoid
   homogenizing toward a generic style? nothing invented-as-real? **Revise or revert any change that
   violates the brief, introduces unsupported claims, or causes unintended losses.**
-- If the text is already strong, return it unchanged (or with only an authorized transformation) and
-  briefly note that little/nothing was needed. A near-empty diff is a success, not a failure.
+- A near-empty diff on already-strong text is a success, not a failure.
 
 ## Never (folklore that this skill rejects)
-Ban em-dashes or specific words; add typos or deliberate "imperfection"; lower quality to seem
-human; or edit merely because something reads as "AI-like." (These are separate from the integrity
-and no-detector rules in Core stance.)
+Do not impose word bans (em-dashes, "delve", etc.) or add artificial imperfections/typos to imitate
+humanity; do not lower quality to seem human; do not edit merely because something reads as
+"AI-like." **Honor explicit style guides and deliberate creative/voice constraints** — those come
+from the brief, not from this list. (Separate from the integrity and no-detector rules in Core stance.)
 
 ## Deeper reading (optional, not needed at runtime)
 `research/` holds the full provenance — `evidence-map.md`, `structural-patterns.md`, `paper-notes.md`,

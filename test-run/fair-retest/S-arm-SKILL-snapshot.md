@@ -48,9 +48,8 @@ Depth/provenance live in `research/`; you don't need to reread it to operate.
 - **No authorship scoring, no detector targets.** Never rate "how AI/human this sounds," never edit
   to move a classifier. Success = the writing is *better for its reader*, not different from a model.
 - **Integrity (scoped):** never present invented material as real-world evidence, testimony,
-  citation, statistic, or biography. In fiction **WRITE**, invent characters, events, and detail
-  within the brief. In **EDIT**, add or alter them only where the requested transformation
-  authorizes it; preserve established continuity.
+  citation, statistic, or biography. When writing **fiction**, inventing characters/events/detail is
+  the task — do it freely, and preserve continuity unless asked to change it.
 
 ## 1 · Read the task before touching the text
 Infer (ask only if genuinely blocking):
@@ -76,18 +75,12 @@ For **EDIT/DIAGNOSE**, an intervention is justified only when you can fill all f
    less human-sounding" does NOT count as a failure.** If no concrete failure is supported, leave
    that candidate unchanged and continue reviewing the requested scope.
 4. **Smallest useful change** — the least edit that fixes it while preserving voice/meaning.
-   Before deleting or replacing text, identify what information or function would disappear.
-   Removing filler does not authorize removing a distinct claim, motive, or realization inside it.
-   Consolidate genuine redundancy; omit substantive content only as the brief authorizes or a
-   supported correction requires.
 
 This is a safeguard requiring real judgment, not a guarantee — do not invent a plausible-sounding
 failure to license an edit you just find "more human." When in doubt, leave it. **For an *authorized
-transformation* (the user asked you to rewrite, shorten, change register, etc.), assess the gap
-against the requested target rather than inventing a defect. Change or omit content only as that
-target requires and within the brief's constraints. "Rewrite" or "tighten" is not blanket permission
-to change substantive meaning; a summary, abridgment, or creative transformation may authorize
-selection or alteration.**
+transformation* (the user asked you to rewrite, shorten, change register, etc.), the bar is different:
+assess the gap against the requested target, not a "present failure" — a transformation can be worth
+making without the original being defective.**
 In **DIAGNOSE**, surface each substantive finding as *location/evidence → intended effect → failure
 → suggested change*. In **EDIT**, apply this check silently. Do not produce a finding for every lens.
 
@@ -100,9 +93,8 @@ Ask only the lenses the genre/purpose actually cares about. Each question is gen
 more explicit or less, tighter or looser — decided by what serves the reader, not by a target value.
 
 - **L1 · Explanation & interpretation** — Does the amount of *stated* meaning/theme/significance fit
-  what this reader needs and what is better left inferable? (Both over- and under-explaining can
-  impair the intended effect. Explanation may supply a motive, realization, emphasis, or narrator
-  stance. Information a reader could infer is not necessarily equivalent to an explicit disclosure.)
+  what this reader needs and what is better left inferable? (Both over- and under-explaining are
+  failures. Reports/instructions often *should* state conclusions; a scene may be stronger implied.)
 - **L2 · Presentation** — Do description, interiority, emotion, sensory detail, and dialogue each
   earn their space, or does any one device repeat past the point of effect? (Judge from the passage.
   Do **not** "add variety," "add senses," or strip working detail.)
@@ -139,10 +131,9 @@ explanation and order serve the purpose. Keep necessary conclusions, qualificati
 dependencies. Add sources when needed to substantiate claims; do not invent them. Neither extra
 explicitness nor tidier causality is a target.
 
-For passages organized around **scenes, experience, or unfolding events**, use the relevant lenses
-from §3 when WRITE, DIAGNOSE, or the requested edit calls for structural review. Light EDIT stays
-within its requested scope; narrative genre alone does not call for a broader review. Do not run all
-six by default.
+For passages organized around **scenes, experience, or unfolding events**, select the relevant lenses
+from §3 to examine how presentation, disclosure, interpretation, and closure work together. Do not
+run all six by default.
 
 For **mixed** writing, apply these choices locally while preserving the whole piece's purpose. An
 anecdote may support an argument; an explicit conclusion may belong in a narrative.
@@ -158,9 +149,8 @@ unchanged.
   summary, prioritize the substantive findings. **If no edit is justified, return the unchanged text
   when that was requested; otherwise briefly say no change is needed.**
 - **Restraint check before returning** (silently): meaning intact? facts accurate (errors corrected,
-  none introduced)? voice preserved? continuity/terminology intact? who knows what, when,
-  consistent with the intended viewpoint? still clear? did I avoid homogenizing toward a generic
-  style? nothing invented-as-real? **Revise or revert any change that
+  none introduced)? voice preserved? continuity/terminology intact? still clear? did I avoid
+  homogenizing toward a generic style? nothing invented-as-real? **Revise or revert any change that
   violates the brief, introduces unsupported claims, or causes unintended losses.**
 - A near-empty diff on already-strong text is a success, not a failure.
 

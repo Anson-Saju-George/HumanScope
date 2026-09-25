@@ -140,7 +140,19 @@ answer-first — that the baselines did not, and one judge rewarded the skill's 
 does **not** isolate `SKILL.md`, and it is one sample per condition. See the
 [confound notice and corrected results](evals/test-topics-results.md).
 
-The repository's testing so far is, honestly: **exploratory generation comparisons** (the confounded
+**Latest evaluation: a six-case exploratory EDIT comparison** ([results](test-run/fair-retest/RESULTS.md)).
+With one Claude-generated output per condition, two independently run, blinded OpenAI judges ranked
+HumanScope above ordinary editing in one case, below it in two, and tied in three; the same counts
+held against a compact prompt. Combined scores were equal or close, but this does not establish
+equivalence. HumanScope left an unresolved technical specification as written, where the ordinary and compact
+edits changed its requirements, but it lost information in a marketing passage and a fiction passage.
+**Its contribution beyond competent ordinary editing remains unestablished.** The compact
+comparison did not isolate the six lenses. HumanScope preserved the brief better than Chen's
+*Human Scope* in the two fiction cases tested; that small comparison does not establish general
+superiority. v1.1 patches the observed information-loss failures, and those patches are untested until
+the [held-out suite](evals/heldout-v1.1.md) runs.
+
+Earlier testing was: **exploratory generation comparisons** (the confounded
 A/B above), a **generation ablation** (full vs compact vs ordinary — motivates the review-depth
 routing, does not isolate the lenses), and **preservation smoke tests** across genres/models (the
 guards held on the artifacts tried, with no guardless control). The intended rigorous design —
@@ -153,6 +165,11 @@ also [test cases](evals/cases.md), [smoke test](evals/smoke-test.md).
 HumanScope is **not the first** skill to build on StoryScope, and it stands on a shared lineage —
 credit where due:
 
+- **[Human Scope](https://chen.media/guides/human-scope-storyscope-claude-writing-skill)** by Alex
+  Chen (Chen Media). Chen's SCOPE reel prompted this project, and his companion skill is prior art
+  we found during development. It is a concise, fiction-focused StoryScope checklist. HumanScope is a
+  separate, unaffiliated implementation informed by the same paper. The v1.1 knowledge-boundary
+  check draws on Chen's editorial checklist.
 - **[NulightJens/humanizer-stack](https://github.com/NulightJens/humanizer-stack)** — a two-pass
   (surface + structural) Claude-skill pipeline grounded in StoryScope, with **deterministic Python
   scanners**. Ahead of us on reproducibility and inspectability.

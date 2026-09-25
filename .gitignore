@@ -20,3 +20,6 @@ Thumbs.db
 
 # Local Codex per-project pin (personal setup; not for the public repo)
 .codex/
+
+# Third-party competitor skill (Chen Media, no license) — download from https://chen.media/downloads/human-scope.zip
+test-run/fair-retest/_competitor/

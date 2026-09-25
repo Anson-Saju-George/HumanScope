@@ -377,3 +377,217 @@ _Usage-unlimited pass. Verdict: **V1 is well short of its model-only ceiling; su
 - **The ablation doesn't isolate the lenses** (H inherits extra instructions/context; C's prompt is edit-framed but used for generation). Also a factual error: ablation generator=Claude, judge=Sol.
 - **Residual overclaims** in results (demonstrated L1 mechanism, effect-size dependence, preserved voice, no over-editing — generation can't show voice-preservation/restraint) and generalization ('one-off/non-harmful/guards prevent' — no guardless control).
 _Also: 6 small SKILL.md runtime fixes; a concrete scaled model-only protocol (96 held-out cases × 4 arms O/C/V1/N × 3 generator families × 3 runs = 3,456 outputs, 3 independent judges, separate constraint/task/preference outcomes, case-clustered CIs); v1.1 = corrected reports + runtime fixes + versioned eval harness + regression suite, NOT another lens. Raw: research/raw-model-output/astra-v1-audit-R8.txt._
+
+
+## Round 9 — Astra (gpt-6-astra @ xhigh, pinned session) — fair re-test review + Chen prior art
+_Invoked 2026-09-25 with full unblinded fair-retest results (6 cases x 4 arms: S/O/C/K), both blind judges' scores, all 24 outputs, Chen's human-scope SKILL.md, and the then-current SKILL.md. Adjudication: all six SKILL.md diffs adopted verbatim (v1.1); "propose, not cut" rejected as an absolute per Astra; RESULTS.md headline/counts/K-funeral/manifest labels corrected; held-out suite adopted as `evals/heldout-v1.1.md`; README credit reworded (name-coincidence sentence removed)._
+
+**Verdict: the retest exposes real failures, but “S ties O; S beats K; lenses add nothing” is too broad. Keep the lenses provisionally for structural work, make a small preservation patch, and validate it on new material. Do not call the patch an improvement before testing it.**
+
+**1. What the results actually say**
+
+The headline should be:
+
+> **In six preservation-focused editing cases, HumanScope showed mixed results and no demonstrated advantage over ordinary or compact editing. The comparison did not isolate the lenses’ contribution.**
+
+The equal totals hide this:
+
+| Comparison | Astra: wins / losses / ties | Sol: wins / losses / ties |
+|---|---:|---:|
+| S versus O | 1 / 2 / 3 | 1 / 2 / 3 |
+| S versus C | 1 / 2 / 3 | 1 / 2 / 3 |
+
+S’s technical win compensates for its marketing and fiction losses under the chosen scoring. Equal sums of two ordinal scales do **not** establish equivalent performance. Conversely, counting cases alone ignores the potentially different consequences of altering an operational requirement and deleting a marketing assertion. Report both the counts and the failure types.
+
+Five corrections matter:
+
+- **C still is not a lens-only ablation.** [C-instr.txt](D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/fair-retest/C-instr.txt:1) also omits S’s detailed claim guard, artifact conventions, routing and final restraint check. S’s technical success could come from those instructions. Say **“the full package did not establish an advantage over the compact package,”** not “the lenses showed no increment.”
+
+- **The preservation brief is legitimate but restricts the conclusion.** It tests an important promised behavior: improve wording without making substantive authorial decisions. It does not determine the best developmental edit, nor whether implicitness would improve fiction-a under a different brief. The bias enters when this task becomes a claim about fiction editing generally.
+
+- **Fiction-a was not merely redundant.** Its paragraph establishes a habitual coping behavior, fear of losing Ruth, that fear as the journey’s motive, and Dana’s realization of this. Eggs and driving do not establish those things. **All four edits lose the stated motive; S loses more than O/C.** Ranking the least damaging rewrite does not establish improvement over the original. Include the untouched source next time. A faithful tightening remains possible—for example: “Whisk in hand, she realized she had always cooked when afraid: fear of losing her mother was why she had driven two hours, unasked.”
+
+- **The K comparison needs narrower language and one factual correction.** S better preserved the brief in both tested fiction cases. Four other cases are outside K’s principal scope. Also, K’s “At the funeral I skipped it too” follows reasonably from “three weddings and one funeral” plus “I always skip that year.” The unsupported addition is the comparative motive—“nobody there needed me to skip it more than I did”—and the loss is the present confession. Fiction-a contains unmistakably invented actions. Don’t overstate the competitor’s errors.
+
+- **Fix the evaluation records themselves.** “Leverage” is labelled a defect in [MANIFESTS.md](D:/main-projects/LIVE-ACTIVE/HumanScope/test-run/fair-retest/MANIFESTS.md:3), yet S/O/C retain it and receive full marks. Remove that word-based defect label. Describe the judges as two independently run OpenAI models; this is neither cross-provider corroboration nor twelve independent task replications. Four cases were already development material.
+
+There is also a reproducibility gap: the successful judge prompts/transcripts and exact evaluated S snapshot are not archived in this checkout. The packet builder alone does not establish the reported isolation. Archive the successful runs; their absence does not mean they never happened.
+
+Finally, **rerunning these six cases is useful regression testing, not inherently overfitting**. Using those reruns as independent validation would be the mistake.
+
+**2. Diagnosis and numbered SKILL.md diffs**
+
+The common failure is **unauthorized loss of distinct information during preservation editing**. “Removing content the author chose to state” is too broad: authors also choose redundant, irrelevant and mistaken content.
+
+A plausible mechanism is treating a passage’s expendable rhetorical function as evidence that *everything inside it* is expendable. That remains a hypothesis; neither L1 nor any other instruction has been isolated causally.
+
+I would make these six focused changes.
+
+**1. Check deletions, not just surviving claims.**  
+[§2, smallest useful change](D:/main-projects/LIVE-ACTIVE/HumanScope/SKILL.md:77)
+
+Old:
+
+> **Smallest useful change** — the least edit that fixes it while preserving voice/meaning.
+
+New:
+
+> **Smallest useful change** — the least edit that fixes it while preserving voice/meaning. Before deleting or replacing text, identify what information or function would disappear. Removing filler does not authorize removing a distinct claim, motive or realization inside it. Consolidate genuine redundancy; omit substantive content only as the brief authorizes or a supported correction requires.
+
+This preserves content where required, without freezing sentences or forbidding deletion.
+
+**2. Bound the transformation exception.**  
+[§2, authorized transformation](D:/main-projects/LIVE-ACTIVE/HumanScope/SKILL.md:80)
+
+Old:
+
+> For an *authorized transformation* (the user asked you to rewrite, shorten, change register, etc.), the bar is different: assess the gap against the requested target, not a "present failure" — a transformation can be worth making without the original being defective.
+
+New:
+
+> For an authorized transformation, assess the gap against the requested target rather than inventing a defect. Change or omit content only as that target requires and within the brief’s constraints. “Rewrite” or “tighten” is not blanket permission to change substantive meaning; a summary, abridgment or creative transformation may authorize selection or alteration.
+
+Otherwise the exception can swallow the preservation rule.
+
+**3. Scope fictional invention by mode.**  
+[Core stance](D:/main-projects/LIVE-ACTIVE/HumanScope/SKILL.md:51)
+
+Old:
+
+> When writing **fiction**, inventing characters/events/detail is the task — do it freely, and preserve continuity unless asked to change it.
+
+New:
+
+> In fiction **WRITE**, invent characters, events and detail within the brief. In **EDIT**, add or alter them only where the requested transformation authorizes it; preserve established continuity.
+
+This is an actual cross-mode ambiguity. “Fiction” alone must not license new events during a light edit.
+
+**4. Replace L1’s residual invitation toward implication.**  
+[L1 parenthetical](D:/main-projects/LIVE-ACTIVE/HumanScope/SKILL.md:96)
+
+Old:
+
+> Both over- and under-explaining are failures. Reports/instructions often *should* state conclusions; a scene may be stronger implied.
+
+New:
+
+> Both over- and under-explaining can impair the intended effect. Explanation may supply a motive, realization, emphasis or narrator stance. Information a reader could infer is not necessarily equivalent to an explicit disclosure.
+
+Keep the opening question. This change teaches the distinction the failed edit missed.
+
+**5. Make structural review depend on the task, not narrative genre alone.**  
+[§4 narrative routing](D:/main-projects/LIVE-ACTIVE/HumanScope/SKILL.md:134)
+
+Old:
+
+> For passages organized around **scenes, experience, or unfolding events**, select the relevant lenses from §3 to examine how presentation, disclosure, interpretation, and closure work together. Do not run all six by default.
+
+New:
+
+> For passages organized around **scenes, experience, or unfolding events**, use relevant lenses when WRITE, DIAGNOSE or the requested edit calls for structural review. Light EDIT stays within its requested scope; narrative genre alone does not call for a broader review. Do not run all six by default.
+
+The existing permission to use any lens for a concrete need remains.
+
+**6. Add the useful knowledge-boundary check.**  
+[§5 restraint check](D:/main-projects/LIVE-ACTIVE/HumanScope/SKILL.md:152)
+
+Old:
+
+> voice preserved? continuity/terminology intact?
+
+New:
+
+> voice preserved? continuity/terminology intact? who knows what, when, consistent with the intended viewpoint?
+
+Test this against retrospective and omniscient narration so it does not become a new prohibition.
+
+Your proposals, adjudicated:
+
+- **“Claim-bearing sentences survive”: amend.** Required claims survive; sentences may merge, move or disappear when their content remains.
+- **“Stated meaning is proposed, not cut, in EDIT”: reject as an absolute.** Perform authorized omissions and genuine consolidation. For an unauthorized substantive deletion, retain the material; propose an alternative only when review commentary is requested or permitted. Do not force an approval loop into artifact-only editing.
+- **Knowledge boundaries: adopt conditionally. Diagnose → choose changes → revise: offer as an optional README workflow.** It is useful author control, not a mandatory runtime sequence.
+
+Chen’s exact useful instruction is:
+
+> “Check continuity, chronology, knowledge boundaries, and cause and effect.”
+
+Also worth retaining as an editorial principle:
+
+> “Keep explicit reflection when voice, accessibility, genre, or the author's intent calls for it.”
+
+Chen already contains that safeguard and still produced the failed edits. **Another sentence of caution is not proof of reliability.**
+
+Explicitly reject importing:
+
+> “Identify the three highest-impact issues”
+
+That imposes an issue quota.
+
+> “Revise at scene level before polishing individual phrases.”
+
+That is an inappropriate universal order for light edits.
+
+The quota may contribute to unnecessary revision; these outputs do not prove it caused the invented material. And Chen’s supplied skill proceeds directly from diagnosis to revision—it does **not** specify an approval step. Credit the knowledge-boundary check, not an approval workflow absent from the text.
+
+**3. Should the six lenses stay?**
+
+**The case for removing them:** no demonstrated incremental benefit; additional instruction load; some directional residue; ordinary editing already handles much of their substance. Their existence cannot be justified by the effort spent developing them.
+
+**The case for retaining them:** this test barely exercises long-range composition, and does not test WRITE, DIAGNOSE or substantial structural editing. Moreover, C removes more than the lenses. These results cannot identify their contribution, positive or negative.
+
+**Decision: retain them provisionally as optional aids for structural work, with the routing change above.** Do not advertise them as an established advantage. The next matched comparator should be the patched skill with **only the lens content and necessary references removed**, keeping guards and other workflow instructions constant. Publish that diff.
+
+Their benefit in untested modes is a reason to test them, not evidence that they help there.
+
+**4. Held-out validation specifications**
+
+Use **eight new source artifacts, nine tasks**, because case 2 has two permission conditions. These are specifications, not yet held-out evidence: freeze the patch before realizing the new texts and evaluating outputs.
+
+| Case | Hazard and source | Correct behavior | Why judging does not automatically favor restraint or intervention |
+|---|---|---|---|
+| **1. Exhibition access notice — light EDIT** | A verbose sentence contains a real opening window and an eligibility exception; nearby material contains genuine filler. | Shorten expendable language while preserving the window, exception and audience attachment. | Score recoverable information and useful tightening separately. Wholesale deletion and unchanged bloat can both fail. |
+| **2. Motive and realization — paired EDIT briefs** | A new close-third story states a motive that actions alone do not establish, plus a genuinely duplicated clause. | **A:** ordinary meaning-preserving light edit retains motive and realization while tightening duplication. **B:** an explicit request to make the motive ambiguous permits removing that explanation while preserving events. | The same deletion cannot be right under both briefs. Count these as one source cluster, not independent cases. |
+| **3. Effective apology — light EDIT** | A well-written apology uses purposeful repetition and an explicit admission of responsibility. | Preserve the admission and rhetorical function; unchanged text can succeed. | Judges are not told “no change expected.” They assess the recipient’s needs, not edit count or byte identity. |
+| **4. Genuine redundancy — EDIT** | Adjacent paragraphs repeat a proposition without adding scope, emphasis, contrast or a separate reading path. A distinct qualification sits beside the duplicate. | Consolidate the repetition while retaining the proposition and qualification. | A blanket “never remove stated content” editor fails. Maximum shortening also fails if it loses the qualification. |
+| **5. Executable instructions — structural EDIT** | A prerequisite appears after the action requiring it; an explanation is detached from its referent. All necessary information exists. Reordering is authorized. | Move the prerequisite before the dependent action and restore the explanatory connection without inventing steps. | Untouched text fails an observable task: following the instructions in order. This is a genuine structural-edit requirement. |
+| **6. Knowledge boundaries — DIAGNOSE** | A limited-viewpoint scene uses information before its character acquires it. A separate, clearly retrospective narrator passage legitimately mentions later knowledge. | Identify the first problem with evidence and a feasible repair; do not flag the retrospective passage merely for knowing more. | Both indiscriminate suspicion and indiscriminate preservation fail. The chronology and viewpoint establish the distinction. |
+| **7. Supported correction — EDIT** | A claim is broader than the supplied evidence. The brief authorizes evidence-based correction. | Narrow the claim and retain citation attachment; leave supported neighboring claims intact. | Success requires changing something explicitly stated. The evidence packet, not aesthetic preference, determines the correction. |
+| **8. Notes to agenda — transformation** | Working notes contain completed and pending tasks, unresolved alternatives, owners and dependencies. The user requests an agenda organized around decisions and follow-up. | Produce the agenda while preserving status, uncertainty and ownership. | Returning the notes unchanged fails the task; inventing decisions to make a tidy agenda fails preservation. |
+
+Use a normal preservation brief in case 2A—not a bespoke instruction naming the exact information the patch is supposed to protect. Give every arm the same brief within each task.
+
+For execution:
+
+- Compare **pre-patch S, patched S, O and matched compact C\***.
+- Use at least three fresh-context runs per task: **108 outputs**.
+- Include the untouched source when judging EDIT cases.
+- Score **unauthorized information change, task completion and reader benefit separately**. A polished semantic loss must not disappear inside an aggregate.
+- Randomize presentation order independently; allow ties. Give judges source material and the task, not the patch or expected preferred operation.
+- Preserve the six existing cases as regression tests. New instances test transfer of the fix; eight deliberately selected artifacts still do not establish general writing efficacy.
+- Add separate WRITE validation before claiming the revised invention rule or lenses improve drafting. This suite primarily validates editing boundaries.
+
+**5. Public wording**
+
+For the README:
+
+> **Latest evaluation: a six-case exploratory EDIT comparison.** With one Claude-generated output per condition, two independently run, blinded OpenAI judges ranked HumanScope above ordinary editing in one case, below it in two, and tied in three; the same counts held against a compact prompt. Combined scores were equal or close, but this does not establish equivalence. HumanScope preserved an unresolved technical specification where ordinary and compact edits changed it, while losing information in a marketing passage and a fiction passage. Its contribution beyond competent ordinary editing remains unestablished. The compact comparison did not isolate the six lenses.
+
+In the detailed results, add:
+
+> HumanScope better preserved the brief than Chen’s *Human Scope* in the two tested fiction cases. This small comparison does not establish general superiority; four additional cases were outside Chen’s skill’s principal scope.
+
+For credit:
+
+> Alex Chen’s SCOPE reel prompted this project. His companion skill, [*Human Scope*](https://chen.media/guides/human-scope-storyscope-claude-writing-skill), is prior art located during development. HumanScope is a separate, unaffiliated implementation informed by the same StoryScope paper. The v1.1 knowledge-boundary check draws on Chen’s editorial checklist.
+
+Use the last sentence only once adopted. Remove the [README’s unsupported “name coincidence” explanation](D:/main-projects/LIVE-ACTIVE/HumanScope/README.md:159); simply distinguish the projects.
+
+For CHANGELOG, after the patch lands:
+
+> - Added the matched-brief exploratory EDIT comparison and documented its limits.
+> - Clarified deletion checks, transformation scope and fiction invention permissions.
+> - Restricted automatic expansion into structural review during light editing.
+> - Added a viewpoint-sensitive knowledge-boundary check, crediting Alex Chen’s *Human Scope*.
+> - Behavioral improvement remains pending held-out validation.
+
+Also mark the historical [“validated domain-gating”](D:/main-projects/LIVE-ACTIVE/HumanScope/CHANGELOG.md:48) and [“safe and useful”](D:/main-projects/LIVE-ACTIVE/HumanScope/CHANGELOG.md:56) claims as withdrawn. They remain stronger than the evidence despite the newer corrections.

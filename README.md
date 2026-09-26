@@ -152,6 +152,16 @@ comparison did not isolate the six lenses. HumanScope preserved the brief better
 *Human Scope* in the two fiction cases tested; that small comparison does not establish general
 superiority. The v1.1 candidate adds instructions targeting these information-loss failures. Whether they improve behavior remains unestablished; the [held-out suite](evals/heldout-v1.1.md) will test that.
 
+**Everyday WRITE prompts vs HumanScope** ([results](test-run/write-x/RESULTS.md)). Bare task
+prompts, including one typed the way a person casually would, were compared with the same prompts
+plus HumanScope on a bakery web page, a blog post, and a team email. One blind judge (GPT Astra)
+scored the visible text. In all three tasks, every HumanScope output ranked above every bare-prompt
+output. The main difference was **fidelity**: the bare outputs confidently invented recipes, store
+policies, migration histories, and team rules that the owner never supplied, and used more stock
+taglines. HumanScope outputs were plainer, and one left placeholders instead of inventing facts.
+The sample is small (1–3 runs per arm, one judge, Claude-generated), and the fidelity criterion
+overlaps the skill's own integrity rule.
+
 Earlier testing was: **exploratory generation comparisons** (the confounded
 A/B above), a **generation ablation** (full vs compact vs ordinary — motivates the review-depth
 routing, does not isolate the lenses), and **preservation smoke tests** across genres/models (preservation successes and information-change failures were observed, without a guardless control). The intended rigorous design —

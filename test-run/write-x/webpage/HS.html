@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crumb &amp; Co. | Bakery on SE Division, Portland</title>
+<meta name="description" content="Crumb &amp; Co. is a walk-in bakery at 412 SE Division St, Portland. Sourdough, morning buns, and a seasonal galette. Open Tuesday to Sunday, 7am to 3pm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --flour: #f7f1e6;
+    --paper: #fffaf1;
+    --crust: #7a4a24;
+    --crust-dark: #4e2e15;
+    --ink: #2a211b;
+    --muted: #6b5d52;
+    --line: #e4d8c4;
+    --open: #3f6b3a;
+    --closed: #9a4a2e;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--flour);
+    color: var(--ink);
+    font: 400 1.0625rem/1.6 "Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  h1, h2, h3 {
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    color: var(--crust-dark);
+  }
+  a { color: var(--crust); }
+  a:focus-visible { outline: 2px solid var(--crust); outline-offset: 3px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  header {
+    border-bottom: 1px solid var(--line);
+    background: var(--flour);
+  }
+  header .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding-top: 18px; padding-bottom: 18px; flex-wrap: wrap;
+  }
+  .logo {
+    font-family: "Fraunces", Georgia, serif; font-size: 1.5rem; font-weight: 600;
+    color: var(--crust-dark); text-decoration: none; letter-spacing: -0.01em;
+  }
+  nav a {
+    color: var(--ink); text-decoration: none; margin-left: 22px; font-size: 0.95rem;
+  }
+  nav a:hover { color: var(--crust); text-decoration: underline; }
+
+  /* Hero */
+  .hero { padding: 72px 0 64px; }
+  .hero .wrap {
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: end;
+  }
+  .hero h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); letter-spacing: -0.02em; }
+  .hero p.lede { font-size: 1.2rem; color: var(--muted); max-width: 32ch; margin: 20px 0 0; }
+  .status-card {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 6px;
+    padding: 24px 26px;
+  }
+  .status {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 500; font-size: 0.95rem;
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--muted); }
+  .status.is-open .dot { background: var(--open); }
+  .status.is-open { color: var(--open); }
+  .status.is-closed .dot { background: var(--closed); }
+  .status.is-closed { color: var(--closed); }
+  .status-card address {
+    font-style: normal; margin-top: 14px; font-size: 1.05rem;
+  }
+  .status-card .hours-short { margin: 6px 0 0; color: var(--muted); }
+  .status-card .walkin {
+    margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--line);
+    font-size: 0.95rem;
+  }
+
+  /* Bakes */
+  section { padding: 64px 0; }
+  .section-head { margin-bottom: 32px; }
+  .section-head h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); }
+  .bakes {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    border-top: 2px solid var(--crust-dark);
+  }
+  .bake {
+    padding: 26px 24px 30px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .bake + .bake { padding-left: 24px; border-left: 1px solid var(--line); }
+  .bake h3 { font-size: 1.5rem; }
+  .bake p { margin: 10px 0 0; color: var(--muted); }
+  .bake .tag {
+    display: inline-block; margin-top: 14px; font-size: 0.8rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--crust);
+  }
+
+  /* Visit */
+  .visit { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .visit h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin-bottom: 20px; }
+  table.hours { border-collapse: collapse; width: 100%; max-width: 360px; }
+  table.hours th, table.hours td {
+    text-align: left; padding: 9px 0; border-bottom: 1px solid var(--line); font-weight: 400;
+  }
+  table.hours td { text-align: right; }
+  table.hours tr.today th, table.hours tr.today td { font-weight: 500; color: var(--crust-dark); }
+  table.hours tr.closed td { color: var(--muted); }
+  .visit address { font-style: normal; font-size: 1.15rem; line-height: 1.5; }
+  .visit .note { color: var(--muted); margin-top: 18px; max-width: 40ch; }
+  .btn {
+    display: inline-block; margin-top: 22px; padding: 12px 20px;
+    background: var(--crust-dark); color: var(--paper); text-decoration: none;
+    border-radius: 4px; font-weight: 500;
+  }
+  .btn:hover { background: var(--crust); }
+
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  @media (max-width: 760px) {
+    nav a { margin-left: 0; margin-right: 18px; }
+    .hero { padding: 44px 0 40px; }
+    .hero .wrap, .visit .wrap { grid-template-columns: 1fr; gap: 32px; }
+    .bakes { grid-template-columns: 1fr; }
+    .bake, .bake + .bake { padding: 22px 0 24px; border-left: 0; }
+    table.hours { max-width: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Crumb &amp; Co.</a>
+    <nav aria-label="Main">
+      <a href="#bakes">What we bake</a>
+      <a href="#visit">Hours &amp; location</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Bread and pastry on SE&nbsp;Division.</h1>
+        <p class="lede">Sourdough, morning buns, and a galette that changes with the season. Come by in the morning.</p>
+      </div>
+      <aside class="status-card" aria-label="Today at the bakery">
+        <div class="status" id="status" role="status"><span class="dot" aria-hidden="true"></span><span id="status-text">Tue–Sun, 7am–3pm</span></div>
+        <address>412 SE Division St<br>Portland, OR</address>
+        <p class="hours-short">Tuesday to Sunday, 7am to 3pm. Closed Mondays.</p>
+        <p class="walkin"><strong>Walk-in only.</strong> We don’t take online orders, so just come in.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="bakes">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What we bake</h2>
+      </div>
+      <div class="bakes">
+        <article class="bake">
+          <h3>Sourdough</h3>
+          <p>Our naturally leavened loaves.</p>
+        </article>
+        <article class="bake">
+          <h3>Morning buns</h3>
+          <p>The one to grab first thing.</p>
+        </article>
+        <article class="bake">
+          <h3>Seasonal galette</h3>
+          <p>The filling changes with the season. Ask at the counter what it is this week.</p>
+          <span class="tag">Changes seasonally</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <div>
+        <h2>Hours</h2>
+        <table class="hours" id="hours">
+          <tbody>
+            <tr data-day="1" class="closed"><th scope="row">Monday</th><td>Closed</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>7am – 3pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>7am – 3pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>7am – 3pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>7am – 3pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>7am – 3pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>7am – 3pm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h2>Find us</h2>
+        <address>Crumb &amp; Co.<br>412 SE Division St<br>Portland, OR</address>
+        <p class="note">Walk-in only. There’s no online ordering, so everything is sold at the counter.</p>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=412+SE+Division+St+Portland+OR" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Crumb &amp; Co. · 412 SE Division St, Portland, OR</span>
+    <span>Tue–Sun 7am–3pm · Walk-in only</span>
+  </div>
+</footer>
+
+<script>
+  // Open/closed indicator, computed in Portland time (America/Los_Angeles).
+  (function () {
+    try {
+      var parts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/Los_Angeles",
+        weekday: "short", hour: "numeric", minute: "numeric", hour12: false
+      }).formatToParts(new Date());
+      var get = function (t) { for (var i = 0; i < parts.length; i++) if (parts[i].type === t) return parts[i].value; };
+      var dayIndex = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(get("weekday"));
+      var hour = parseInt(get("hour"), 10) % 24;
+      var minutes = hour * 60 + parseInt(get("minute"), 10);
+
+      var openDay = dayIndex !== 1;              // closed Mondays
+      var isOpen = openDay && minutes >= 7 * 60 && minutes < 15 * 60;
+
+      var status = document.getElementById("status");
+      var text = document.getElementById("status-text");
+      if (isOpen) {
+        status.classList.add("is-open");
+        text.textContent = "Open now, until 3pm";
+      } else {
+        status.classList.add("is-closed");
+        var msg;
+        if (openDay && minutes < 7 * 60) msg = "Closed now, opens at 7am";
+        else if (dayIndex === 0) msg = "Closed now, opens Tuesday at 7am"; // Sunday after 3pm
+        else if (dayIndex === 1) msg = "Closed Mondays, opens Tuesday at 7am";
+        else msg = "Closed now, opens tomorrow at 7am";
+        text.textContent = msg;
+      }
+
+      var row = document.querySelector('#hours tr[data-day="' + dayIndex + '"]');
+      if (row) row.classList.add("today");
+    } catch (e) { /* static hours remain visible */ }
+  })();
+</script>
+</body>
+</html>

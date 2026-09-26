@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crumb &amp; Co. — Sourdough Bakery on SE Division, Portland</title>
+<meta name="description" content="Crumb & Co. is a walk-in bakery at 412 SE Division St, Portland. Naturally leavened sourdough, morning buns, and a seasonal galette. Open Tuesday to Sunday, 7am to 3pm.">
+<style>
+  :root {
+    --flour: #f6f1e7;
+    --paper: #fbf8f2;
+    --crust: #7a4a24;
+    --crust-dark: #5a3418;
+    --ink: #2a211b;
+    --muted: #6b5d52;
+    --rule: #e3d8c6;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 17px/1.6 var(--sans);
+  }
+  .wrap { max-width: 68rem; margin: 0 auto; padding-inline: 1.25rem; }
+  a { color: var(--crust); }
+  a:focus-visible { outline: 2px solid var(--crust); outline-offset: 3px; }
+
+  header.top {
+    border-bottom: 1px solid var(--rule);
+  }
+  header.top .wrap {
+    display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+    gap: .5rem 1.5rem; padding-block: 1.1rem;
+  }
+  .logo {
+    font-family: var(--serif); font-size: 1.5rem; font-weight: 700;
+    color: var(--ink); text-decoration: none; letter-spacing: -.01em;
+  }
+  .logo span { color: var(--crust); }
+  nav a {
+    color: var(--muted); text-decoration: none; margin-left: 1.25rem; font-size: .95rem;
+  }
+  nav a:first-child { margin-left: 0; }
+  nav a:hover { color: var(--ink); }
+
+  .hero { padding-block: 4.5rem 3.5rem; }
+  .hero .wrap {
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: center;
+  }
+  .eyebrow {
+    font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--crust); font-weight: 600; margin: 0 0 1rem;
+  }
+  h1 {
+    font-family: var(--serif); font-weight: 700; font-size: clamp(2.4rem, 5.5vw, 4rem);
+    line-height: 1.05; letter-spacing: -.02em; margin: 0 0 1.25rem;
+  }
+  .lede { font-size: 1.15rem; color: var(--muted); max-width: 32rem; margin: 0 0 2rem; }
+  .facts { display: flex; flex-wrap: wrap; gap: .75rem 2rem; margin: 0; padding: 0; list-style: none; }
+  .facts li { font-size: .95rem; }
+  .facts strong { display: block; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+
+  .loaf { width: 100%; max-width: 26rem; height: auto; justify-self: center; }
+
+  section { padding-block: 3.5rem; border-top: 1px solid var(--rule); }
+  h2 {
+    font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+    font-weight: 700; letter-spacing: -.01em; margin: 0 0 .5rem;
+  }
+  .section-intro { color: var(--muted); margin: 0 0 2.25rem; max-width: 36rem; }
+
+  .menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+  .item h3 {
+    font-family: var(--serif); font-size: 1.35rem; margin: 0 0 .5rem;
+    padding-top: 1rem; border-top: 3px solid var(--crust);
+  }
+  .item p { margin: 0; color: var(--muted); }
+  .tag {
+    display: inline-block; margin-top: .9rem; font-size: .78rem; font-weight: 600;
+    letter-spacing: .06em; text-transform: uppercase; color: var(--crust-dark);
+    background: var(--flour); border: 1px solid var(--rule); border-radius: 999px; padding: .2rem .7rem;
+  }
+
+  .visit { background: var(--flour); }
+  .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .hours { width: 100%; border-collapse: collapse; }
+  .hours th, .hours td { text-align: left; padding: .6rem 0; border-bottom: 1px solid var(--rule); font-weight: 400; }
+  .hours td { text-align: right; font-variant-numeric: tabular-nums; }
+  .hours tr.closed td { color: var(--muted); }
+  .hours tr.today th, .hours tr.today td { font-weight: 700; color: var(--ink); }
+  #status { margin: 1rem 0 0; font-weight: 600; color: var(--crust-dark); min-height: 1.6em; }
+  address { font-style: normal; font-size: 1.1rem; line-height: 1.5; margin-bottom: 1.25rem; }
+  .btn {
+    display: inline-block; background: var(--crust); color: #fff; text-decoration: none;
+    padding: .75rem 1.25rem; border-radius: 6px; font-weight: 600; font-size: .95rem;
+  }
+  .btn:hover { background: var(--crust-dark); }
+  .note {
+    margin-top: 2rem; padding: 1.1rem 1.25rem; background: var(--paper);
+    border-left: 3px solid var(--crust); border-radius: 0 6px 6px 0;
+  }
+  .note strong { display: block; margin-bottom: .2rem; }
+  .note p { margin: 0; color: var(--muted); }
+
+  footer { padding-block: 2rem; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--rule); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; }
+
+  @media (max-width: 800px) {
+    .hero { padding-block: 2.75rem 2rem; }
+    .hero .wrap, .visit-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .loaf { max-width: 16rem; order: -1; justify-self: start; }
+    .menu { grid-template-columns: 1fr; gap: 2rem; }
+    nav a { margin-left: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">Crumb <span>&amp;</span> Co.</a>
+    <nav aria-label="Main">
+      <a href="#bakes">What we bake</a>
+      <a href="#visit">Hours &amp; location</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Bakery · SE Division, Portland</p>
+        <h1>Slow bread, baked every morning.</h1>
+        <p class="lede">Naturally leavened sourdough, morning buns, and a galette that changes with the season. Come by, grab something warm, and say hello.</p>
+        <ul class="facts">
+          <li><strong>Open</strong>Tue–Sun, 7am–3pm</li>
+          <li><strong>Find us</strong>412 SE Division St</li>
+          <li><strong>Ordering</strong>Walk-in only</li>
+        </ul>
+      </div>
+      <svg class="loaf" viewBox="0 0 400 300" role="img" aria-label="Illustration of a scored sourdough loaf">
+        <ellipse cx="200" cy="262" rx="165" ry="14" fill="#e3d8c6"/>
+        <path d="M40 220 C40 110 120 60 200 60 C280 60 360 110 360 220 C360 250 320 258 200 258 C80 258 40 250 40 220 Z" fill="#b87333"/>
+        <path d="M40 220 C40 110 120 60 200 60 C280 60 360 110 360 220 C360 250 320 258 200 258 C80 258 40 250 40 220 Z" fill="none" stroke="#7a4a24" stroke-width="4"/>
+        <path d="M70 200 C70 130 130 88 200 84" fill="none" stroke="#d99a5b" stroke-width="10" stroke-linecap="round" opacity=".55"/>
+        <path d="M120 110 C170 140 230 140 280 110" fill="none" stroke="#f3dcb6" stroke-width="9" stroke-linecap="round"/>
+        <path d="M100 160 C160 190 240 190 300 160" fill="none" stroke="#f3dcb6" stroke-width="9" stroke-linecap="round"/>
+        <path d="M110 210 C170 232 230 232 290 210" fill="none" stroke="#f3dcb6" stroke-width="8" stroke-linecap="round" opacity=".8"/>
+        <g fill="#f6f1e7" opacity=".7">
+          <circle cx="150" cy="95" r="2.5"/><circle cx="240" cy="98" r="2"/><circle cx="310" cy="140" r="2.5"/>
+          <circle cx="85" cy="175" r="2"/><circle cx="205" cy="200" r="2.5"/><circle cx="330" cy="200" r="2"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <section id="bakes">
+    <div class="wrap">
+      <h2>What we bake</h2>
+      <p class="section-intro">A short list, done carefully. What's on the shelf depends on the day, so come early for the best pick.</p>
+      <div class="menu">
+        <article class="item">
+          <h3>Sourdough</h3>
+          <p>Naturally leavened with our own starter and given a long, slow rise. A crackly crust and an open, chewy crumb.</p>
+          <span class="tag">Every day we're open</span>
+        </article>
+        <article class="item">
+          <h3>Morning buns</h3>
+          <p>Laminated dough rolled up and baked until the edges caramelize. Best eaten warm, right at the counter.</p>
+          <span class="tag">Morning favorite</span>
+        </article>
+        <article class="item">
+          <h3>Seasonal galette</h3>
+          <p>A rustic, free-form tart filled with whatever's in season. The filling rotates, so there's usually something new to try.</p>
+          <span class="tag">Rotating</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap visit-grid">
+      <div>
+        <h2>Hours</h2>
+        <table class="hours" aria-label="Opening hours">
+          <tbody>
+            <tr data-day="1" class="closed"><th scope="row">Monday</th><td>Closed</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>7am – 3pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>7am – 3pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>7am – 3pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>7am – 3pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>7am – 3pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>7am – 3pm</td></tr>
+          </tbody>
+        </table>
+        <p id="status" aria-live="polite"></p>
+      </div>
+      <div>
+        <h2>Find us</h2>
+        <address>
+          Crumb &amp; Co.<br>
+          412 SE Division St<br>
+          Portland, OR
+        </address>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=412+SE+Division+St+Portland+OR" target="_blank" rel="noopener">Get directions</a>
+        <div class="note">
+          <strong>Walk-in only</strong>
+          <p>We don't take online or phone orders yet. Just stop in during open hours and pick what you like from the case.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Crumb &amp; Co. · 412 SE Division St, Portland</span>
+    <span>Tue–Sun, 7am–3pm · Closed Mondays</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    // Use Portland (Pacific) time regardless of where the visitor is.
+    var now;
+    try {
+      var parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Los_Angeles', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false
+      }).formatToParts(new Date());
+      var get = function (t) { return (parts.find(function (p) { return p.type === t; }) || {}).value; };
+      var days = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+      now = { day: days[get('weekday')], hour: parseInt(get('hour'), 10) % 24 };
+    } catch (e) {
+      var d = new Date();
+      now = { day: d.getDay(), hour: d.getHours() };
+    }
+
+    var row = document.querySelector('.hours tr[data-day="' + now.day + '"]');
+    if (row) row.classList.add('today');
+
+    var status = document.getElementById('status');
+    var openDay = now.day !== 1;
+    if (openDay && now.hour >= 7 && now.hour < 15) {
+      status.textContent = 'Open now, until 3pm.';
+    } else if (openDay && now.hour < 7) {
+      status.textContent = 'Closed right now. Opening at 7am today.';
+    } else {
+      var next = now.day === 0 ? 'Tuesday' : (now.day === 1 ? 'Tuesday' : 'tomorrow');
+      status.textContent = 'Closed right now. We open at 7am ' + next + '.';
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>

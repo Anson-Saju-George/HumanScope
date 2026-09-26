@@ -1,0 +1,5 @@
+# Write-mode X vs S — realistic bare user prompts (no writing instructions in X)
+- webpage: Make a web page for my bakery, Crumb & Co. We're in Portland at 412 SE Division St, open Tue–Sun 7am–3pm. We do naturally leavened sourdough, morning buns, and a rotating seasonal galette. Walk-in only, no online orders yet. Output a single self-contained HTML file.
+- blog: Write a blog post for our company blog about why our 12-person engineering team switched from Jira to Linear last quarter. Main reasons: Jira felt slow and we spent too long grooming tickets; Linear's keyboard-first workflow and cycles fit how we work. Downside: we lost some reporting we used to rely on.
+- email: Write an email to my team (8 people) announcing that starting next Monday, standups move from daily to Monday/Wednesday/Friday, 15 minutes max. On Tuesdays and Thursdays people post a short written update in #standup instead. Reason: the team asked for more focus time.
+- story: Write a short story, about 600 words, about a lighthouse keeper's last night before the light is automated.

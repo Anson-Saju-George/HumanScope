@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crumb &amp; Co. — Bakery on SE Division, Portland</title>
+<meta name="description" content="Crumb & Co. is a walk-in bakery at 412 SE Division St, Portland. Naturally leavened sourdough, morning buns, and a seasonal galette. Open Tuesday to Sunday, 7am to 3pm.">
+<style>
+  :root {
+    --flour: #f7f1e6;
+    --crust: #8a4b22;
+    --crust-dark: #5e3216;
+    --ink: #2a211b;
+    --muted: #6b5d51;
+    --line: #e2d6c3;
+    --card: #fffaf2;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--flour);
+    color: var(--ink);
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  a { color: var(--crust-dark); }
+  a:focus-visible { outline: 3px solid var(--crust); outline-offset: 2px; }
+  .wrap { max-width: 60rem; margin: 0 auto; padding-inline: 1.25rem; }
+  .sans { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+
+  header.top {
+    border-bottom: 1px solid var(--line);
+  }
+  header.top .wrap {
+    display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+    gap: .5rem 1.5rem; padding-block: 1rem;
+  }
+  .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: .01em; text-decoration: none; color: var(--ink); }
+  .logo span { color: var(--crust); }
+  nav a { margin-left: 1.25rem; font-size: .95rem; text-decoration: none; color: var(--muted); }
+  nav a:first-child { margin-left: 0; }
+  nav a:hover { color: var(--crust-dark); text-decoration: underline; }
+
+  .hero { padding-block: 4rem 3rem; }
+  .hero h1 {
+    font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.1; margin: 0 0 1rem; font-weight: normal;
+    max-width: 16ch;
+  }
+  .hero p.lede { font-size: 1.2rem; color: var(--muted); max-width: 36rem; margin: 0 0 2rem; }
+  .facts {
+    display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; padding: 1.25rem 1.5rem;
+    background: var(--card); border: 1px solid var(--line); border-radius: 6px; max-width: 42rem;
+  }
+  .facts div { font-size: .95rem; }
+  .facts strong { display: block; font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--crust); }
+
+  section { padding-block: 3rem; border-top: 1px solid var(--line); }
+  h2 { font-weight: normal; font-size: 1.9rem; margin: 0 0 1.5rem; }
+
+  .menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.5rem; }
+  .item { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 1.5rem; }
+  .item h3 { margin: 0 0 .5rem; font-size: 1.25rem; color: var(--crust-dark); }
+  .item p { margin: 0; color: var(--muted); }
+  .tag { display: inline-block; margin-top: .9rem; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--crust); }
+
+  .visit { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 2.5rem; }
+  .visit h3 { font-size: 1.1rem; margin: 0 0 .75rem; }
+  address { font-style: normal; }
+  table.hours { border-collapse: collapse; width: 100%; max-width: 20rem; }
+  table.hours th, table.hours td { text-align: left; padding: .4rem 0; border-bottom: 1px solid var(--line); font-weight: normal; }
+  table.hours td { text-align: right; }
+  table.hours tr.closed td, table.hours tr.closed th { color: var(--muted); }
+  #today-status { margin-top: 1rem; font-size: .95rem; color: var(--crust-dark); min-height: 1.5em; }
+
+  .note {
+    background: var(--card); border-left: 4px solid var(--crust); padding: 1rem 1.25rem; max-width: 40rem;
+  }
+  .note p { margin: 0; }
+
+  footer { border-top: 1px solid var(--line); padding-block: 2rem; color: var(--muted); font-size: .9rem; }
+
+  @media (max-width: 34rem) {
+    nav a { margin-left: 0; margin-right: 1rem; }
+    .hero { padding-block: 2.5rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">Crumb <span>&amp;</span> Co.</a>
+    <nav class="sans" aria-label="Main">
+      <a href="#bake">What we bake</a>
+      <a href="#visit">Hours &amp; location</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1>A neighborhood bakery on SE Division.</h1>
+    <p class="lede">Naturally leavened sourdough, morning buns, and a galette that changes with the season. Come by in the morning; we're walk-in only.</p>
+    <div class="facts sans">
+      <div><strong>Where</strong>412 SE Division St, Portland</div>
+      <div><strong>Open</strong>Tue–Sun, 7am–3pm</div>
+      <div><strong>Ordering</strong>Walk-in only</div>
+    </div>
+  </div>
+
+  <section id="bake">
+    <div class="wrap">
+      <h2>What we bake</h2>
+      <div class="menu">
+        <article class="item">
+          <h3>Sourdough</h3>
+          <p>Naturally leavened loaves, raised on starter rather than commercial yeast.</p>
+          <span class="tag sans">Every day we're open</span>
+        </article>
+        <article class="item">
+          <h3>Morning buns</h3>
+          <p>Our morning buns, baked for the early crowd.</p>
+          <span class="tag sans">Every day we're open</span>
+        </article>
+        <article class="item">
+          <h3>Seasonal galette</h3>
+          <p>A galette that rotates with the season. Ask at the counter what's on right now.</p>
+          <span class="tag sans">Rotating</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap">
+      <h2>Visit us</h2>
+      <div class="visit">
+        <div>
+          <h3>Location</h3>
+          <address>
+            Crumb &amp; Co.<br>
+            412 SE Division St<br>
+            Portland, OR
+          </address>
+          <p class="sans"><a href="https://www.google.com/maps/search/?api=1&amp;query=412+SE+Division+St+Portland+OR" target="_blank" rel="noopener">Open in Google Maps</a></p>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <table class="hours sans" aria-describedby="today-status">
+            <tbody>
+              <tr class="closed" data-day="1"><th scope="row">Monday</th><td>Closed</td></tr>
+              <tr data-day="2"><th scope="row">Tuesday</th><td>7am–3pm</td></tr>
+              <tr data-day="3"><th scope="row">Wednesday</th><td>7am–3pm</td></tr>
+              <tr data-day="4"><th scope="row">Thursday</th><td>7am–3pm</td></tr>
+              <tr data-day="5"><th scope="row">Friday</th><td>7am–3pm</td></tr>
+              <tr data-day="6"><th scope="row">Saturday</th><td>7am–3pm</td></tr>
+              <tr data-day="0"><th scope="row">Sunday</th><td>7am–3pm</td></tr>
+            </tbody>
+          </table>
+          <p id="today-status" class="sans" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ordering">
+    <div class="wrap">
+      <h2>How to order</h2>
+      <div class="note">
+        <p>We're walk-in only for now, and we don't take online orders yet. Stop by the counter during open hours.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap sans">
+    Crumb &amp; Co. &middot; 412 SE Division St, Portland, OR &middot; Tue–Sun 7am–3pm
+  </div>
+</footer>
+
+<script>
+  (function () {
+    // Status is computed in Portland time so it's right for visitors anywhere.
+    var el = document.getElementById('today-status');
+    try {
+      var parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Los_Angeles', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false
+      }).formatToParts(new Date());
+      var get = function (t) { for (var i = 0; i < parts.length; i++) if (parts[i].type === t) return parts[i].value; };
+      var dayIdx = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+      var mins = (parseInt(get('hour'), 10) % 24) * 60 + parseInt(get('minute'), 10);
+      var row = document.querySelector('tr[data-day="' + dayIdx + '"]');
+      if (row) row.style.fontWeight = 'bold';
+      if (dayIdx === 1) el.textContent = 'Closed today (Monday). We reopen Tuesday at 7am.';
+      else if (mins < 420) el.textContent = 'Opens today at 7am.';
+      else if (mins < 900) el.textContent = 'Open now until 3pm.';
+      else el.textContent = dayIdx === 0 ? 'Closed for the day. We reopen Tuesday at 7am.' : 'Closed for the day. We reopen tomorrow at 7am.';
+    } catch (e) { /* hours table still shows everything */ }
+  })();
+</script>
+</body>
+</html>

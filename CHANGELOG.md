@@ -31,6 +31,11 @@ tightening the runtime; no new lenses/scanners.
   fictional invention to WRITE (EDIT alters events only when authorized); reword L1 so explanation
   can carry a motive or realization; prevent narrative genre alone from triggering broader structural review during light EDIT; add a viewpoint-sensitive
   knowledge-boundary check, crediting Alex Chen's *Human Scope*.
+- **Ran an everyday WRITE-prompt comparison** (`test-run/write-x/`): bare task prompts (tidy and
+  casually typed) vs the same prompts plus HumanScope; web page, blog, and email; one blind Astra
+  judge. Every HumanScope output ranked above every bare output in all three tasks, mainly on
+  fidelity (bare outputs invented recipes, policies, and histories). Small sample (1–3 runs per
+  arm); the story arm was generated but not yet judged.
 - **Credited prior art:** Alex Chen's *Human Scope* (the SCOPE reel that prompted this project).
 - **Archived for reproducibility:** judge prompts and verdicts, exact S-arm skill snapshot, shuffle keys.
 - **Held-out validation specified** (`evals/heldout-v1.1.md`: 8 new artifacts, 9 tasks, 108

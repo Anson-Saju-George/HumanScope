@@ -101,6 +101,8 @@ installation and other loading options.
 /humanscope Write a product update from these facts. Audience: existing customers.
 ```
 
+**Optional author-controlled workflow:** request DIAGNOSE first, choose the suggested changes you want, then request EDIT implementing those choices. Direct editing remains available without a separate approval step when the changes are already authorized.
+
 ### Claude.ai
 
 Download or clone the repository, package the skill folder as a ZIP containing `SKILL.md`
@@ -126,8 +128,7 @@ See the [paper notes](research/paper-notes.md), [evidence map](research/evidence
 ## Evaluation
 
 **Status: experimental.** Better reader outcomes than ordinary editing have not been
-established. Research grounding is **fiction-specific**; all testing so far is on literary/
-narrative and short expository prose. **Performance on academic papers, structured documents,
+established. Research grounding is **fiction-specific**; testing remains small and exploratory, including narrative prose and short academic, marketing, technical, and notes artifacts. **Performance on academic papers, structured documents,
 websites/marketing, and notes has not been established** — the skill applies careful,
 reader-focused editing there (with guards for structure, claim-strength, and format), but its
 distinctive value on those genres is untested.
@@ -144,18 +145,16 @@ does **not** isolate `SKILL.md`, and it is one sample per condition. See the
 With one Claude-generated output per condition, two independently run, blinded OpenAI judges ranked
 HumanScope above ordinary editing in one case, below it in two, and tied in three; the same counts
 held against a compact prompt. Combined scores were equal or close, but this does not establish
-equivalence. HumanScope left an unresolved technical specification as written, where the ordinary and compact
+equivalence. HumanScope reordered the definition and removed filler while preserving the specification's operative requirements and unresolved ambiguity, where the ordinary and compact
 edits changed its requirements, but it lost information in a marketing passage and a fiction passage.
 **Its contribution beyond competent ordinary editing remains unestablished.** The compact
 comparison did not isolate the six lenses. HumanScope preserved the brief better than Chen's
 *Human Scope* in the two fiction cases tested; that small comparison does not establish general
-superiority. v1.1 patches the observed information-loss failures, and those patches are untested until
-the [held-out suite](evals/heldout-v1.1.md) runs.
+superiority. The v1.1 candidate adds instructions targeting these information-loss failures. Whether they improve behavior remains unestablished; the [held-out suite](evals/heldout-v1.1.md) will test that.
 
 Earlier testing was: **exploratory generation comparisons** (the confounded
 A/B above), a **generation ablation** (full vs compact vs ordinary — motivates the review-depth
-routing, does not isolate the lenses), and **preservation smoke tests** across genres/models (the
-guards held on the artifacts tried, with no guardless control). The intended rigorous design —
+routing, does not isolate the lenses), and **preservation smoke tests** across genres/models (preservation successes and information-change failures were observed, without a guardless control). The intended rigorous design —
 untouched vs ordinary vs HumanScope, independent judges, constraint/task/preference scored
 separately — is specified in the [rubric](evals/rubric.md) and [human-eval protocol](evals/human-eval-protocol.md);
 also [test cases](evals/cases.md), [smoke test](evals/smoke-test.md).

@@ -20,7 +20,7 @@ tightening the runtime; no new lenses/scanners.
   softened the distinctiveness claim.
 - **Updated README** testing inventory (exploratory generation / confounded ablation / preservation
   smoke tests).
-- **Ran the confound-free re-test** (`test-run/fair-retest/`): 6 EDIT cases × 4 arms (HumanScope,
+- **Ran the matched-brief exploratory EDIT comparison** (`test-run/fair-retest/`): 6 EDIT cases × 4 arms (HumanScope,
   strong ordinary editor, compact four-slot, and Alex Chen's *Human Scope*) with identical briefs and
   two blind OpenAI judges. **Result: mixed, no demonstrated advantage over ordinary or compact
   editing** (1 win / 2 losses / 3 ties against each). HumanScope made no unauthorized change to a spec
@@ -29,7 +29,7 @@ tightening the runtime; no new lenses/scanners.
 - **Astra R9 patch (6 SKILL.md edits, untested):** check what a deletion removes (filler ≠ a
   distinct claim, motive, or realization); bound the authorized-transformation exception; scope
   fictional invention to WRITE (EDIT alters events only when authorized); reword L1 so explanation
-  can carry a motive or realization; keep light EDIT out of structural review; add a viewpoint-sensitive
+  can carry a motive or realization; prevent narrative genre alone from triggering broader structural review during light EDIT; add a viewpoint-sensitive
   knowledge-boundary check, crediting Alex Chen's *Human Scope*.
 - **Credited prior art:** Alex Chen's *Human Scope* (the SCOPE reel that prompted this project).
 - **Archived for reproducibility:** judge prompts and verdicts, exact S-arm skill snapshot, shuffle keys.
@@ -56,13 +56,12 @@ independent adversarial-review rounds (GPT Sol ×1, GPT Astra ×6), and evaluate
   analysis, rejected-ideas log, limitations, and the full adversarial-review record (7 rounds).
 
 ### Evaluation (`evals/`, `test-run/`)
-- **A/B efficacy** (4 topics × 2 runtimes): blind model-judge ranked HumanScope above its own
-  baseline in all 8 cells.
+- **Exploratory A/B generation comparison** (4 topics × 2 runtimes): blind model-judge ranked HumanScope above its own
+  baseline in all 8 cells *(confounded; does not isolate SKILL.md)*.
 - **Ablation** (full vs compact four-slot vs ordinary): lenses win on narrative; compact wins on
   expository → validated domain-gating. *(Withdrawn: the ablation did not isolate the lenses — see
   v1.1.)*
-- **Generalization** (academic / marketing / notes / technical × 3 arms): 10/12 clean, 2 minor
-  non-harmful; guards hold across genres and model families.
+- **Preservation smoke tests** (four artifacts, twelve outputs): reported ten clean outputs and two deviations. *(The earlier descriptions "non-harmful" and "guards hold across genres and model families" are withdrawn; the tests did not establish harmlessness, causal guard effectiveness, or broad reliability.)*
 - Three-way blind **human-eval protocol** scaffolded (`evals/human-eval-protocol.md`).
 
 ### Honest scope

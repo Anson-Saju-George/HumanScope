@@ -9,7 +9,7 @@ This complements the [fair re-test](../fair-retest/RESULTS.md). There, every arm
 **only the task**.
 
 ## Design
-- **Tasks (3 judged):** bakery web page (single HTML file), company blog post (Jira → Linear),
+- **Tasks (4 judged):** bakery web page (single HTML file), company blog post (Jira → Linear),
   team email (standup change). Briefs with the supplied facts: [`TASKS.md`](TASKS.md).
 - **Arms, all Claude Opus subagents with fresh context:**
   | Arm | Prompt |
@@ -50,7 +50,17 @@ X2 6th. Every email scored 5 for slop. The bare emails lost on invented policy: 
 posting deadlines, "meeting-free mornings". *(Claude's blind read called the emails a tie. Astra's
 finer fidelity check found a consistent difference.)*
 
-**In all three tasks, every HumanScope output ranked above every bare-prompt output.**
+**Story** (judged separately, one blind Astra; scores are generic / craft / effect / brief fit):
+S3 1st (4/5/5/4) · S2 2nd (4/4/4/4) · S1 3rd (3/4/4/4) · X1 4th · X2 5th · X3 6th. Astra: the
+weakest *"expect dead wives, aching knees, historical dates, and abandoned cleaning equipment to
+arrive already charged with significance"*. S1 was marked down for an explicit epiphany. The bare
+stories fit the 600-word brief slightly better. Prompt and verdict:
+[`judging/prompt-story.md`](judging/prompt-story.md), [`judging/astra-story.md`](judging/astra-story.md);
+key: [`_key-story.json`](_key-story.json). *Note: that prompt says the stories were "written to the
+same one-line request". The skill arm also got "read SKILL.md". No story criterion depends on what an
+arm was told; the archived prompt is left as sent.*
+
+**In all four tasks, every HumanScope output ranked above every bare-prompt output.**
 
 ## Reading
 - **What bare prompts produce is less "slop" than confident invention.** Astra: *"the slop
@@ -77,7 +87,5 @@ finer fidelity check found a consistent difference.)*
   skill explicitly targets. The slop and usefulness scores favored the skill too, by smaller margins.
 - **The baseline is Claude inside a Claude Code subagent**, not the consumer chat app, and it
   was told where to save the file.
-- **Story arm not judged:** all six stories (X1–X3, S1–S3) were generated but not yet judged. The
-  run was interrupted by a usage limit.
 - This supports "HumanScope reduces invented detail and stock phrasing in everyday WRITE tasks".
   It does not establish broader writing quality, and it does not replace the held-out suite.

@@ -157,8 +157,9 @@ the skill, and the key was opened only after scoring. Full scorecard and limits:
 
 **What the difference actually is.** Bare Claude output is rarely "delve / tapestry" slop. It is
 fluent copy that **confidently invents facts** the owner never gave: recipes, store policies,
-migration histories, team rules. HumanScope keeps writing to what's true, cuts stock phrasing, and
-in edits leaves voice and meaning alone. The cost is plainer copy, and sometimes `[placeholders]`
+migration histories, team rules. In these tests HumanScope **reduced** those unsupported additions
+(not to zero: its blog drafts still scored 3/5 for fidelity, against 1/5 for bare), cut stock
+phrasing, and in edits mostly left voice and meaning alone. The cost is plainer copy, and sometimes `[placeholders]`
 where a fact is missing.
 
 **Limits.** Small samples (1–3 runs per arm), model judges only (OpenAI), and all writing by Claude.

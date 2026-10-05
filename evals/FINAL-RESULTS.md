@@ -22,8 +22,9 @@ fresh context. Every prompt, output, key, and verdict is in the linked folders.
 Blind judges consistently pointed at the same mechanism. Bare Claude output is rarely "delve /
 tapestry" slop. It is fluent copy that **confidently invents facts** the owner never gave: recipes,
 sell-out rules, migration histories, lost dashboards, trial periods, posting deadlines. It also leans
-on stock taglines. HumanScope keeps the writing to what's true, cuts the stock phrasing, and in edits
-leaves voice and meaning alone (personal notes, a narrator's "I think", a spec's open ambiguity).
+on stock taglines. In these tests HumanScope **reduced** those unsupported additions, though
+not to zero: its blog drafts still scored 3/5 for fidelity (bare: 1/5), with some invented outcomes.
+It also cut the stock phrasing, and in edits mostly left voice and meaning alone (personal notes, a narrator's "I think", a spec's open ambiguity).
 In Astra's words, the worst bare pieces *"sound more informative because they manufacture
 evidence."*
 

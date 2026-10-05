@@ -14,7 +14,7 @@ fresh context. Every prompt, output, key, and verdict is in the linked folders.
 | Does it beat a bare **"can you edit this"**? | [fair-retest](../test-run/fair-retest/RESULTS.md) (6 cases, 5 editors) | **Yes, 6 of 6 cases:** 52 vs 33 of 60; the bare edit came last of all five editors |
 | Does it beat a carefully written "excellent editor" prompt? | same | **No, a tie** (52 vs 52), reproduced across two judging runs |
 | Do the six lenses add value over the four-slot rule alone? | same (compact arm C) | **Not shown** (52 vs 50); the comparison doesn't isolate the lenses |
-| How does it compare with Alex Chen's *Human Scope*? | same | **Clearly ahead** (52 vs 37); Chen's skill invented events in fiction |
+| How does it compare with Alex Chen's *Human Scope*? | same | **Ahead in this evaluation** (52 vs 37); Chen's skill invented events in fiction |
 | Does opt-in **always-on** mode work without typing `/humanscope`? | [always-on](../test-run/write-x/always-on/) | **Yes:** web page 1st (5/5/5); blog 2nd behind `/humanscope`, ahead of bare |
 | Did Astra R9's six fixes help, on texts never seen before? | [held-out](heldout-v1.1-run/) (9 tasks) | **Modestly yes:** patched 4 wins, 1 loss, 4 ties vs pre-patch (123 vs 117 of 135) |
 

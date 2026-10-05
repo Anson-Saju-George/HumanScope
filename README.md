@@ -152,7 +152,7 @@ the skill, and the key was opened only after scoring. Full scorecard and limits:
 | A bare **"can you edit this"** | **Better in 6 of 6 cases** (52 vs 33 of 60) ([results](test-run/fair-retest/RESULTS.md)) |
 | A carefully written **"excellent editor" prompt** | **Tie** (52 vs 52), reproduced across two judging runs |
 | The four-slot rule alone, without the lenses | Near-tie (52 vs 50); the lenses' contribution is not isolated |
-| Alex Chen's *Human Scope* | **Ahead** (52 vs 37) |
+| Alex Chen's *Human Scope* | **Ahead in this evaluation** (52 vs 37) |
 | v1.1 vs the pre-patch skill, on 9 new texts | **Modestly better**: 4 wins, 1 loss, 4 ties ([held-out](evals/heldout-v1.1-run/)) |
 
 **What the difference actually is.** Bare Claude output is rarely "delve / tapestry" slop. It is

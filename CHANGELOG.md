@@ -46,7 +46,7 @@ tightening the runtime; no new lenses/scanners.
 - **Ran the held-out validation** (`evals/heldout-v1.1-run/`): 9 new frozen tasks, patched vs
   pre-patch vs untouched. Patched won 4, lost 1, tied 4 (123 vs 117 of 135). One judge, one run per arm.
 - **Final summary:** `evals/FINAL-RESULTS.md`.
-- **Credited prior art:** Alex Chen's *Human Scope* (the SCOPE reel that prompted this project).
+- **Credited prior art:** Alex Chen's *Human Scope*, the companion skill to his SCOPE reel.
 - **Archived for reproducibility:** judge prompts and verdicts, exact S-arm skill snapshot, shuffle keys.
 - **Held-out validation specified** (`evals/heldout-v1.1.md`: 8 new artifacts, 9 tasks, 108
   outputs). Run later in this release: see the held-out validation entry below.

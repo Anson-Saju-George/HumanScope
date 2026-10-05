@@ -6,6 +6,7 @@
 
 A research-informed writing skill for composition, clarity, and author intent.
 
+[![Version: 1.1.0](https://img.shields.io/badge/version-1.1.0-blue)](CHANGELOG.md)
 [![Status: experimental](https://img.shields.io/badge/status-experimental-orange)](#evaluation)
 [![Research: StoryScope](https://img.shields.io/badge/research-StoryScope-blue)](#research-and-limits)
 [![Format: Claude skill](https://img.shields.io/badge/format-Claude%20skill-8A2BE2)](#install)
@@ -88,7 +89,8 @@ With Git installed, run this from the project where you want to use HumanScope:
 git clone https://github.com/Anson-Saju-George/HumanScope.git .claude/skills/humanscope
 ```
 
-This installs a project skill at `.claude/skills/humanscope/SKILL.md`. In Claude Code, invoke it
+To pin this release, add `--branch v1.1.0`. This installs a project skill at
+`.claude/skills/humanscope/SKILL.md`. In Claude Code, invoke it
 with `/humanscope` and your request. See the
 [official Claude Code skill guide](https://code.claude.com/docs/en/skills) for personal
 installation and other loading options.
@@ -115,6 +117,13 @@ and its supporting files, and upload it through Claude's custom-skills interface
 [official upload instructions](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
 for the required archive layout and account settings.
 
+### Other assistants
+
+`SKILL.md` is plain instructions, so any assistant that accepts uploaded files can follow it. Upload
+the file (or the repository ZIP) and ask it to apply HumanScope for the rest of the conversation.
+This is untested beyond a quick check in ChatGPT, which read the file and described the approach
+correctly.
+
 ## Research and limits
 
 HumanScope is informed by **StoryScope: Investigating idiosyncrasies in AI fiction**
@@ -132,53 +141,30 @@ See the [paper notes](research/paper-notes.md), [evidence map](research/evidence
 
 ## Evaluation
 
-**Summary of all blind tests: [evals/FINAL-RESULTS.md](evals/FINAL-RESULTS.md).** In short:
-HumanScope beat bare prompts in every writing task and every editing case tested, mainly by not
-inventing facts. It tied a carefully written "excellent editor" prompt, and it beat Alex Chen's
-*Human Scope*. The v1.1 fixes helped modestly on held-out texts. All judging was by model judges
-on small samples; details and limits are below and in that file.
+All results come from **blind** model judging: outputs shown as shuffled letters, judges never saw
+the skill, and the key was opened only after scoring. Full scorecard and limits:
+**[evals/FINAL-RESULTS.md](evals/FINAL-RESULTS.md)**.
 
-**Status: experimental.** Better reader outcomes than ordinary editing have not been
-established. Research grounding is **fiction-specific**; testing remains small and exploratory, including narrative prose and short academic, marketing, technical, and notes artifacts. **Performance on academic papers, structured documents,
-websites/marketing, and notes has not been established** — the skill applies careful,
-reader-focused editing there (with guards for structure, claim-strength, and format), but its
-distinctive value on those genres is untested.
+| Compared with… | Result |
+| --- | --- |
+| A bare **writing** prompt (web page, blog, email, story) | **Better in all 4 tasks**: every HumanScope piece ranked above every bare piece ([results](test-run/write-x/RESULTS.md)) |
+| The same request **typed casually**, the way people really write | Without the skill: =6th of 8. With `/humanscope`: **1st, 5/5/5** |
+| A bare **"can you edit this"** | **Better in 6 of 6 cases** (52 vs 33 of 60) ([results](test-run/fair-retest/RESULTS.md)) |
+| A carefully written **"excellent editor" prompt** | **Tie** (52 vs 52), reproduced across two judging runs |
+| The four-slot rule alone, without the lenses | Near-tie (52 vs 50); the lenses' contribution is not isolated |
+| Alex Chen's *Human Scope* | **Ahead** (52 vs 37) |
+| v1.1 vs the pre-patch skill, on 9 new texts | **Modestly better**: 4 wins, 1 loss, 4 ties ([held-out](evals/heldout-v1.1-run/)) |
 
-One exploratory generation run compared four lighthouse-keeper stories: two models, each
-with and without HumanScope. A blinded model judge ranked the outputs **skill > baseline >
-skill > baseline** across the two models. **This comparison is confounded** (a later audit found
-the skill arms also received extra instructions — read the research files, be implicit, cite,
-answer-first — that the baselines did not, and one judge rewarded the skill's own aesthetic), so it
-does **not** isolate `SKILL.md`, and it is one sample per condition. See the
-[confound notice and corrected results](evals/test-topics-results.md).
+**What the difference actually is.** Bare Claude output is rarely "delve / tapestry" slop. It is
+fluent copy that **confidently invents facts** the owner never gave: recipes, store policies,
+migration histories, team rules. HumanScope keeps writing to what's true, cuts stock phrasing, and
+in edits leaves voice and meaning alone. The cost is plainer copy, and sometimes `[placeholders]`
+where a fact is missing.
 
-**Latest evaluation: a six-case exploratory EDIT comparison** ([results](test-run/fair-retest/RESULTS.md)).
-With one Claude-generated output per condition, two independently run, blinded OpenAI judges ranked
-HumanScope above ordinary editing in one case, below it in two, and tied in three; the same counts
-held against a compact prompt. Combined scores were equal or close, but this does not establish
-equivalence. HumanScope reordered the definition and removed filler while preserving the specification's operative requirements and unresolved ambiguity, where the ordinary and compact
-edits changed its requirements, but it lost information in a marketing passage and a fiction passage.
-**Its contribution beyond competent ordinary editing remains unestablished.** The compact
-comparison did not isolate the six lenses. HumanScope preserved the brief better than Chen's
-*Human Scope* in the two fiction cases tested; that small comparison does not establish general
-superiority. The v1.1 candidate adds instructions targeting these information-loss failures. Whether they improve behavior remains unestablished; the [held-out suite](evals/heldout-v1.1.md) will test that.
-
-**Everyday WRITE prompts vs HumanScope** ([results](test-run/write-x/RESULTS.md)). Bare task
-prompts, including one typed the way a person casually would, were compared with the same prompts
-plus HumanScope on a bakery web page, a blog post, and a team email. One blind judge (GPT Astra)
-scored the visible text. In all three tasks, every HumanScope output ranked above every bare-prompt
-output. The main difference was **fidelity**: the bare outputs confidently invented recipes, store
-policies, migration histories, and team rules that the owner never supplied, and used more stock
-taglines. HumanScope outputs were plainer, and one left placeholders instead of inventing facts.
-The sample is small (1–3 runs per arm, one judge, Claude-generated), and the fidelity criterion
-overlaps the skill's own integrity rule.
-
-Earlier testing was: **exploratory generation comparisons** (the confounded
-A/B above), a **generation ablation** (full vs compact vs ordinary — motivates the review-depth
-routing, does not isolate the lenses), and **preservation smoke tests** across genres/models (preservation successes and information-change failures were observed, without a guardless control). The intended rigorous design —
-untouched vs ordinary vs HumanScope, independent judges, constraint/task/preference scored
-separately — is specified in the [rubric](evals/rubric.md) and [human-eval protocol](evals/human-eval-protocol.md);
-also [test cases](evals/cases.md), [smoke test](evals/smoke-test.md).
+**Limits.** Small samples (1–3 runs per arm), model judges only (OpenAI), and all writing by Claude.
+The fidelity criterion overlaps the skill's own integrity rule. No human-reader evaluation yet. An
+earlier v1.0 A/B was found to be **confounded** and is kept only as a
+[corrected historical record](evals/test-topics-results.md).
 
 ## Related work / prior art
 
@@ -186,8 +172,8 @@ HumanScope is **not the first** skill to build on StoryScope, and it stands on a
 credit where due:
 
 - **[Human Scope](https://chen.media/guides/human-scope-storyscope-claude-writing-skill)** by Alex
-  Chen (Chen Media). Chen's SCOPE reel prompted this project, and his companion skill is prior art
-  we found during development. It is a concise, fiction-focused StoryScope checklist. HumanScope is a
+  Chen (Chen Media), the companion skill to his SCOPE reel. It is prior art we found during
+  development: a concise, fiction-focused StoryScope checklist. HumanScope is a
   separate, unaffiliated implementation informed by the same paper. The v1.1 knowledge-boundary
   check draws on Chen's editorial checklist.
 - **[NulightJens/humanizer-stack](https://github.com/NulightJens/humanizer-stack)** — a two-pass
@@ -202,14 +188,16 @@ credit where due:
 **What HumanScope contributes is a *discipline*, not a first-mover claim:** every edit must clear the
 four-slot test (evidence → intended effect → present failure → smallest change), "AI-like" is not an
 allowed reason to edit, "no change" is always valid, and lenses are gated by genre and purpose — with
-an explicit refusal to optimize for detectors. Whether that discipline produces *better reading for a
-human* than a well-instructed ordinary edit is the open question our evaluation is built to answer.
+an explicit refusal to optimize for detectors. In blind model-judged tests, that discipline clearly beat bare prompts and tied a
+well-instructed ordinary editor. Whether it reads better *to people* is the open question.
 
 ## 🗺️ Roadmap
 
 - [x] Experimental skill with six conditional lenses
 - [x] Worked examples, evaluation rubric, and exploratory model-judged runs
 - [x] [Prior-art acknowledgment](#related-work--prior-art)
+- [x] Matched-brief blind comparisons, bare-prompt tests, and held-out validation ([summary](evals/FINAL-RESULTS.md))
+- [x] Opt-in always-on mode ([`always-on/CLAUDE-snippet.md`](always-on/CLAUDE-snippet.md))
 - [ ] **Decisive test:** 3-way blind *human* eval — HumanScope vs. a compact four-slot-only variant
   vs. competent ordinary editing ([protocol](evals/human-eval-protocol.md)); answers both "beats
   ordinary editing?" and "do the six lenses earn their complexity?"
@@ -224,7 +212,10 @@ The Chrome extension is planned; it is not included in the current package.
 | --- | --- |
 | [SKILL.md](SKILL.md) | Runtime instructions |
 | [examples/](examples/examples.md) | Worked edits and preservation cases |
+| [evals/FINAL-RESULTS.md](evals/FINAL-RESULTS.md) | One-page summary of every blind test |
 | [evals/](evals/rubric.md) | Evaluation protocol, cases, and recorded runs |
+| [always-on/](always-on/CLAUDE-snippet.md) | Optional CLAUDE.md block for always-on use |
+| [CHANGELOG.md](CHANGELOG.md) | Release history |
 | [research/](research/roadmap-and-state.md) | Research notes, decisions, and project state |
 | [Review record](research/adversarial-review.md) | Adversarial reviews by GPT Sol and GPT Astra |
 

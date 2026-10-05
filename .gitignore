@@ -23,3 +23,5 @@ Thumbs.db
 
 # Third-party competitor skill (Chen Media, no license) — download from https://chen.media/downloads/human-scope.zip
 test-run/fair-retest/_competitor/
+
+__pycache__/

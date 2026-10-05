@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.1 (in progress) — evaluation-integrity corrections (Astra R8 audit)
+## v1.1.0 — 2026-10-05 — evaluation integrity, R9 fixes, and blind validation
 
 A max-rigor audit found an evaluation confound the first 7 rounds missed. Correcting the record and
 tightening the runtime; no new lenses/scanners.
@@ -36,10 +36,20 @@ tightening the runtime; no new lenses/scanners.
   judge. Every HumanScope output ranked above every bare output in all three tasks, mainly on
   fidelity (bare outputs invented recipes, policies, and histories). Small sample (1–3 runs per
   arm); the story arm was generated but not yet judged.
+- **Judged the story arm:** all three HumanScope stories ranked above all three bare stories.
+- **Added a bare "can you edit this" arm** to the edit comparison: HumanScope won all 6 cases (52 vs
+  33 of 60). The bare edit ranked last of five editors. The re-judge reproduced the HumanScope =
+  excellent-editor tie (52 vs 52).
+- **Added opt-in always-on mode** (`always-on/CLAUDE-snippet.md`): a short CLAUDE.md block for
+  reader-facing prose. Blind test: 1st on the web page and 2nd on the blog (it left placeholders),
+  ahead of bare in both.
+- **Ran the held-out validation** (`evals/heldout-v1.1-run/`): 9 new frozen tasks, patched vs
+  pre-patch vs untouched. Patched won 4, lost 1, tied 4 (123 vs 117 of 135). One judge, one run per arm.
+- **Final summary:** `evals/FINAL-RESULTS.md`.
 - **Credited prior art:** Alex Chen's *Human Scope* (the SCOPE reel that prompted this project).
 - **Archived for reproducibility:** judge prompts and verdicts, exact S-arm skill snapshot, shuffle keys.
 - **Held-out validation specified** (`evals/heldout-v1.1.md`: 8 new artifacts, 9 tasks, 108
-  outputs). **Behavioral improvement remains pending that suite.**
+  outputs). Run later in this release: see the held-out validation entry below.
 
 ## v1.0.0 — 2026-09-20
 

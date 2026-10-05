@@ -101,6 +101,11 @@ installation and other loading options.
 /humanscope Write a product update from these facts. Audience: existing customers.
 ```
 
+**Optional always-on mode:** to apply the core writing rules without typing `/humanscope`, paste
+the block in [`always-on/CLAUDE-snippet.md`](always-on/CLAUDE-snippet.md) into your project's
+`CLAUDE.md` (or `~/.claude/CLAUDE.md`). It covers reader-facing prose only, not code or chat.
+In a small blind test it beat bare prompts on a web page and a blog post.
+
 **Optional author-controlled workflow:** request DIAGNOSE first, choose the suggested changes you want, then request EDIT implementing those choices. Direct editing remains available without a separate approval step when the changes are already authorized.
 
 ### Claude.ai
@@ -126,6 +131,12 @@ See the [paper notes](research/paper-notes.md), [evidence map](research/evidence
 [scope limitations](research/limitations.md).
 
 ## Evaluation
+
+**Summary of all blind tests: [evals/FINAL-RESULTS.md](evals/FINAL-RESULTS.md).** In short:
+HumanScope beat bare prompts in every writing task and every editing case tested, mainly by not
+inventing facts. It tied a carefully written "excellent editor" prompt, and it beat Alex Chen's
+*Human Scope*. The v1.1 fixes helped modestly on held-out texts. All judging was by model judges
+on small samples; details and limits are below and in that file.
 
 **Status: experimental.** Better reader outcomes than ordinary editing have not been
 established. Research grounding is **fiction-specific**; testing remains small and exploratory, including narrative prose and short academic, marketing, technical, and notes artifacts. **Performance on academic papers, structured documents,

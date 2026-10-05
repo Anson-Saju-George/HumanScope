@@ -1,0 +1,49 @@
+{
+  "seed": 20261004,
+  "key": {
+    "01-access": {
+      "A": "P",
+      "B": "U",
+      "C": "S"
+    },
+    "02A-motive": {
+      "A": "S",
+      "B": "U",
+      "C": "P"
+    },
+    "02B-motive": {
+      "A": "U",
+      "B": "S",
+      "C": "P"
+    },
+    "03-apology": {
+      "A": "P",
+      "B": "S",
+      "C": "U"
+    },
+    "04-redundancy": {
+      "A": "U",
+      "B": "S",
+      "C": "P"
+    },
+    "05-instructions": {
+      "A": "S",
+      "B": "U",
+      "C": "P"
+    },
+    "06-knowledge": {
+      "A": "P",
+      "B": "S"
+    },
+    "07-correction": {
+      "A": "P",
+      "B": "U",
+      "C": "S"
+    },
+    "08-agenda": {
+      "A": "P",
+      "B": "U",
+      "C": "S"
+    }
+  }
+}

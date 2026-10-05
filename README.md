@@ -121,8 +121,8 @@ for the required archive layout and account settings.
 
 `SKILL.md` is plain instructions, so any assistant that accepts uploaded files can follow it. Upload
 the file (or the repository ZIP) and ask it to apply HumanScope for the rest of the conversation.
-This is untested beyond a quick check in ChatGPT, which read the file and described the approach
-correctly.
+ChatGPT read it and summarized the approach correctly, but output quality outside Claude has not
+been evaluated.
 
 ## Research and limits
 
@@ -149,7 +149,7 @@ the skill, and the key was opened only after scoring. Full scorecard and limits:
 | --- | --- |
 | A bare **writing** prompt (web page, blog, email, story) | **Better in all 4 tasks**: every HumanScope piece ranked above every bare piece ([results](test-run/write-x/RESULTS.md)) |
 | The same request **typed casually**, the way people really write | Without the skill: =6th of 8. With `/humanscope`: **1st, 5/5/5** |
-| A bare **"can you edit this"** | **Better in 6 of 6 cases** (52 vs 33 of 60) ([results](test-run/fair-retest/RESULTS.md)) |
+| A bare **"can you edit this"** | **Better in 6 of 6 cases** (52 vs 33 of 60) ([results](test-run/fair-retest/RESULTS.md#re-judge-with-a-bare-edit-arm)) |
 | A carefully written **"excellent editor" prompt** | **Tie** (52 vs 52), reproduced across two judging runs |
 | The four-slot rule alone, without the lenses | Near-tie (52 vs 50); the lenses' contribution is not isolated |
 | Alex Chen's *Human Scope* | **Ahead in this evaluation** (52 vs 37) |
@@ -162,7 +162,9 @@ in edits leaves voice and meaning alone. The cost is plainer copy, and sometimes
 where a fact is missing.
 
 **Limits.** Small samples (1–3 runs per arm), model judges only (OpenAI), and all writing by Claude.
-The fidelity criterion overlaps the skill's own integrity rule. No human-reader evaluation yet. An
+The fidelity criterion overlaps the skill's own integrity rule. No human-reader evaluation yet. Its
+weakest results are in **fiction editing**, where it once removed more of a character's stated
+motive than plain editors did. An
 earlier v1.0 A/B was found to be **confounded** and is kept only as a
 [corrected historical record](evals/test-topics-results.md).
 

@@ -96,3 +96,28 @@ test, not validation. Validation is the held-out suite in
 
 
 Arm K used Alex Chen's *Human Scope* skill as downloaded 2026-09-25 from https://chen.media/downloads/human-scope.zip (not redistributed here; place its `human-scope/` folder in `_competitor/` to reproduce).
+
+## Re-judge with a bare-edit arm
+A later run added **X**: the user's whole message was *"can you edit this"*, with the text pasted
+(Claude Opus subagent, fresh context, no other instruction; outputs in `<case>/X.md`). All five
+editors were then **re-judged together** by one fresh blind GPT Astra (@ xhigh), with labels
+shuffled per case. Key: [`_key-5arm.json`](_key-5arm.json). Prompt and verdict:
+[`judging/prompt-5arm.md`](judging/prompt-5arm.md), [`judging/astra-5arm.md`](judging/astra-5arm.md).
+Scores are from this re-judge, so they differ slightly from the 4-arm run above.
+
+| Case | X: bare "edit this" | S: HumanScope | O: excellent-editor prompt | C: compact | K: Chen |
+|---|---|---|---|---|---|
+| Academic | 4/3 · 4th | 5/5 · =1st | 5/5 · =1st | 5/5 · =1st | 3/3 · 5th |
+| Marketing | 3/3 · =4th | 4/4 · 3rd | 5/5 · =1st | 5/5 · =1st | 3/3 · =4th |
+| Notes | 2/1 · 5th | 5/5 · =1st | 5/5 · =1st | 5/5 · =1st | 5/5 · =1st |
+| Technical | 4/4 · 3rd | 5/5 · =1st | 3/3 · 4th | 2/2 · 5th | 5/5 · =1st |
+| Fiction-a | 2/1 · 4th | 2/2 · 3rd | 3/3 · 2nd | 3/3 · 1st | 1/1 · 5th |
+| Fiction-b | 4/2 · 4th | 5/5 · =1st | 5/5 · =1st | 5/5 · =1st | 2/1 · 5th |
+| **Total /60** | **33** | **52** | **52** | **50** | **37** |
+
+- **S beat X in all 6 cases.** X ranked last overall. It expanded the personal notes' shorthand,
+  cut the narrator's "I think" (fiction-b), and cut Dana's stated motive (fiction-a).
+- **The S = O tie reproduced** (52 vs 52), as in the 4-arm run.
+- **Fiction remains S's weakest area.** In fiction-a, S ranked 3rd under all three judgments (both
+  4-arm judges and this re-judge). It lost more of the stated motive than O or C.
+- One run per arm, one judge. Same caveats as above.

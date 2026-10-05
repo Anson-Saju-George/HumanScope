@@ -11,7 +11,7 @@ fresh context. Every prompt, output, key, and verdict is in the linked folders.
 |---|---|---|
 | Does it beat what a normal user gets from a bare **writing** prompt? | [write-x](../test-run/write-x/RESULTS.md): web page, blog, email, story (26 pieces) | **Yes, in all 4 tasks:** every HumanScope piece ranked above every bare piece |
 | …even when the prompt is typed casually, the way people really write? | web page, casual prompt with vs without `/humanscope` | **Yes:** without it, =6th of 8; with it, **1st with 5/5/5** |
-| Does it beat a bare **"can you edit this"**? | [fair-retest](../test-run/fair-retest/RESULTS.md) (6 cases, 5 editors) | **Yes, 6 of 6 cases:** 52 vs 33 of 60; the bare edit came last of all five editors |
+| Does it beat a bare **"can you edit this"**? | [5-editor re-judge](../test-run/fair-retest/RESULTS.md#re-judge-with-a-bare-edit-arm) (6 cases) | **Yes, 6 of 6 cases:** 52 vs 33 of 60; the bare edit came last of all five editors |
 | Does it beat a carefully written "excellent editor" prompt? | same | **No, a tie** (52 vs 52), reproduced across two judging runs |
 | Do the six lenses add value over the four-slot rule alone? | same (compact arm C) | **Not shown** (52 vs 50); the comparison doesn't isolate the lenses |
 | How does it compare with Alex Chen's *Human Scope*? | same | **Ahead in this evaluation** (52 vs 37); Chen's skill invented events in fiction |
@@ -29,6 +29,11 @@ evidence."*
 
 **Its cost:** plainer copy, and sometimes placeholders where facts are missing. That is honest, but
 it means the owner must fill them in.
+
+**Its weakest area is fiction editing**, the domain the StoryScope research comes from. In the
+fiction-a edit case it ranked 3rd under every judgment and removed more of a character's stated motive
+than the plain editors did; the R9 fixes target this and helped on held-out motive tasks, but it is
+not settled. Most of its clear wins are on web pages, blogs, emails, and edits of everyday text.
 
 ## Held-out validation (patched v1.1 vs pre-patch)
 Nine new tasks, written and frozen (hash recorded) before any output existed. Each task had three
@@ -66,4 +71,6 @@ benefit (1–5 each).
 - The fidelity criterion overlaps the skill's own integrity rule. "Don't present unsupplied facts as
   real" is a fair standard for owner-facing copy, but it is the axis the skill targets.
 - Research grounding (StoryScope) is fiction-specific; non-fiction use is an editorial adaptation.
+- Output quality with other assistants (e.g. ChatGPT) has not been evaluated; they can load
+  SKILL.md, but that only shows they can read it.
 - Not a detector-evasion tool. Nothing here measures or targets "AI detection" scores.

@@ -889,3 +889,96 @@ I’m using only the supplied material, including your `ea4f02b` update. File re
    **Verdict:** v1.1.0 is a reasonable experimental writing package with promising model-judged results and an unusually inspectable history of failures. Its current report still turns preferences into broader assurances and repeats an invalid interpretation of the bare-edit run. Correct those claims and the always-on inconsistencies; keep the main design largely stable. It is neither a validated general writing improvement nor evidence that StoryScope’s lenses improve prose, and it does not need to become either before being useful to someone who wants these editing defaults.
 
    **Interview sentence:** “I built HumanScope, compared it with bare prompts and a strong editing baseline, and published both the promising model-judged results and the failures and confounds that limit what we can claim.”
+
+## Round 11 — Astra (gpt-6-astra @ medium, pinned session) — ChatGPT packaging review
+_Invoked 2026-10-05, inline-only. Reviewed chatgpt/instructions.txt (v1.1.1), the setup guide, and SKILL.md before GPT Store publication. Adjudication: all points adopted. instructions.txt replaced with Astra's self-contained version; guide wording, description, starters, release pinning, and smoke test applied (v1.1.2)._
+
+**No-go as written; go after a small packaging correction and a private smoke test.** The main problem is not length: the excerpt drops exceptions that prevent over-preservation and incorrect output.
+
+1. **`instructions.txt` is not verbatim—and two changes distort behavior.**
+
+   - **“Core rules, quoted” is inaccurate.** Several bullets paraphrase or combine passages. For example, “Before editing, identify…” is newly composed; “Correct supported errors rather than freezing them” shortens the original.
+   - **The transformation exception disappears.** Requiring a “concrete present failure” for every intervention can obstruct an authorized summary or register change. SKILL.md explicitly allows these without declaring the original defective.
+   - **“Original format” contradicts “intended format.”** Notes-to-agenda is permitted by SKILL.md but obstructed by this excerpt.
+   - **“Return the requested text” obscures DIAGNOSE’s required findings.** Its output should be evidence → effect → failure → suggested change, without rewriting.
+   - Important omissions include claim strength/attribution, artifact conventions, the prohibition on pretending verification, and the final restraint check.
+
+   “SKILL.md wins” does not repair omissions when the relevant passage is never retrieved.
+
+2. **Make the instructions self-sufficient; use Knowledge for elaboration.**
+
+   “Read it before every request” is an instruction to attempt retrieval, **not a guarantee that the entire file enters context**. OpenAI distinguishes GPT instructions from uploaded reference knowledge. My recommendation is to put essential behavior in Instructions and consult the file for details. [Official OpenAI documentation](https://learn.chatgpt.com/docs/migrate-custom-gpts)
+
+   Here is a **2,944-character** replacement. It tightly paraphrases the supplied skill; it does not introduce new editorial policies.
+
+   ```text
+   HumanScope supports writing, editing and diagnosis focused on composition and author intent. These instructions summarize SKILL.md; consult that Knowledge file for the full lens questions and supporting detail. Its fiction research describes differences, not quality rules; non-fiction applications are not validated by that study.
+
+   Infer mode: WRITE, EDIT or DIAGNOSE (do not rewrite). Identify audience, purpose, voice, artifact and conventions. Default to light editing. Ask only if missing information is genuinely blocking.
+
+   Preserve meaning, voice, register, terminology, intent and established facts, except where the requested transformation authorizes change. Preserve claim strength, scope, uncertainty and attribution, except for supported corrections or authorized changes. Correct or add factual claims only with real supporting evidence; never present an unverified claim or reference as checked. Flag material uncertainty. Preserve required markup, citations, numbering, notation, task states and meaningful fragments unless the transformation changes them.
+
+   Never present invented material as real evidence, testimony, citation, statistic or biography. Fiction WRITE may invent within the brief; fiction EDIT may add or alter story facts only when authorized, preserving continuity.
+
+   For EDIT/DIAGNOSE, justify each intervention by:
+   1. Evidence: a passage, structural relationship or omission relative to the brief.
+   2. Intended effect for this reader.
+   3. Concrete present failure, or the gap from an authorized transformation's target.
+   4. Smallest useful change.
+   "AI-like" is not a failure. Do not manufacture defects. Before deleting or replacing text, identify what information or function would disappear. Consolidate redundancy without losing distinct claims, motives or realizations unless authorized or required by a supported correction. "Rewrite" is not blanket permission to change meaning. No change is valid when the brief is satisfied.
+
+   For WRITE: brief/constraints -> intended effect -> compositional choice -> draft -> restraint check.
+
+   Select relevant lenses only: explanation, presentation, causality/closure, information order, referential grounding and reader relationship. Each is a question, never a preferred direction. Start lean for explanation, argument, instructions and reports; check needed information, support and order. Narrative genre alone does not expand light-edit scope. Do not run all six by default.
+
+   WRITE/EDIT: return the artifact in its intended format, not a lecture, unless reasoning is requested. DIAGNOSE: give evidence -> intended effect -> failure -> suggested change. Before returning, check facts, meaning, voice, continuity, terminology and the brief; revise or revert unsupported additions or unintended losses.
+
+   Never score authorship or optimize for detectors. Do not impose word bans or artificial imperfections to appear human. Honor explicit style and creative constraints.
+   ```
+
+   This is a **compressed implementation**, not proof of behavioral equivalence to the Claude skill.
+
+3. **Fix the guide and public description.**
+
+   **Name:** “HumanScope” is fine.
+
+   **Description:** “Writes and edits without inventing facts or overwriting your voice” promises an outcome the evaluations explicitly contradict.
+
+   Use:
+
+   > **Experimental writing, editing and structural feedback focused on your intent, voice and supplied facts.**
+
+   Exact guide changes:
+
+   | Old | New |
+   |---|---|
+   | “set HumanScope up once and it applies every time” | “save HumanScope’s instructions and reference file for reuse; application remains model-dependent.” |
+   | “quotes … word for word” | “summarizes the essential rules, including their exceptions.” |
+   | “It works” | “This supplies the method for that conversation; reliable application has not been established.” |
+   | “the method is the same one that was tested” | “This packaging adapts the tested Claude instructions. Its behavior in ChatGPT requires separate checking.” |
+
+   Pin the uploaded `SKILL.md` and the instructions to **one release**, rather than pairing a versioned wrapper with a moving `main` download.
+
+   Also, the guide currently stops at private/link sharing; it does not document Store publication. Confirm publication availability and requirements in the creator’s account rather than presenting those sharing options as equivalent.
+
+4. **Conversation starters**
+
+   - “Light-edit this email. Preserve my voice, facts and level of certainty.”
+   - “Turn these notes into a decision agenda. Keep owners, open questions and task statuses.”
+   - “Diagnose this story’s ending. Show evidence and suggest changes; don’t rewrite it.”
+   - “Draft a product update from these facts for existing customers.”
+
+5. **Minimum pre-publication check**
+
+   Test the **actual configured GPT**, not a chat merely describing its instructions. Use six short cases in fresh chats:
+
+   - Sparse factual WRITE brief: no invented policies, numbers or testimonials.
+   - Effective text: no manufactured defect or unnecessary rewrite.
+   - Notes-to-agenda: performs the transformation and preserves uncertainty/status.
+   - Academic/spec edit: preserves hedges, citation attachment and normative force.
+   - DIAGNOSE: evidence-based findings, no unsolicited rewrite.
+   - Fiction WRITE versus EDIT: invents when authorized; preserves established facts otherwise.
+
+   Run each twice and inspect the outputs yourself. In a private duplicate without Knowledge, verify that the core preservation, transformation and output rules still function.
+
+   **GO after these fixes and a passing smoke test, labeled experimental.** Passing checks basic packaging behavior; it does not establish comparative quality or justify “never invents facts.”

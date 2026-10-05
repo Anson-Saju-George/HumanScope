@@ -1,0 +1,15 @@
+{
+  "name": "humanscope",
+  "description": "HumanScope: a blind-evaluated writing and editing skill for Claude",
+  "owner": {
+    "name": "Anson Saju George",
+    "url": "https://github.com/Anson-Saju-George"
+  },
+  "plugins": [
+    {
+      "name": "humanscope",
+      "source": "./",
+      "description": "Writing and editing that reduces invented facts and leaves your voice and meaning alone"
+    }
+  ]
+}

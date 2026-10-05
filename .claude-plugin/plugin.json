@@ -1,0 +1,14 @@
+{
+  "name": "humanscope",
+  "displayName": "HumanScope",
+  "version": "1.1.2",
+  "description": "Writing and editing that reduces invented facts and leaves your voice and meaning alone. Blind-evaluated; experimental.",
+  "author": {
+    "name": "Anson Saju George",
+    "url": "https://github.com/Anson-Saju-George"
+  },
+  "homepage": "https://github.com/Anson-Saju-George/HumanScope",
+  "repository": "https://github.com/Anson-Saju-George/HumanScope",
+  "license": "MIT",
+  "keywords": ["writing", "editing", "fidelity", "storyscope"]
+}

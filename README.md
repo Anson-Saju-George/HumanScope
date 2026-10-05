@@ -6,7 +6,7 @@
 
 A research-informed writing skill for composition, clarity, and author intent.
 
-[![Version: 1.1.1](https://img.shields.io/badge/version-1.1.1-blue)](CHANGELOG.md)
+[![Version: 1.1.2](https://img.shields.io/badge/version-1.1.2-blue)](CHANGELOG.md)
 [![Status: experimental](https://img.shields.io/badge/status-experimental-orange)](#evaluation)
 [![Research: StoryScope](https://img.shields.io/badge/research-StoryScope-blue)](#research-and-limits)
 [![Format: Claude skill](https://img.shields.io/badge/format-Claude%20skill-8A2BE2)](#install)
@@ -82,7 +82,19 @@ purpose. See the [runtime instructions](SKILL.md) and [worked examples](examples
 
 ## Install
 
-### Claude Code
+### Claude Code (plugin, recommended)
+
+Install it as a plugin from this repository's marketplace. Run these in your shell:
+
+```bash
+claude plugin marketplace add Anson-Saju-George/HumanScope
+claude plugin install humanscope@humanscope
+```
+
+Or from inside a session: `/plugin install humanscope --marketplace Anson-Saju-George/HumanScope`.
+The plugin loads one skill, `humanscope`. Update later with `claude plugin update humanscope@humanscope`.
+
+### Claude Code (manual)
 
 With Git installed, run this from the project where you want to use HumanScope:
 
@@ -90,7 +102,7 @@ With Git installed, run this from the project where you want to use HumanScope:
 git clone https://github.com/Anson-Saju-George/HumanScope.git .claude/skills/humanscope
 ```
 
-To pin this release, add `--branch v1.1.1`. This installs a project skill at
+To pin this release, add `--branch v1.1.2`. This installs a project skill at
 `.claude/skills/humanscope/SKILL.md`. In Claude Code, invoke it
 with `/humanscope` and your request. See the
 [official Claude Code skill guide](https://code.claude.com/docs/en/skills) for personal
@@ -121,8 +133,9 @@ for the required archive layout and account settings.
 
 ### ChatGPT
 
-ChatGPT can't install skills from GitHub, but you can set HumanScope up once as a **Custom GPT** or a
-**Project**: paste a short instructions block and attach `SKILL.md`. Step-by-step:
+ChatGPT can't install skills from GitHub, but you can save HumanScope as a **Custom GPT** or a
+**Project**: paste a self-contained instructions block (a compressed adaptation of SKILL.md) and attach
+`SKILL.md` as a reference file. Step-by-step:
 **[chatgpt/README.md](chatgpt/README.md)**. Output quality in ChatGPT hasn't been evaluated; all
 tests were run on Claude.
 

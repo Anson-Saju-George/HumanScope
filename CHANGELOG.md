@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.1.2 — 2026-10-05 — Claude Code plugin and reviewed ChatGPT packaging (skill unchanged)
+
+`SKILL.md` is byte-identical to v1.1.0.
+
+- **Claude Code plugin marketplace** (`.claude-plugin/`): install with
+  `claude plugin marketplace add Anson-Saju-George/HumanScope`, then
+  `claude plugin install humanscope@humanscope`. Validated with `claude plugin validate --strict` and
+  test-installed locally (loads one skill, `humanscope`).
+- **ChatGPT packaging revised after Astra R11:** the v1.1.1 `instructions.txt` wrongly claimed to quote
+  SKILL.md word for word, and its excerpts dropped the transformation exception and the intended-format
+  rule. It is replaced by a self-contained compressed adaptation (about 2,900 characters) that keeps
+  those exceptions. The setup guide adds an accurate GPT description, conversation starters, files
+  pinned to this release, GPT Store notes, and a six-case smoke test to run before publishing.
+
 ## v1.1.1 — 2026-10-05 — docs and ChatGPT setup (skill unchanged)
 
 `SKILL.md` is byte-identical to v1.1.0. This release carries the corrected public record and adds

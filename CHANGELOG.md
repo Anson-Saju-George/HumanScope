@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.1.1 — 2026-10-05 — docs and ChatGPT setup (skill unchanged)
+
+`SKILL.md` is byte-identical to v1.1.0. This release carries the corrected public record and adds
+ChatGPT setup.
+
+- **ChatGPT setup** (`chatgpt/`): a short instructions block (about 2,000 characters) that points to
+  SKILL.md and quotes its core rules word for word, plus steps for a Custom GPT, a Project, or a
+  one-off chat. No new rules. Quality in ChatGPT hasn't been evaluated.
+- **Corrected evaluation record** after outside review and Astra R10: the bare-edit arm was excluded
+  as an evaluation error; editing vs a strong prompt is "no demonstrated advantage" (pre-R9 outputs);
+  the held-out task-05 regression is acknowledged; the fidelity claim is limited to scores; always-on
+  is described as tested only when supplied explicitly. See the v1.1.0 entries below, corrected in
+  place.
+
 ## v1.1.0 — 2026-10-05 — evaluation integrity, R9 fixes, and blind validation
 
 A max-rigor audit found an evaluation confound the first 7 rounds missed. Correcting the record and

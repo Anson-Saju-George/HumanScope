@@ -6,13 +6,13 @@
 
 A research-informed writing skill for composition, clarity, and author intent.
 
-[![Version: 1.1.0](https://img.shields.io/badge/version-1.1.0-blue)](CHANGELOG.md)
+[![Version: 1.1.1](https://img.shields.io/badge/version-1.1.1-blue)](CHANGELOG.md)
 [![Status: experimental](https://img.shields.io/badge/status-experimental-orange)](#evaluation)
 [![Research: StoryScope](https://img.shields.io/badge/research-StoryScope-blue)](#research-and-limits)
 [![Format: Claude skill](https://img.shields.io/badge/format-Claude%20skill-8A2BE2)](#install)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-[Install](#install) · [Examples](examples/examples.md) · [Skill](SKILL.md) · [Evaluation](#evaluation)
+[Install](#install) · [ChatGPT](chatgpt/README.md) · [Examples](examples/examples.md) · [Skill](SKILL.md) · [Evaluation](#evaluation)
 
 </div>
 
@@ -90,7 +90,7 @@ With Git installed, run this from the project where you want to use HumanScope:
 git clone https://github.com/Anson-Saju-George/HumanScope.git .claude/skills/humanscope
 ```
 
-To pin this release, add `--branch v1.1.0`. This installs a project skill at
+To pin this release, add `--branch v1.1.1`. This installs a project skill at
 `.claude/skills/humanscope/SKILL.md`. In Claude Code, invoke it
 with `/humanscope` and your request. See the
 [official Claude Code skill guide](https://code.claude.com/docs/en/skills) for personal
@@ -119,13 +119,18 @@ and its supporting files, and upload it through Claude's custom-skills interface
 [official upload instructions](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
 for the required archive layout and account settings.
 
+### ChatGPT
+
+ChatGPT can't install skills from GitHub, but you can set HumanScope up once as a **Custom GPT** or a
+**Project**: paste a short instructions block and attach `SKILL.md`. Step-by-step:
+**[chatgpt/README.md](chatgpt/README.md)**. Output quality in ChatGPT hasn't been evaluated; all
+tests were run on Claude.
+
 ### Other assistants
 
-`SKILL.md` is plain instructions, so it can be supplied to other assistants: upload the file (or the
-repository ZIP) and ask the assistant to apply HumanScope for the rest of the conversation. Reliable
-application and output quality there remain unestablished.
-ChatGPT read it and summarized the approach correctly, but output quality outside Claude has not
-been evaluated.
+`SKILL.md` is plain instructions, so it can be supplied to other assistants: upload the file and
+ask the assistant to apply HumanScope for the rest of the conversation. Reliable application and
+output quality there remain unestablished.
 
 ## Research and limits
 
@@ -225,6 +230,7 @@ The Chrome extension is planned; it is not included in the current package.
 | [evals/FINAL-RESULTS.md](evals/FINAL-RESULTS.md) | One-page summary of every blind test |
 | [evals/](evals/rubric.md) | Evaluation protocol, cases, and recorded runs |
 | [always-on/](always-on/CLAUDE-snippet.md) | Optional CLAUDE.md block for always-on use |
+| [chatgpt/](chatgpt/README.md) | Setup for ChatGPT (Custom GPT or Project) |
 | [CHANGELOG.md](CHANGELOG.md) | Release history |
 | [research/](research/roadmap-and-state.md) | Research notes, decisions, and project state |
 | [Review record](research/adversarial-review.md) | Adversarial reviews by GPT Sol and GPT Astra |

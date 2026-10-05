@@ -9,7 +9,7 @@
     {
       "name": "humanscope",
       "source": "./",
-      "description": "Writing and editing that reduces invented facts and leaves your voice and meaning alone"
+      "description": "Writing and editing skill that aims to avoid invented facts and preserve your voice and meaning. Blind-evaluated; experimental."
     }
   ]
 }

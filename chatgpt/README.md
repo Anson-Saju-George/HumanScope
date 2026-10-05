@@ -11,10 +11,10 @@ still depends on the model. Both setups use the same two files, **from the same 
 - [`SKILL.md`](../SKILL.md): the full method, uploaded as a reference (Knowledge) file. At about
   12,700 characters it's too long for the instructions box.
 
-Download both files pinned to this release (v1.1.2), so the instructions and the reference file match:
+Download both files pinned to this release (v1.1.3), so the instructions and the reference file match:
 
-- `https://raw.githubusercontent.com/Anson-Saju-George/HumanScope/v1.1.2/chatgpt/instructions.txt`
-- `https://raw.githubusercontent.com/Anson-Saju-George/HumanScope/v1.1.2/SKILL.md`
+- `https://raw.githubusercontent.com/Anson-Saju-George/HumanScope/v1.1.3/chatgpt/instructions.txt`
+- `https://raw.githubusercontent.com/Anson-Saju-George/HumanScope/v1.1.3/SKILL.md`
 
 ## Option A: a Custom GPT
 

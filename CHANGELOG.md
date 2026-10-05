@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.1.3 — 2026-10-05 — docs-only overclaim fixes (skill unchanged)
+
+`SKILL.md` is byte-identical to v1.1.0. Earlier tags are left in place.
+
+- README (Related work): replaced "clearly beat bare prompts and tied a well-instructed ordinary editor"
+  with the measured claim (higher fidelity scores than bare prompts on non-fiction writing; no
+  demonstrated advantage over a well-instructed editor; causal rules untested). This sentence had
+  shipped in v1.1.1 and v1.1.2.
+- Plugin listing description (`plugin.json`, `marketplace.json`): "leaves your voice and meaning
+  alone" (an absolute) changed to "aims to avoid invented facts and preserve your voice and meaning".
+- ChatGPT guide download links pinned to v1.1.3.
+
 ## v1.1.2 — 2026-10-05 — Claude Code plugin and reviewed ChatGPT packaging (skill unchanged)
 
 `SKILL.md` is byte-identical to v1.1.0.

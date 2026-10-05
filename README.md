@@ -6,7 +6,7 @@
 
 A research-informed writing skill for composition, clarity, and author intent.
 
-[![Version: 1.1.2](https://img.shields.io/badge/version-1.1.2-blue)](CHANGELOG.md)
+[![Version: 1.1.3](https://img.shields.io/badge/version-1.1.3-blue)](CHANGELOG.md)
 [![Status: experimental](https://img.shields.io/badge/status-experimental-orange)](#evaluation)
 [![Research: StoryScope](https://img.shields.io/badge/research-StoryScope-blue)](#research-and-limits)
 [![Format: Claude skill](https://img.shields.io/badge/format-Claude%20skill-8A2BE2)](#install)
@@ -102,7 +102,7 @@ With Git installed, run this from the project where you want to use HumanScope:
 git clone https://github.com/Anson-Saju-George/HumanScope.git .claude/skills/humanscope
 ```
 
-To pin this release, add `--branch v1.1.2`. This installs a project skill at
+To pin this release, add `--branch v1.1.3`. This installs a project skill at
 `.claude/skills/humanscope/SKILL.md`. In Claude Code, invoke it
 with `/humanscope` and your request. See the
 [official Claude Code skill guide](https://code.claude.com/docs/en/skills) for personal
@@ -212,8 +212,10 @@ credit where due:
 **What HumanScope contributes is a *discipline*, not a first-mover claim:** every edit must clear the
 four-slot test (evidence → intended effect → present failure → smallest change), "AI-like" is not an
 allowed reason to edit, "no change" is valid when the brief is already satisfied, and lenses are gated by genre and purpose — with
-an explicit refusal to optimize for detectors. In blind model-judged tests, that discipline clearly beat bare prompts and tied a
-well-instructed ordinary editor. Whether it reads better *to people* is the open question.
+an explicit refusal to optimize for detectors. In small blind model-judged tests, the full skill
+received higher factual-fidelity scores than bare prompts on non-fiction writing and showed no
+demonstrated advantage over a well-instructed ordinary editor; which of its rules drive that difference
+is untested. Whether it reads better *to people* is the open question.
 
 ## 🗺️ Roadmap
 

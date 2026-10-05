@@ -591,3 +591,301 @@ For CHANGELOG, after the patch lands:
 > - Behavioral improvement remains pending held-out validation.
 
 Also mark the historical [“validated domain-gating”](D:/main-projects/LIVE-ACTIVE/HumanScope/CHANGELOG.md:48) and [“safe and useful”](D:/main-projects/LIVE-ACTIVE/HumanScope/CHANGELOG.md:56) claims as withdrawn. They remain stronger than the evidence despite the newer corrections.
+
+## Round 10 — Astra (gpt-6-astra @ xhigh, pinned session) — post-v1.1.0 audit of report and skill
+_Invoked 2026-10-05 (first attempt hit the Codex usage limit before writing output; retried inline-only after reset). Material: SKILL.md, FINAL-RESULTS, README, CHANGELOG v1.1.0, both result pages, always-on snippet, exact arm and judge prompts, and summaries of outside reviews (ChatGPT, another Claude). Added question 6: which of its own R7–R9b recommendations were wrong. Adjudication: findings 1–8 and 11 applied as wording corrections (bare-edit arm removed from conclusions; version context on editing and Chen comparisons; held-out regression acknowledged; fidelity claim limited to scores; always-on scope stated). Findings 9–10 (SKILL.md description and slot-3 change; always-on snippet protections) deferred to proposed v1.2 pending tests. Cross-checked by another Claude against the repo files before applying. A fresh, context-free Astra pass separately flagged "keeps writing to what is true" (fixed in f271b4a)._
+
+**The release is defensible; the scorecard still overstates what it establishes.** The strongest supported claim is that the complete instruction package received favorable model judgments against bare writing prompts. Neither its causal mechanism nor an advantage over competent editing has been established.
+
+I’m using only the supplied material, including your `ea4f02b` update. File references below use quoted anchors because the updated files are not pasted in full.
+
+1. **The new fidelity claim needs a narrower denominator.**
+
+   In `README.md` and `evals/FINAL-RESULTS.md`, your replacement—
+
+   > “in every writing task each HumanScope piece scored higher on fidelity than each bare piece; only 2 of 10 fully clean”
+
+   —mixes different populations. **Ten** covers the full-skill nonfiction drafts: three web, three blog, three email, plus HS. Including the three stories gives **thirteen** full-skill drafts. The supplied record does not include the story fidelity scores.
+
+   Replace with:
+
+   > “Across the three nonfiction writing tasks, the reported fidelity scores favored every full-skill draft over the bare drafts for that task. Two of the ten full-skill nonfiction drafts received 5/5 for fidelity; this is a judge score, not independent verification that they were error-free. Including fiction, the judge ranked every full-skill draft above every bare draft within each of four task prompts.”
+
+   Also change **“invents much less”** to **“received higher factual-fidelity scores”** unless you publish an actual count and severity assessment of unsupported assertions. An ordinal score difference does not measure how much invention decreased.
+
+   I accept your update that the story results have been added; I am not treating the old “not yet judged” passage as an outstanding defect.
+
+2. **WRITE’s instruction difference is legitimate. The conclusions drawn from it need limits.**
+
+   Task alone versus **the same task plus the skill** is exactly the intervention a package comparison should test. Adding “read SKILL.md” is not the X confound. Requiring owner-specific claims to be supported is also reasonable; a criterion does not become circular merely because the skill targets it.
+
+   But this tests **adding the entire instruction package**, not:
+
+   - whether its six lenses work;
+   - whether the four-slot rule causes the benefit;
+   - whether it beats a short ordinary writing brief;
+   - what typical consumer-chat users receive.
+
+   In `evals/FINAL-RESULTS.md`:
+
+   > “Blind judges consistently pointed at the same mechanism.”
+
+   Replace with:
+
+   > “The judge’s explanations frequently favored outputs with fewer unsupported owner-specific assertions. This comparison does not identify which instructions produced that difference.”
+
+   The four-slot rule applies to **EDIT/DIAGNOSE**, while these wins are **WRITE** results. Crediting that rule specifically is particularly weak.
+
+   Replace the scorecard question:
+
+   > “Does it beat what a normal user gets…”
+
+   with:
+
+   > “How did task-plus-skill compare with task-only prompts in these Claude Code subagent runs?”
+
+   Likewise, **“the way people really write”** becomes **“one casually worded bakery request.”** One spelling/register variation is not a user study.
+
+3. **Choose (c): remove X from the efficacy scorecard; retain the disclosed run.**
+
+   **“A brief beats no brief” is not a valid rescue interpretation.** The judge was misinformed about X’s obligations. That compromises the inference about the benefit of providing a brief as well as the skill-specific inference.
+
+   In `test-run/fair-retest/RESULTS.md`, replace:
+
+   > “What the result does show: … any preservation brief beat a bare request … That is evidence for giving the model a brief…”
+
+   with:
+
+   > “These scores were assigned under an inaccurate description of X’s instructions. We retain this run as a documented evaluation error and do not use it to estimate the benefit of either a preservation brief or HumanScope.”
+
+   Remove the **52 versus 33** row from the README and final scorecard. Keep a short disclosure linking to the archived run. Make the same correction to the CHANGELOG’s “Read 52 vs 33 as…” sentence.
+
+   I would **not spend another run repairing X now**. You already have a cleaner ordinary-editor comparison. A corrected X judgment would answer a different, request-dependent question and would not retroactively create matched preservation instructions.
+
+4. **The ordinary-editor and competitor headlines lose essential context.**
+
+   Apply these replacements in both scorecards:
+
+   | Current wording | Replacement |
+   |---|---|
+   | “Tie (52 vs 52), reproduced across two judging runs” | “The pre-R9 candidate showed mixed results against ordinary editing: 1 win, 2 losses and 3 ties under each original judge. Aggregate scores were equal; this does not establish equivalence.” |
+   | “Near-tie (52 vs 50); the lenses’ contribution is not isolated” | “The pre-R9 full and compact packages showed mixed results. The compact arm omitted several components besides the lenses, so their contribution remains untested.” |
+   | “Ahead in this evaluation (52 vs 37)” | “The pre-R9 candidate better preserved the requested meaning in the two fiction cases tested against Chen’s skill. This does not establish general superiority.” |
+   | “v1.1 vs the pre-patch skill, on 9 new texts” | “Patched versus pre-patch skill on nine tasks from eight source texts.” |
+
+   Two distinctions matter:
+
+   - **The editing comparator outputs predate the R9 patch.** Current v1.1 has not been compared with O or matched C* in the new suite.
+   - Rejudging the same outputs measures judgment consistency, not replication of generation performance. The original sums were **51–51**; the later sums were **52–52**.
+
+   Chen’s revised credit is appropriately neutral. It does not claim his reel originated this project or that his skill requires an approval step. Keep that wording.
+
+5. **The held-out summary denies a regression shown in its own table.**
+
+   In `evals/FINAL-RESULTS.md`, replace:
+
+   > “The fixes help modestly on new material and didn’t break anything.”
+
+   with:
+
+   > “In this single run, the judge preferred the patched output on four tasks, preferred the predecessor on one, and tied them on four. Task 05 scored lower for patched fidelity and reader benefit, so the run was not regression-free. These observations do not establish that the patch systematically improves or worsens performance.”
+
+   Replace:
+
+   > “The gains were on information fidelity (01, 07) and on doing an authorized transformation properly (02B).”
+
+   with:
+
+   > “Task 01 improved on all three scores. Task 02B improved on fidelity and reader benefit, while task completion remained 4/5. Task 07 improved only on reader benefit; both versions scored 5/5 for fidelity and completion.”
+
+   Additional exact corrections:
+
+   - **“helped on one held-out motive task”** → **“Both versions preserved the motive under the light-edit brief; the patched version ranked higher under the separate ambiguity-transformation brief.”**
+   - **“Each task had three candidates”** → **“EDIT tasks included the untouched source; the DIAGNOSE task compared the two diagnostic responses.”**
+   - **“both versions found the intended problem”** → **“Both flagged the intended issue, but its status as an actual error was disputed, and both diagnoses overstated the evidence.”**
+
+   The **123–117** sum is not a calibrated effect size. Nor are 02A and 02B independent source examples. The reduced run is useful exploratory evidence, but it does not complete the planned 108-output protocol.
+
+6. **“Fiction is the weakest area” is another unsupported generalization.**
+
+   In `README.md`, `evals/FINAL-RESULTS.md` and the fair-retest reading:
+
+   > “Its weakest area is fiction editing.”
+
+   Replace with:
+
+   > “A known failure occurred in preservation-focused fiction editing: the pre-R9 candidate removed distinct psychological information from fiction-a. The few examples tested do not establish a ranking of performance across genres.”
+
+   Repeated judgments of **one bad output** do not create additional fiction examples. Also, “its one fiction case that needed a fix” revives the mistaken defect label. Its explanation was not demonstrated to be redundant; the original remains a meaningful comparator.
+
+   Remove **“Most of its clear wins are on … edits of everyday text.”** The editing comparison did not demonstrate a general advantage. The positive bare-prompt signal primarily concerns generation.
+
+7. **The evaluation still contains the aesthetic prescription the skill rejects.**
+
+   The WRITE judge’s first axis prelabels **“tidy triads”** and named phrases as “AI-slop.” That can reward removing functioning rhetoric without demonstrating a reader problem.
+
+   For a future judgment—not by overwriting the historical prompt—replace the first axis with:
+
+   > **Purpose-fit and specificity:** Identify passages whose generic framing, repetition, explanation or tone causes a concrete problem for the stated reader and brief. Familiar phrases, triads, explicit themes and resolved endings are not defects by themselves. Support criticisms with quoted evidence.
+
+   Replace the fidelity definition with:
+
+   > **Fidelity:** Identify contradictions of supplied facts or constraints and unsupported owner-specific assertions presented as established facts. Distinguish these from general background claims, transparent inferences, suggestions and placeholders. Absence from the brief does not by itself establish falsity. For fiction, assess the requested constraints and continuity; invention within the brief is permitted.
+
+   The supplied **held-out judge header is substantially better**: it permits authorized transformations and penalizes both unnecessary intervention and failure to act. I see no instruction in that header that inherently favors S over P. The questionable knowledge-case premise is a separate problem with the case’s expected answer.
+
+   Finally, change WRITE RESULTS’:
+
+   > “The slop and usefulness scores favored the skill too…”
+
+   to:
+
+   > “Advantages differed by criterion: all email outputs tied on the slop score, and the placeholder-heavy skill blog scored lower on usefulness than the bare blogs.”
+
+   Overall ranking is not improvement on every axis.
+
+8. **Always-on was tested as an explicitly supplied prompt, not as automatic integration.**
+
+   Its generator was told:
+
+   > “Read it first and treat it as always-on project instructions…”
+
+   That demonstrates what happens when the snippet is deliberately supplied. It does not demonstrate automatic discovery, persistence across a conversation, or correct activation boundaries.
+
+   Replace `FINAL-RESULTS.md`’s:
+
+   > “Does opt-in always-on mode work without typing `/humanscope`? Yes…”
+
+   with:
+
+   > “When explicitly supplied as project instructions, the snippet’s outputs ranked above the bare outputs on two tasks. Automatic loading and continued application were not tested.”
+
+   Use equivalent wording in README and CHANGELOG.
+
+   Similarly, the webpage test judges **extracted page text**, not HTML correctness, accessibility, rendering or functionality. Label it **“webpage copy”**, and state that limitation.
+
+9. **Make two small full-skill edits; do not redesign the taxonomy now.**
+
+   I do not accept “we now know the strongest effect is fidelity rather than lenses” as a component finding. We know what the reported judgments often rewarded. The causal attribution remains open.
+
+   **`SKILL.md`, description — remove the conflicting trigger.**
+
+   Old:
+
+   > “Use it to write, rewrite, tighten, or make text feel less formulaic / less ‘AI-shaped,’ and to diagnose structural habits without rewriting.”
+
+   New:
+
+   > “Use it to write, revise or tighten prose, or to diagnose compositional problems without rewriting.”
+
+   This improves conceptual consistency. If automatic skill selection matters, test selection separately; do not claim it improves prose quality.
+
+   **`SKILL.md`, §2 — put the transformation exception at the actual decision point.**
+
+   Old:
+
+   > “3. **Present failure** — a concrete way it falls short *now*.”
+
+   New:
+
+   > “3. **Present failure or requested transformation** — identify a concrete shortfall, or a gap between the current text and the user’s authorized target.”
+
+   Old:
+
+   > “If no concrete failure is supported, leave that candidate unchanged and continue reviewing the requested scope.”
+
+   New:
+
+   > “If neither a concrete shortfall nor the authorized target justifies this change, leave that candidate unchanged and continue reviewing the requested scope.”
+
+   The later transformation paragraph already supplies the exception, but the numbered rule currently says the opposite before qualifying it. Keep the later limits on what “rewrite” authorizes.
+
+   **Test the second change** against an already-effective passage, a requested summary, an authorized voice transformation and a meaning-preserving light edit.
+
+   Otherwise, freeze the body. Its length is a reason to investigate compression, not evidence of damage. Keep the lenses optional. The current evidence supports neither mandatory use nor wholesale deletion.
+
+10. **The always-on derivative has lost several protections from the full skill.**
+
+   These are substantive consistency fixes, not reasons to add more lenses.
+
+   **`always-on/CLAUDE-snippet.md`, scope**
+
+   Old:
+
+   > “They don’t apply to code, commit messages, or conversational replies.”
+
+   New:
+
+   > “Apply these rules to requested prose artifacts, including text embedded in HTML or delivered in chat. They do not govern executable code, commit messages or ordinary conversation.”
+
+   **Facts/invention bullet**
+
+   Replace the whole bullet with:
+
+   > **Don’t invent real-world specifics.** Use supplied facts or appropriately supported additions; do not turn plausible details about real people, products, policies or events into asserted facts. Omit optional missing details; ask about essential gaps or mark a placeholder when a draft is useful. Fiction WRITE may invent within the brief; fiction EDIT may add or alter story facts only when authorized.
+
+   This avoids both indiscriminate placeholders and ambiguity about invention during fiction edits.
+
+   **Stock-phrase instruction**
+
+   Old:
+
+   > “Skip stock taglines and filler … unless the brief asks for that register.”
+
+   New:
+
+   > “Keep or remove conventional phrasing according to its function and the requested tone; a familiar phrase is not a defect by itself.”
+
+   **Editing bullet**
+
+   Replace with:
+
+   > **When editing,** justify changes by passage → reader need → present shortfall or authorized target → smallest useful fix. Preserve meaning, voice, facts and format except for supported corrections or changes the brief authorizes. Check what deletions remove; filler may go without losing a distinct claim or disclosure. No change is valid when the brief is satisfied. “AI-like” is not a reason.
+
+   **Final bullet**
+
+   Old:
+
+   > “No deliberate typos, word bans, or detector gaming.”
+
+   New:
+
+   > “Do not add typos or impose word bans to appear human; honor explicit style and creative constraints. Never optimize for detector scores.”
+
+   **Test these before shipping:** fictional copyedit versus creative rewrite; supported factual correction; summary versus preservation edit; optional versus essential missing facts; purposeful conventional phrasing; prose embedded in HTML. The current two WRITE demonstrations do not test these editing obligations.
+
+11. **Repair the remaining documentation mismatches.**
+
+   - **README four-slot explanation:** add **“For an authorized transformation, assess the requested target rather than requiring the original to be defective.”**
+   - **README “no change is always valid”:** replace with **“no change is valid when the brief is already satisfied.”**
+   - **README human-eval roadmap:** replace **“compact four-slot-only … answers … do the lenses earn their complexity?”** with **“a matched variant removing only the lenses … tests their incremental contribution.”** Human raters do not repair a confounded component comparison.
+   - **README “any assistant … can follow it”:** replace with **“The instructions can be supplied to other assistants; reliable application and output quality there remain unestablished.”**
+   - **CHANGELOG “R9 patch … untested” / fair-retest “These are untested”:** replace with **“Initially untested; subsequently examined in the reduced held-out comparison linked below.”**
+   - **CHANGELOG “108 outputs … Run later in this release”:** replace with **“The planned 108-output protocol was not completed. A reduced S/P/U comparison was run: nine tasks, one generation per edited arm, one judge, without O or C*.”**
+   - **FINAL-RESULTS “Every prompt … is in the linked folders”:** the pasted material cannot establish that archive claim. Identify the exact generation instructions, complete task texts, versions/settings, judging packets and freeze record. The displayed H prompt contains an ellipsis, so it is not itself an exact reproducibility record.
+   - **Freeze claim:** a hash identifies material; it does not by itself establish when it was frozen. Link the pre-generation record if available; otherwise say **“The author reports that materials were frozen before generation.”**
+
+   Keep historical prompts and verdicts unchanged. Add corrections alongside them rather than silently rewriting the experiment.
+
+12. **My earlier recommendations were not all right.**
+
+   On the recommendations documented in this conversation:
+
+   - **The preservation-first design was initially too absolute.** Requiring a “present failure” for every edit can obstruct a legitimate transformation; unconditional claim preservation can freeze an error. The correction/authorization exceptions were necessary repairs to a design I helped push. Moving that exception into slot 3 is the remaining cleanup.
+   - **I overscoped the next validation step.** Four arms × nine tasks × three runs bundled patch checking, comparison with ordinary editing and component attribution into one expensive exercise. Those are separate questions. A smaller patch check was reasonable; my mistake would be treating completion of the full design as a release prerequisite.
+   - **The knowledge-boundary addition was a plausible editorial hypothesis, not an established improvement.** Its new test produced overdiagnosis in both versions. I should not give the added check credit merely because its rationale sounds sophisticated. The appropriate next move is comparison on genuine violations and legitimate foreknowledge—not another stronger instruction to find leaks.
+   - **“Keep light EDIT out of structural review” was overcautious shorthand.** A cross-paragraph contradiction can warrant a small, authorized repair. The narrower current wording—narrative genre alone must not expand scope—is preferable.
+
+   I cannot honestly identify which recommendation caused task 05’s loss: the six changes were bundled and sampled once. Nor does P’s failure on knowledge establish that adding the check made that behavior worse. Owning a design mistake does not justify inventing causal evidence against myself.
+
+13. **Next steps, ranked by value per cost.**
+
+   1. **Correct the public record now.** Remove X from the efficacy scorecard, distinguish versions, fix the fidelity denominator, acknowledge the held-out loss, and separate ranking from reliability. This requires no new model run.
+   2. **Do the small snippet regression check if you keep promoting always-on editing.** It is a newly packaged instruction set with omitted exceptions.
+   3. **If you retain “reduced slop” as a headline, rejudge existing WRITE outputs using neutral purpose-fit criteria and exact task materials.** This is more valuable than rescuing X. Otherwise drop the aesthetic efficacy claim and keep the original rankings explicitly provisional.
+   4. **Then stop, if stopping is the goal.** An experimental release does not need another expansive model-only study.
+   5. **For the next substantive milestone, use blind human evaluation against strong ordinary editing.** Add a matched lens-removal arm only if component complexity is a decision you actually intend to make. A cumulative “+guard, +routing, +lenses…” ladder is order-dependent and does not cleanly allocate credit among interacting instructions.
+
+   **Verdict:** v1.1.0 is a reasonable experimental writing package with promising model-judged results and an unusually inspectable history of failures. Its current report still turns preferences into broader assurances and repeats an invalid interpretation of the bare-edit run. Correct those claims and the always-on inconsistencies; keep the main design largely stable. It is neither a validated general writing improvement nor evidence that StoryScope’s lenses improve prose, and it does not need to become either before being useful to someone who wants these editing defaults.
+
+   **Interview sentence:** “I built HumanScope, compared it with bare prompts and a strong editing baseline, and published both the promising model-judged results and the failures and confounds that limit what we can claim.”

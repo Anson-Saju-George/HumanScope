@@ -84,7 +84,7 @@ arm was told; the archived prompt is left as sent.*
 - **One external judge** (an OpenAI model), no human readers. All writing is by Claude.
 - **The fidelity criterion overlaps the skill's own integrity rule.** "Don't present unsupplied
   facts as real" is a reasonable, neutral standard for owner-facing copy, but it is the axis the
-  skill explicitly targets. The slop and usefulness scores favored the skill too, by smaller margins.
+  skill explicitly targets. Advantages differed by criterion: all email outputs tied on the slop score, and the placeholder-heavy skill blog scored lower on usefulness than the bare blogs. The overall ranking is not improvement on every axis. The judge rubric also listed "tidy triads" and stock phrases as slop, which is close to the skill's own taste, so treat the slop scores as provisional.
 - **The baseline is Claude inside a Claude Code subagent**, not the consumer chat app, and it
   was told where to save the file.
 - This supports "HumanScope reduces invented detail and stock phrasing in everyday WRITE tasks".

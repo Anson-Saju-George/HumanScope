@@ -26,31 +26,39 @@ tightening the runtime; no new lenses/scanners.
   editing** (1 win / 2 losses / 3 ties against each). HumanScope made no unauthorized change to a spec
   where the ordinary and compact arms changed its requirements. It lost information in a marketing
   passage and a fiction passage, and it preserved the brief better than Chen's skill in both fiction cases.
-- **Astra R9 patch (6 SKILL.md edits, untested):** check what a deletion removes (filler ≠ a
+- **Astra R9 patch (6 SKILL.md edits; initially untested, later examined in the reduced held-out comparison below):** check what a deletion removes (filler ≠ a
   distinct claim, motive, or realization); bound the authorized-transformation exception; scope
   fictional invention to WRITE (EDIT alters events only when authorized); reword L1 so explanation
   can carry a motive or realization; prevent narrative genre alone from triggering broader structural review during light EDIT; add a viewpoint-sensitive
   knowledge-boundary check, crediting Alex Chen's *Human Scope*.
 - **Ran an everyday WRITE-prompt comparison** (`test-run/write-x/`): bare task prompts (tidy and
-  casually typed) vs the same prompts plus HumanScope; web page, blog, and email; one blind Astra
-  judge. Every HumanScope output ranked above every bare output in all three tasks, mainly on
-  fidelity (bare outputs invented recipes, policies, and histories). Small sample (1–3 runs per
-  arm); the story arm was generated but not yet judged.
+  casually typed) vs the same prompts plus HumanScope; web page copy, blog, and email; one blind
+  Astra judge. Every full-skill draft ranked above every bare draft within each task, with the
+  biggest gap on fidelity to the supplied facts (bare outputs added recipes, policies, and
+  histories). This tests the whole package, not which rule causes it. Small sample (1–3 runs per arm).
 - **Judged the story arm:** all three HumanScope stories ranked above all three bare stories.
-- **Added a bare "can you edit this" arm** to the edit comparison: 52 vs 33 of 60. The re-judge
-  reproduced the HumanScope = excellent-editor tie (52 vs 52). **Confounded (disclosed after
-  release):** the judge prompt said all arms shared one preservation brief, which the bare arm never
-  received. Read 52 vs 33 as "a brief beats no brief", not as a HumanScope-specific result.
+- **Added a bare "can you edit this" arm** to the edit comparison and re-judged all five editors.
+  **Evaluation error (disclosed after release):** the judge prompt said all arms shared one
+  preservation brief, which the bare arm never received, so its scores can't measure the bare arm,
+  the brief, or the skill. Excluded from the results and kept as a documented error. The re-judge's
+  52–52 for HumanScope and the excellent-editor prompt is judgment consistency on the same pre-R9
+  outputs, not a replication.
 - **Added opt-in always-on mode** (`always-on/CLAUDE-snippet.md`): a short CLAUDE.md block for
-  reader-facing prose. Blind test: 1st on the web page and 2nd on the blog (it left placeholders),
-  ahead of bare in both.
+  reader-facing prose. Blind test, with the snippet supplied explicitly as project instructions:
+  1st on web page copy and 2nd on the blog (it left placeholders), ahead of bare in both. Automatic
+  loading and continued application were not tested.
 - **Ran the held-out validation** (`evals/heldout-v1.1-run/`): 9 new frozen tasks, patched vs
-  pre-patch vs untouched. Patched won 4, lost 1, tied 4 (123 vs 117 of 135). One judge, one run per arm.
+  pre-patch vs untouched. The judge preferred patched on 4, pre-patch on 1 (task 05, so it was not
+  regression-free), and tied 4. One judge, one generation per arm.
 - **Final summary:** `evals/FINAL-RESULTS.md`.
 - **Credited prior art:** Alex Chen's *Human Scope*, the companion skill to his SCOPE reel.
 - **Archived for reproducibility:** judge prompts and verdicts, exact S-arm skill snapshot, shuffle keys.
 - **Held-out validation specified** (`evals/heldout-v1.1.md`: 8 new artifacts, 9 tasks, 108
-  outputs). Run later in this release: see the held-out validation entry below.
+  outputs). The planned 108-output protocol was not completed. A reduced S/P/U comparison was run
+  (nine tasks, one generation per arm, one judge, without O or C*): see the entry above.
+- **Astra R10 review (post-release):** corrected the public record (bare-edit arm removed, version
+  context added to the editing and Chen comparisons, held-out regression acknowledged, fidelity
+  claim limited to scores). Proposed SKILL.md and always-on changes deferred to v1.2 pending tests.
 
 ## v1.0.0 — 2026-09-20
 

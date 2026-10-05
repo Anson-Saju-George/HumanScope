@@ -90,7 +90,7 @@ One sample per arm per case; six short cases; two independently run OpenAI model
 Six SKILL.md edits (see CHANGELOG): check what a deletion removes; bound the transformation
 exception; scope fictional invention to WRITE; reword L1 so explanation can carry a motive or
 realization; prevent narrative genre alone from triggering broader structural review during light EDIT; add a viewpoint-sensitive knowledge-boundary
-check (from Chen's checklist). **These are untested.** Re-running these six cases is a regression
+check (from Chen's checklist). **Initially untested; subsequently examined in the reduced held-out comparison (`../../evals/heldout-v1.1-run/`).** Re-running these six cases is a regression
 test, not validation. Validation is the held-out suite in
 [`../../evals/heldout-v1.1.md`](../../evals/heldout-v1.1.md).
 
@@ -120,12 +120,15 @@ Scores are from this re-judge, so they differ slightly from the 4-arm run above.
   was **scored against rules it never saw**. For example, in the notes case it tidied the shorthand,
   a reasonable response to "can you edit this", and lost points for breaking a protected format
   nobody had told it about. This repeats the arm-asymmetry flaw disclosed for v1.0.
-- **What the result does show:** under a preservation rubric, **any preservation brief beat a bare
-  request** (S 52 and O 52 vs X 33). That is evidence for giving the model a brief, not specifically
-  for HumanScope.
-- S outscored X in all 6 cases, but fiction-a by a single point (2/2 vs 2/1). X ranked last overall. It expanded the personal notes' shorthand,
-  cut the narrator's "I think" (fiction-b), and cut Dana's stated motive (fiction-a).
-- **The S = O tie reproduced** (52 vs 52), as in the 4-arm run.
-- **Fiction remains S's weakest area.** In fiction-a, S ranked 3rd under all three judgments (both
-  4-arm judges and this re-judge). It lost more of the stated motive than O or C.
+- **These scores were assigned under an inaccurate description of X's instructions.** We retain this
+  run as a documented evaluation error and do not use it to estimate the benefit of either a
+  preservation brief or HumanScope. *(An earlier version of this page read it as "a brief beats no
+  brief"; Astra R10 rejected that reading, because the judge was misinformed about X's obligations.)*
+- What X actually did, as a description rather than a scored comparison: it expanded the personal
+  notes' shorthand, cut the narrator's "I think" (fiction-b), and cut Dana's stated motive (fiction-a).
+- **S and O again totaled the same** (52 vs 52). This shows the judgments were consistent on the same
+  pre-R9 outputs, not that the generation result replicated.
+- **A known failure:** in the preservation-focused fiction-a edit, the pre-R9 skill removed distinct
+  psychological information (Dana's stated motive), ranking 3rd. Repeated judgments of one output are
+  not extra fiction examples, so this doesn't establish a ranking across genres.
 - One run per arm, one judge. Same caveats as above.

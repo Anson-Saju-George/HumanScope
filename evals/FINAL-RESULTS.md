@@ -11,7 +11,7 @@ fresh context. Every prompt, output, key, and verdict is in the linked folders.
 |---|---|---|
 | Does it beat what a normal user gets from a bare **writing** prompt? | [write-x](../test-run/write-x/RESULTS.md): web page, blog, email, story (26 pieces) | **Yes, in all 4 tasks:** every HumanScope piece ranked above every bare piece |
 | …even when the prompt is typed casually, the way people really write? | web page, casual prompt with vs without `/humanscope` | **Yes:** without it, =6th of 8; with it, **1st with 5/5/5** |
-| Does it beat a bare **"can you edit this"**? | [5-editor re-judge](../test-run/fair-retest/RESULTS.md#re-judge-with-a-bare-edit-arm) (6 cases) | **Yes, 6 of 6 cases:** 52 vs 33 of 60; the bare edit came last of all five editors |
+| Does a preservation brief beat a bare **"can you edit this"**? | [5-editor re-judge](../test-run/fair-retest/RESULTS.md#re-judge-with-a-bare-edit-arm) (6 cases) | **Confounded.** Any brief (the skill, or a one-paragraph prompt) beat the bare request, 52 and 52 vs 33, but the judge was told all arms shared the brief, so the bare edit was scored against rules it never received |
 | Does it beat a carefully written "excellent editor" prompt? | same | **No, a tie** (52 vs 52), reproduced across two judging runs |
 | Do the six lenses add value over the four-slot rule alone? | same (compact arm C) | **Not shown** (52 vs 50); the comparison doesn't isolate the lenses |
 | How does it compare with Alex Chen's *Human Scope*? | same | **Ahead in this evaluation** (52 vs 37); Chen's skill invented events in fiction |
@@ -32,7 +32,7 @@ it means the owner must fill them in.
 
 **Its weakest area is fiction editing**, the domain the StoryScope research comes from. In the
 fiction-a edit case it ranked 3rd under every judgment and removed more of a character's stated motive
-than the plain editors did; the R9 fixes target this and helped on held-out motive tasks, but it is
+than the plain editors did; the R9 fixes target this and helped on one held-out motive task, but it is
 not settled. Most of its clear wins are on web pages, blogs, emails, and edits of everyday text.
 
 ## Held-out validation (patched v1.1 vs pre-patch)
@@ -66,6 +66,10 @@ benefit (1–5 each).
 - One judge, one run per arm, nine tasks. This is a consistency check, not proof.
 
 ## Limits (read before quoting any of this)
+- **Confound in the bare-edit comparison:** its judge prompt said all arms shared one preservation
+  brief, which the bare arm never received. Treat 52 vs 33 as "a brief beats no brief", not as a
+  HumanScope-specific result. The writing comparison doesn't have this problem: there, the judges were
+  given the owner's supplied facts, and every arm got the same request.
 - Small samples: 1–3 runs per arm per task; a few dozen short texts in total.
 - Model judges only (OpenAI), no human readers. All writing is by Claude.
 - The fidelity criterion overlaps the skill's own integrity rule. "Don't present unsupplied facts as

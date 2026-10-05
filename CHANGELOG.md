@@ -37,9 +37,10 @@ tightening the runtime; no new lenses/scanners.
   fidelity (bare outputs invented recipes, policies, and histories). Small sample (1–3 runs per
   arm); the story arm was generated but not yet judged.
 - **Judged the story arm:** all three HumanScope stories ranked above all three bare stories.
-- **Added a bare "can you edit this" arm** to the edit comparison: HumanScope won all 6 cases (52 vs
-  33 of 60). The bare edit ranked last of five editors. The re-judge reproduced the HumanScope =
-  excellent-editor tie (52 vs 52).
+- **Added a bare "can you edit this" arm** to the edit comparison: 52 vs 33 of 60. The re-judge
+  reproduced the HumanScope = excellent-editor tie (52 vs 52). **Confounded (disclosed after
+  release):** the judge prompt said all arms shared one preservation brief, which the bare arm never
+  received. Read 52 vs 33 as "a brief beats no brief", not as a HumanScope-specific result.
 - **Added opt-in always-on mode** (`always-on/CLAUDE-snippet.md`): a short CLAUDE.md block for
   reader-facing prose. Blind test: 1st on the web page and 2nd on the blog (it left placeholders),
   ahead of bare in both.

@@ -115,7 +115,15 @@ Scores are from this re-judge, so they differ slightly from the 4-arm run above.
 | Fiction-b | 4/2 · 4th | 5/5 · =1st | 5/5 · =1st | 5/5 · =1st | 2/1 · 5th |
 | **Total /60** | **33** | **52** | **52** | **50** | **37** |
 
-- **S beat X in all 6 cases.** X ranked last overall. It expanded the personal notes' shorthand,
+- **Confound (found in outside review, 2026-10-05):** the judge prompt said all five edits were made
+  *"under the SAME instruction"* and quoted the preservation brief. X never received that brief, so it
+  was **scored against rules it never saw**. For example, in the notes case it tidied the shorthand,
+  a reasonable response to "can you edit this", and lost points for breaking a protected format
+  nobody had told it about. This repeats the arm-asymmetry flaw disclosed for v1.0.
+- **What the result does show:** under a preservation rubric, **any preservation brief beat a bare
+  request** (S 52 and O 52 vs X 33). That is evidence for giving the model a brief, not specifically
+  for HumanScope.
+- S outscored X in all 6 cases, but fiction-a by a single point (2/2 vs 2/1). X ranked last overall. It expanded the personal notes' shorthand,
   cut the narrator's "I think" (fiction-b), and cut Dana's stated motive (fiction-a).
 - **The S = O tie reproduced** (52 vs 52), as in the 4-arm run.
 - **Fiction remains S's weakest area.** In fiction-a, S ranked 3rd under all three judgments (both

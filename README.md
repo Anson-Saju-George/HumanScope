@@ -228,6 +228,8 @@ is untested. Whether it reads better *to people* is the open question.
 - [x] [Prior-art acknowledgment](#related-work--prior-art)
 - [x] Matched-brief blind comparisons, bare-prompt tests, and held-out validation ([summary](evals/FINAL-RESULTS.md))
 - [x] Opt-in always-on mode ([`always-on/CLAUDE-snippet.md`](always-on/CLAUDE-snippet.md))
+- [x] Claude Code plugin marketplace, ChatGPT packaging ([`chatgpt/`](chatgpt/README.md)), and a GitHub release with the claude.ai skill ZIP
+- [ ] v2: compare against Anthropic Directory writing skills such as ProseShape and writing-quality ([backlog](research/v2-backlog.md))
 - [ ] **Decisive test:** 3-way blind *human* eval — HumanScope vs. a matched variant removing only
   the lenses vs. competent ordinary editing ([protocol](evals/human-eval-protocol.md)); answers both "beats
   ordinary editing?" and "what do the lenses add?"

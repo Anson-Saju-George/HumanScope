@@ -126,10 +126,14 @@ page copy and a blog post. Automatic loading and continued application were not 
 
 ### Claude.ai
 
-Download or clone the repository, package the skill folder as a ZIP containing `SKILL.md`
-and its supporting files, and upload it through Claude's custom-skills interface. Follow the
-[official upload instructions](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
-for the required archive layout and account settings.
+1. Download [`humanscope-skill-v1.1.3.zip`](https://github.com/Anson-Saju-George/HumanScope/releases/download/v1.1.3/humanscope-skill-v1.1.3.zip)
+   from the [latest release](https://github.com/Anson-Saju-George/HumanScope/releases/latest). It holds
+   `humanscope/SKILL.md`.
+2. In claude.ai, open **Settings → Capabilities → Skills → Upload skill** and choose the ZIP. Skills
+   need to be enabled for your plan; see the
+   [official instructions](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills).
+
+This is a skill, not a connector: **"Add custom connector" is for MCP servers** and doesn't apply.
 
 ### ChatGPT
 

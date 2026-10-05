@@ -1,6 +1,6 @@
 # Held-out validation suite — v1.1 (specification, designed by Astra R9)
 
-**Status: completed (2026-10-05).** Results and all materials: [`heldout-v1.1-run/`](heldout-v1.1-run/); summary in [`FINAL-RESULTS.md`](FINAL-RESULTS.md). As run: 9 tasks, three candidates each (patched, pre-patch, untouched source), one run per arm, one blind Astra judge; the bare and C* arms in the spec below were not run. The original protocol follows. Validates the v1.1 SKILL.md patch on *new* material. The six
+**Status: completed (2026-10-05).** Results and all materials: [`heldout-v1.1-run/`](heldout-v1.1-run/); summary in [`FINAL-RESULTS.md`](FINAL-RESULTS.md). As run: 9 tasks, three candidates each (patched, pre-patch, untouched source), one run per arm, one blind Astra judge. Not run from the spec below: the O and C* arms, and the 3-run replication. The original protocol follows. Validates the v1.1 SKILL.md patch on *new* material. The six
 fair-retest cases (`../test-run/fair-retest/`) stay as a **regression** suite; re-running them is
 not validation.
 
